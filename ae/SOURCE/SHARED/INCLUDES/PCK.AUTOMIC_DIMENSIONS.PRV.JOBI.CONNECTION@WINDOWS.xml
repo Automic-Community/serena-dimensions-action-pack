@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<JOBI name="PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS">
+<HEADER state="1">
+<Title>DMCLI Connection</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[!Creates a dmcli connection object
+
+:SET &UC4RB_DMC_CMD# ='java -jar ARATools.jar ARB -cmd execute dmcli -user &UC4RB_DMC_USERNAME# -pass &UC4RB_DMC_PASSWORD# -host &UC4RB_DMC_HOST# -dbname &UC4RB_DMC_DBNAME# -dsn &UC4RB_DMC_DSN#']]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</JOBI>
+</uc-export>
