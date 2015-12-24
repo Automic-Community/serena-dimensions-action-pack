@@ -8,8 +8,8 @@
 </HEADER>
 <SCRIPT mode="1" state="1">
 <MSCRI><![CDATA[!Creates a dmcli connection object
-
-:SET &UC4RB_DMC_CMD# ='java -jar ARATools.jar ARB -cmd execute dmcli -user &UC4RB_DMC_USERNAME# -pass &UC4RB_DMC_PASSWORD# -host &UC4RB_DMC_HOST# -dbname &UC4RB_DMC_DBNAME# -dsn &UC4RB_DMC_DSN#']]></MSCRI>
+:INCLUDE PCK.ITPA_SHARED.PUB.INCLUDE.ATTACH
+:SET &UC4RB_DMC_CMD# ='java -jar &$AGENT_RESOURCES_CLIENT#itpa-tool.jar ARB -cmd execute dmcli -user "&UC4RB_DMC_USERNAME#" -pass "&UC4RB_DMC_PASSWORD#" -host "&UC4RB_DMC_HOST#" -dbname "&UC4RB_DMC_DBNAME#" -dsn "&UC4RB_DMC_DSN#"']]></MSCRI>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC/>
