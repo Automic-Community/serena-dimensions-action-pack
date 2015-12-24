@@ -1,0 +1,34 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Setup_suite
+Default Tags      unix    win
+Test Template     Create Repository Template
+Resource          ../../resources/keywords.txt
+
+*** Variables ***
+${SPACE}          " "
+
+*** Test Cases ***    CVS ROOT        PATH                                               REPOSITORY NAME                                                        FAIL IF EXIST    RETCODE    STATUS
+Valid Create Repository
+                      ${_CVS_ROOT}    ${_WORKING_DIR}${/}repositories                    repository&$PHYS_DATE_YYYYMMDD#&$PHYS_TIME_HHMMSS#                     NO               0          ${ENDED_OK}
+
+Valid Create Repository with parameters contain spaces
+                      ${_CVS_ROOT}    ${SPACE}${_WORKING_DIR}${/}repositories${SPACE}    ${SPACE}repository &$PHYS_DATE_YYYYMMDD#&$PHYS_TIME_HHMMSS#${SPACE}    NO               0          ${ENDED_OK}
+
+*** Keywords ***
+Create Repository Template
+    [Arguments]    ${root}    ${path}    ${repo_name}    ${fail_if_exist}    ${returnCode}    ${returnStatus}
+    Init Action    ${ACTION_CREATE_REPOSITORY}
+    Action Set    ${PRT_CREATE_REPOSITORY_CVS_ROOT}    ${root}
+    Action Set    ${PRT_CREATE_REPOSITORY_CVS_PATH}    ${path}
+    Action Set    ${PRT_CREATE_REPOSITORY_REPO_NAME}    ${repo_name}
+    Action Set    ${PRT_CREATE_REPOSITORY_CVS_FAIL_EXISTING}    ${fail_if_exist}
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start testing for CVS Create Repository

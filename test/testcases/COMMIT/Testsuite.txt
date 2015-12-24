@@ -1,0 +1,93 @@
+*** Settings ***
+Suite Setup       Setup COMMIT suite
+Default Tags      win    unix
+Test Template     Commit Template
+Resource          ../../resources/keywords.txt
+
+*** Variables ***
+${commit_working_dir}    ${_WORKING_DIR}${/}COMMIT_TEST
+${commit_test_module}    ${_CVS_BASE_MODULE}
+
+*** Test Cases ***    OK_NOK             URI                               PASSWORD                 WORKING COPY                     MESSAGE                                REVISION                       RECURSIVE    MODULE                           RETCODE    STATUS          REPORT MESSAGE
+1. Commit Success With Pserver
+                      [Setup]            Setup Commit Test                 TC01
+                      OK                 ${_CVS_URI}                       ${_CVS_PASS}             ${commit_working_dir}${/}TC01    TC01 - first success commit            ${EMPTY}                       NO           ${commit_test_module}            0          ${ENDED_OK}     cvs commit: Examining
+
+2. Commit Success With Pserver & recursive = YES
+                      [Setup]            Setup Commit Test                 TC02
+                      OK                 ${_CVS_URI}                       ${_CVS_PASS}             ${commit_working_dir}${/}TC02    TC02 - commit with recursive=YES       ${EMPTY}                       YES          ${commit_test_module}            0          ${ENDED_OK}     cvs commit: Examining COMMIT/TC02
+
+3. Commit Success With Pserver & have revision
+                      [Setup]            Setup Commit Test                 TC03
+                      OK                 ${_CVS_URI}                       ${_CVS_PASS}             ${commit_working_dir}${/}TC03    TC03 - commit with revision            TC03                           NO           ${commit_test_module}            0          ${ENDED_OK}     cvs commit: Examining
+
+4. Commit Success With Pserver & Commit with nothing added
+                      [Setup]            Checkout Module                   ${commit_test_module}    ${EMPTY}                         ${commit_working_dir}${/}TC04
+                      OK                 ${_CVS_URI}                       ${_CVS_PASS}             ${commit_working_dir}${/}TC04    TC04 - Commit no change                ${_CVS_REVISION}               NO           ${commit_test_module}            0          ${ENDED_OK}     cvs commit: Examining
+
+5.Fail with invalid URI
+                      [Setup]            Checkout Module                   ${commit_test_module}    ${EMPTY}                         ${commit_working_dir}${/}TC05
+                      NOK                ${_CVS_URI}_invalid               ${_CVS_PASS}             ${commit_working_dir}${/}TC05    TC05 - Commit Fail with invalid URI    ${_CVS_REVISION}               NO           ${commit_test_module}            0          ${ENDED_NOK}    no such repository
+
+6.Fail with invalid Password
+                      [Setup]            Checkout Module                   ${commit_test_module}    ${EMPTY}                         ${commit_working_dir}${/}TC06
+                      NOK                ${_CVS_URI}                       ${_CVS_PASS}_invalid     ${commit_working_dir}${/}TC06    TC06 - Fail with invalid Password      ${_CVS_REVISION}               NO           ${commit_test_module}            0          ${ENDED_NOK}    authorization failed
+
+7.Success with invalid Revision
+                      [Documentation]    This is normal behavior of cvs
+                      [Setup]            Checkout Module                   ${commit_test_module}    ${EMPTY}                         ${commit_working_dir}${/}TC07
+                      OK                 ${_CVS_URI}                       ${_CVS_PASS}             ${commit_working_dir}${/}TC07    TC07 - Fail with invalid Revision      1.1${_CVS_REVISION}_invalid    NO           ${commit_test_module}            0          ${ENDED_OK}     cvs commit: Examining .
+
+8.Fail with invalid Module
+                      [Setup]            Checkout Module                   ${commit_test_module}    ${EMPTY}                         ${commit_working_dir}${/}TC08
+                      NOK                ${_CVS_URI}                       ${_CVS_PASS}             ${commit_working_dir}${/}TC08    TC08 - Fail with invalid Module        ${_CVS_REVISION}               NO           ${commit_test_module}_invalid    0          ${ENDED_NOK}    ${EMPTY}
+
+*** Keywords ***
+Setup COMMIT suite
+    [Documentation]    Setup steps before execute test
+    Log    Setup for testing COMMIT action
+    Log    Try to delete created folder from last execution
+    Delete Dir    ${commit_working_dir}
+    Create Dir    ${commit_working_dir}
+    Log    Finish setup for COMMIT testsuite
+
+Setup Commit Test
+    [Arguments]    ${newFolder}
+    [Documentation]    Make some changes and add to repo in order to commit
+    ${_CURRENT_TIMESTAMP_}    Get Time    epochs
+    Checkout Module    ${commit_test_module}    ${EMPTY}    ${commit_working_dir}${/}${newFolder}
+    Update Working Dir    ${commit_working_dir}${/}${newFolder}
+    Remove File In Repo    ${commit_working_dir}${/}${newFolder}    ${commit_test_module}${/}COMMIT${/}${newFolder}    YES    YES
+    Delete Dir    ${commit_working_dir}${/}${newFolder}${/}${commit_test_module}${/}COMMIT${/}${newFolder}
+    Create Dir    ${commit_working_dir}${/}${newFolder}${/}${commit_test_module}${/}COMMIT${/}${newFolder}
+    Add File or folder to repo    ${commit_working_dir}${/}${newFolder}    COMMIT${/}${newFolder}    ${commit_test_module}
+    Create File    ${commit_working_dir}${/}${newFolder}${/}${commit_test_module}${/}COMMIT${/}${newFolder}${/}test 1.txt
+    Add File or folder to repo    ${commit_working_dir}${/}${newFolder}    COMMIT${/}${newFolder}${/}test 1.txt    ${commit_test_module}
+
+Commit Template
+    [Arguments]    ${OK_NOK}    ${uri}    ${password}    ${workingCopy}    ${message}    ${revision}
+    ...    ${recursive}    ${module}    ${returnCode}    ${returnStatus}    ${reportMessage}
+    [Documentation]    This template used for testing action PCK.AUTOMIC_CVS.PUB.ACTION.CHECKOUT with inputs
+    ...    - ${uri}: Repository URI. Example: ":pserver:username@cvs.server.local:/usr/local/cvs".
+    ...    - ${module}: Module that should be exported.
+    ...    - ${password}: Password used for authentication with the repository.
+    ...    - ${workingCopy}: Local path where the repository data will be exported to.
+    ...    - ${message}: Commit log message.
+    ...    - ${revision}: Revision number.
+    ...    - ${returnCode}: return code of execution
+    ...    - ${returnStatus}: return status of execution
+    ...    - ${reportMessage}: message should be contained in execution report
+    Init Action    ${ACTION_COMMIT}
+    Action Set    ${PRT_COMMIT_CVS_URI}    ${uri}
+    Action Set    ${PRT_COMMIT_CVS_MODULE}    ${module}
+    Action Set    ${PRT_COMMIT_CVS_PASSWORD}    ${password}
+    Action Set    ${PRT_COMMIT_CVS_WORKING_DIRECTORY}    ${workingCopy}
+    Action Set    ${PRT_COMMIT_CVS_REVISION}    ${revision}
+    Action Set    ${PRT_COMMIT_CVS_MESSAGE}    ${message}
+    Action Set    ${PRT_COMMIT_CVS_RECURSIVE}    ${recursive}
+    Action Execute
+    Action Report Should Be Found
+    Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
+    Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${reportMessage}

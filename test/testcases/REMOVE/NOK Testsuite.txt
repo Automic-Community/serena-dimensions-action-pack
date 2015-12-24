@@ -1,0 +1,20 @@
+*** Settings ***
+Suite Setup       Setup_suite
+Default Tags      win    unix
+Test Template     Remove Template
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    OK_NOK    URI            PASSWORD        WORKING COPY                          TARGET PATH       DELETE FILE    RECURSIVE    RETURNCODE    MESSAGE
+1.Fail with invalid working copy path
+                      NOK       ${_CVS_URI}    ${_CVS_PASS}    ${_WORKING_COPY}invalid               ${_CVS_TARGET}    YES            YES          0             ${ENDED_NOK}
+
+2. Fail with invalid uri
+                      NOK       invalid        ${_CVS_PASS}    ${_WORKING_COPY}${/}${_CVS_MODULE}    ${_CVS_TARGET}    YES            YES          0             ${ENDED_NOK}
+
+3. Fail with invalid password
+                      NOK       ${_CVS_URI}    invalid         ${_WORKING_COPY}${/}${_CVS_MODULE}    ${_CVS_TARGET}    YES            YES          0             ${ENDED_NOK}
+
+*** Keywords ***
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start testing for Remove Template

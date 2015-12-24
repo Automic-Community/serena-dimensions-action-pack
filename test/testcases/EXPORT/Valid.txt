@@ -1,0 +1,32 @@
+*** Settings ***
+Documentation     _
+Suite Setup       Suite Setup
+Default Tags      unix    win
+Test Template     Import Template
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    URI            MODULE            PASSWORD        REVISION            EXPORT_PATH                                         CHECK_FILE
+Valid Export Head     ${_CVS_URI}    ${_CVS_MODULE}    ${_CVS_PASS}    HEAD                ${_WORKING_DIR}${/}Export${/}ValidExportHead        first_module${/}teet.txt
+
+Valid Export Revision
+                      ${_CVS_URI}    ${_CVS_MODULE}    ${_CVS_PASS}    ${_CVS_REVISION}    ${_WORKING_DIR}${/}Export${/}ValidExportRevision    first_module${/}helloworld.c
+
+*** Keywords ***
+Import Template
+    [Arguments]    ${uri}    ${module}    ${password}    ${revision}    ${path}    ${checkFile}
+    Delete Directory    ${path}
+    Init Action    ${ACTION_EXPORT}
+    Action Set    ${PRT_EXPORT_CVS_URI}    ${uri}
+    Action Set    ${PRT_EXPORT_CVS_MODULE}    ${module}
+    Action Set    ${PRT_EXPORT_CVS_PASSWORD}    ${password}
+    Action Set    ${PRT_EXPORT_CVS_EXPORT_PATH}    ${path}
+    Action Set    ${PRT_EXPORT_CVS_REVISION}    ${revision}
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    0
+    Action Return Status Should Be    ${ENDED_OK}
+    Action Report Should Contain    Logging in to
+    Action Report Should Contain    Logging out of
+
+Suite Setup
+    log    "Suite Setup"

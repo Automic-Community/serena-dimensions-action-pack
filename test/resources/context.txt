@@ -1,0 +1,62 @@
+*** Settings ***
+Documentation     THIS CONTEXT FILE WORKING WITH AUTOMATED TEST SYSTEM
+Resource          ../env/default.txt
+Resource          actions.txt
+Resource          keywords.txt
+Resource          messages.txt
+
+*** Variables ***
+#- CONTEXT VARIABLES ---
+${_AGENT}         /
+${_LOGIN}         /
+${_WORKING_DIR}    /
+${_CVS_REPO}      /
+${_CVS_PASS}      /
+${_CVS_MODULE}    /
+${_CVS_BASE_MODULE}    /
+${_CVS_REVISION}    /
+${_CVS_URI}       /
+${_WORKING_COPY}    /
+${_CVS_REVISION_PSERVER_SSPI}    /
+${_CVS_TARGET}    /
+${_CVS_VENDOR}    Automic
+${_CVS_RELEASE}    rc_1_0
+${_CVS_MESSAGE}    Release Candidate 1.0.0
+
+*** Key Words ***
+Init Agent
+    [Documentation]    Requirement
+    Run Keyword If    '${ENV}' == 'VVNFIBOCVS01'    Init CVS Unix
+    Run Keyword If    '${ENV}' == 'VVNFIBOCVS02'    Init CVS Win
+
+Init CVS Unix
+    [Documentation]    TODO: Write server description here
+    Set Global Variable    ${_AGENT}    CVSUNIX01
+    Set Global Variable    ${_LOGIN}    UC4_RL.LOGIN.ALL
+    Set Global Variable    ${_WORKING_DIR}    /home/cvs
+    Set Global Variable    ${/}    /
+    Set Global Variable    ${_CVS_REPO}    /usr/local/repo
+    Set Global Variable    ${_CVS_PASS}    123
+    Set Global Variable    ${_CVS_MODULE}    Base module
+    Set Global Variable    ${_CVS_BASE_MODULE}    Base module
+    Set Global Variable    ${_CVS_REVISION}    ${EMPTY}
+    Set Global Variable    ${_CVS_URI}    :pserver:cvs@vvnfibocvs01:2401/usr/local/repo
+    Set Global Variable    ${_CVS_ROOT}    /usr/local/repo
+    Set Global Variable    ${_WORKING_COPY}    /home/cvs/testcases/PCK.AUTOMIC_CVS/unix_module
+    Set Global Variable    ${_CVS_REVISION_PSERVER_SSPI}    1.1.1.1
+
+Init CVS Win
+    [Documentation]    TODO: Write server description here
+    Set Global Variable    ${_AGENT}    CVSWIN02
+    Set Global Variable    ${_LOGIN}    UC4_RL.LOGIN.ALL
+    Set Global Variable    ${_WORKING_DIR}    C:\\temp\\cvs
+    Set Global Variable    ${/}    \\
+    Set Global Variable    ${_CVS_REPO}    C:\\Users\\temp\\cvs-repo
+    Set Global Variable    ${_CVS_PASS}    123
+    Set Global Variable    ${_CVS_MODULE}    Base module
+    Set Global Variable    ${_CVS_BASE_MODULE}    Base module for win test
+    Set Global Variable    ${_CVS_REVISION}    ${EMPTY}
+    Set Global Variable    ${_CVS_URI}    :pserver:cvs@vvnfibocvs01:2401/usr/local/repo
+    Set Global Variable    ${_CVS_ROOT}    C:\\cvs02
+    Set Global Variable    ${_WORKING_COPY}    C:\\Automic\\testcases\\PCK.AUTOMIC_CVS\\unix_module
+    Set Global Variable    ${_CVS_REVISION_PSERVER_SSPI}    1.1.1.1

@@ -1,0 +1,3 @@
+*** Settings ***
+Documentation     Testing for PCK.AUTOMIC_CVS.PUB.ACTION.IMPORT
+Force Tags        IMPORT
