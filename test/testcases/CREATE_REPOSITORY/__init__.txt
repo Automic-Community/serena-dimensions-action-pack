@@ -1,3 +1,0 @@
-*** Settings ***
-Documentation     Testing for PCK.AUTOMIC_CVS.PUB.ACTION.CREATE_REPOSITORY
-Force Tags        CREATE_REPOSITORY

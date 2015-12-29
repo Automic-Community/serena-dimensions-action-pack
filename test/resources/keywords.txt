@@ -5,13 +5,6 @@ Resource          context.txt
 Library           com.automic.robot.itpa.ItpaLibrary
 
 *** Key Words ***
-Delete Directory
-    [Arguments]    ${directory}
-    Init Action    ${ACTION_DELETE}
-    Action Set    ${PRT_DELETE_DIR_FILE_RM_NAME}    ${directory}
-    Action Set    ${PRT_DELETE_DIR_FILE_RM_FAIL}    NO
-    Action Execute
-
 Init Action
     [Arguments]    ${actionName}
     Action Create    ${actionName}
@@ -96,92 +89,4 @@ Copy
     Action Set    &UC4RB_DIR_FILE_CP_TARGET#    ${target_file_path}
     Action Set    &UC4RB_DIR_FILE_CP_OVERWRITE#    YES
     Action Set    &UC4RB_COPY_EXCLUDE#    ${EMPTY}
-    Action Execute
-
-Checkout Module
-    [Arguments]    ${module}    ${revision}    ${target_path}
-    Init Action    ${ACTION_CHECKOUT}
-    Action Set    ${PRT_CHECKOUT_CVS_URI}    ${_CVS_URI}
-    Action Set    ${PRT_CHECKOUT_CVS_MODULE}    ${module}
-    Action Set    ${PRT_CHECKOUT_CVS_PASSWORD}    ${_CVS_PASS}
-    Action Set    ${PRT_CHECKOUT_CVS_EXPORT_PATH}    ${target_path}
-    Action Set    ${PRT_CHECKOUT_CVS_REVISION}    ${revision}
-    Action Execute
-
-Export Module
-    [Arguments]    ${module}    ${revision}    ${target_path}
-    Init Action    ${ACTION_EXPORT}
-    Action Set    ${PRT_EXPORT_CVS_URI}    ${_CVS_URI}
-    Action Set    ${PRT_EXPORT_CVS_MODULE}    ${module}
-    Action Set    ${PRT_EXPORT_CVS_PASSWORD}    ${_CVS_PASS}
-    Action Set    ${PRT_EXPORT_CVS_EXPORT_PATH}    ${target_path}
-    Action Set    ${PRT_EXPORT_CVS_REVISION}    ${revision}
-    Action Execute
-
-Remove Template
-    [Arguments]    ${OK_NOK}    ${uri}    ${password}    ${working_copy}    ${target}    ${deleteFile}
-    ...    ${recursive}    ${returnCode}    ${returnStatus}
-    Init Action    ${ACTION_REMOVE}
-    Action Set    ${PRT_REMOVE_CVS_URI}    ${uri}
-    Action Set    ${PRT_REMOVE_CVS_WORKING_DIRECTORY}    ${working_copy}
-    Action Set    ${PRT_REMOVE_CVS_PASSWORD}    ${password}
-    Action Set    ${PRT_REMOVE_CVS_TARGET_PATH}    ${target}
-    Action Set    ${PRT_REMOVE_CVS_DELETE_FILE}    ${deleteFile}
-    Action Set    ${PRT_REMOVE_CVS_RECURSIVE}    ${recursive}
-    Action Execute
-    Action Report Should Be Found
-    Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
-    Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
-    Action Return Status Should Be    ${returnStatus}
-    [Teardown]    Add Removed File In Repo    ${working_copy}    ${target}
-
-Remove File In Repo
-    [Arguments]    ${working_copy}    ${target}    ${removeFile}    ${recursive}
-    Init Action    ${ACTION_REMOVE}
-    Action Set    ${PRT_REMOVE_CVS_URI}    ${_CVS_URI}
-    Action Set    ${PRT_REMOVE_CVS_WORKING_DIRECTORY}    ${working_copy}
-    Action Set    ${PRT_REMOVE_CVS_PASSWORD}    ${_CVS_PASS}
-    Action Set    ${PRT_REMOVE_CVS_TARGET_PATH}    ${target}
-    Action Set    ${PRT_REMOVE_CVS_DELETE_FILE}    ${removeFile}
-    Action Set    ${PRT_REMOVE_CVS_RECURSIVE}    ${recursive}
-    Action Execute
-
-Add File or folder to repo
-    [Arguments]    ${working_copy}    ${target}    ${module}
-    Init Action    ${ACTION_ADD}
-    Action Set    ${PRT_ADD_CVS_URI}    ${_CVS_URI}
-    Action Set    ${PRT_ADD_CVS_PASSWORD}    ${_CVS_PASS}
-    Action Set    ${PRT_ADD_CVS_WORKING_DIRECTORY}    ${working_copy}
-    Action Set    ${PRT_ADD_CVS_TARGET_PATH}    ${target}
-    Action Set    ${PRT_ADD_CVS_MESSAGE}    Add to commit
-    Action Set    ${PRT_ADD_CVS_MODULE}    ${module}
-    Action Execute
-
-Add Removed File In Repo
-    [Arguments]    ${working_copy}    ${target}
-    Init Action    ${ACTION_ADD}
-    Action Set    ${PRT_ADD_CVS_URI}    ${uri}
-    Action Set    ${PRT_ADD_CVS_PASSWORD}    ${password}
-    Action Set    ${PRT_ADD_CVS_WORKING_DIRECTORY}    ${working_copy}
-    Action Set    ${PRT_ADD_CVS_TARGET_PATH}    ${target}
-    Action Set    ${PRT_ADD_CVS_MESSAGE}    re-add file
-    Action Set    ${PRT_ADD_CVS_MODULE}    ${EMPTY}
-    Action Execute
-
-Create Repository Template
-    [Arguments]    ${path}    ${repo_name}    ${failIfExisted}
-    Init Action    ${ACTION_CREATE}
-    Action Set    ${PRT_CREATE_REPOSITORY_CVS_PATH}    ${path}
-    Action Set    ${PRT_CREATE_REPOSITORY_REPO_NAME}    ${repo_name}
-    Action Set    ${PRT_CREATE_REPOSITORY_CVS_FAIL_EXISTING}    ${failIfExisted}
-    Action Execute
-
-Update Working Dir
-    [Arguments]    ${working_copy}
-    Init Action    ${ACTION_UPDATE}
-    Action Set    ${PRT_UPDATE_CVS_URI}    ${_CVS_URI}
-    Action Set    ${PRT_UPDATE_CVS_PASSWORD}    ${_CVS_PASS}
-    Action Set    ${PRT_UPDATE_CVS_WORKING_DIRECTORY}    ${working_copy}
-    Action Set    ${PRT_UPDATE_CVS_REVISION}    ${EMPTY}
-    Action Set    ${PRT_UPDATE_CVS_OVERWRITE}    YES
     Action Execute
