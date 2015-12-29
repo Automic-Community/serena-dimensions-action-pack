@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
-<JOBP AllowExternal="1" name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ECDI">
+<JOBP AllowExternal="1" name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FCDI">
 <XHEADER state="1">
-<Title>DMCLI Extract Request Items - ECDI</Title>
+<Title>DMCLI Fetch Request Items - FCDI</Title>
 <ArchiveKey1/>
 <ArchiveKey2/>
 <Active>1</Active>
@@ -52,17 +52,17 @@
 <result ChkRExec="0" RElseHalt="0" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
 <dynvalues>
 <dyntree>
-<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI">
-<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI">
-<UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_DSNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_ECDI_ARGSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_ECDI_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_ECDI_FOLDERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_ECDI_FOLDER#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_ECDI_REQ_IDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_ECDI_REQ_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
+<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI">
+<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI">
+<UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_DSNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_FCDI_ARGSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FCDI_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_FCDI_FOLDERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FCDI_FOLDER#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_FCDI_REQUEST_IDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FCDI_REQUEST_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -84,7 +84,7 @@
 </PostCon>
 </postconditions>
 </task>
-<task Alias="" BranchType="0" Col="2" Lnr="2" OType="JOBS" Object="PCK.AUTOMIC_DIMENSIONS.PRV.JOB.ECDI@WINDOWS" ParentAlias="" ParentObject="" Row="2" Text2="">
+<task Alias="" BranchType="0" Col="2" Lnr="2" OType="JOBS" Object="PCK.AUTOMIC_DIMENSIONS.PRV.JOB.FCDI@WINDOWS" ParentAlias="" ParentObject="" Row="2" Text2="">
 <checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
 <when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="0" WElseS="0" WElseX="1" WhenExecute="" WtimOn="0"/>
@@ -114,17 +114,17 @@
 </node>
 <node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
 <node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
-<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI">
-<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI">
-<UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_DSNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_ECDI_ARGSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_ECDI_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_ECDI_FOLDERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_ECDI_FOLDER#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_ECDI_REQ_IDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_ECDI_REQ_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
+<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI">
+<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI">
+<UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_DSNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_FCDI_ARGSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FCDI_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_FCDI_FOLDERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FCDI_FOLDER#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_FCDI_REQUEST_IDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FCDI_REQUEST_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -162,17 +162,17 @@
 <result ChkRExec="0" RElseHalt="0" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
 <dynvalues>
 <dyntree>
-<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI">
-<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI">
-<UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_DSNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_ECDI_ARGSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_ECDI_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_ECDI_FOLDERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_ECDI_FOLDER#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_ECDI_REQ_IDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_ECDI_REQ_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
-<UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI"/>
+<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI">
+<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI">
+<UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_DSNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_FCDI_ARGSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FCDI_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_FCDI_FOLDERs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FCDI_FOLDER#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_FCDI_REQUEST_IDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FCDI_REQUEST_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
+<UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -239,9 +239,9 @@
 <Mode>0</Mode>
 </VALUE>
 </node>
-<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI" parent="PRPTS" type="PROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.ECDI" prptmode="1"/>
+<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI" ontop="1">
+<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FCDI" prptmode="1"/>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
@@ -271,7 +271,33 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Executes a DMCLI ECDI command to check out all the items that are related to a specified request.]]></DOC>
+<DOC><![CDATA[= Name =
+PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FCDI
+
+= General description =
+Obtains all of the items associated with a given request ID.
+
+When multiple revisions of the same item are related to requests processed by the command, only the latest is processed.
+
+= Inputs =
+* Username: Username to access Serena Dimensions CM.
+* Password: Password to access Serena Dimensions CM.
+* Hostname: Serena Dimensions CM hostname.
+* DBName: Specifies the Serena Dimensions CM database identifier.
+* DSN: Specifies the data source name for connecting to the database.
+* Request ID: The name of a Dimensions request.
+* Folder: Location in which items are fetched into.
+* Optional Arguments: 	Can be used to specify any optional arguments for FCDI.
+
+= Behavior =
+Return 0 if success and > 0 for failure.
+
+= Outputs =
+None 
+
+= Rollback =
+None
+]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
