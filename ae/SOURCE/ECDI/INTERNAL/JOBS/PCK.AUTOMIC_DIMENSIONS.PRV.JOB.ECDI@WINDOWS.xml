@@ -117,8 +117,6 @@
 <SCRIPT mode="1" state="1">
 <MSCRI><![CDATA[! Action to run the Dimensions CM ECDI command through the DMCLI.
 @echo off
-:INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CHANGE_DIRECTORY_TO_AGENT_BIN
-
 :INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.INCLUDE.ECDI_LOGGING_PARAMS
 
 ! Trim parameters
