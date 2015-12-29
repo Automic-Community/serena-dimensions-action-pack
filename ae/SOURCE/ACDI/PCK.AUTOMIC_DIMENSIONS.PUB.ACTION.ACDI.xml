@@ -274,7 +274,33 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Executes a DMCLI ACDI command which actions to a specified state all the items and requests that are related to a specified request.]]></DOC>
+<DOC><![CDATA[= Name =
+PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI
+
+= General description =
+Executes a DMCLI ACDI command which actions to a specified state all the items and requests that are related to a specified request.
+
+= Inputs =
+* Username: Username to access Serena Dimensions CM.
+* Password: Password to access Serena Dimensions CM.
+* Hostname: Serena Dimensions CM hostname.
+* DBName: Specifies the Serena Dimensions CM database identifier.
+* DSN: Specifies the data source name for connecting to the database.
+* Request ID: The name of a Dimensions request.
+* Status: Specifies the status to which the request is to be actioned. If this is not specified, the next default state is used.
+* Workset: Comprises: <product-id>:<project-id>
+Specifies the project to be processed by this command.
+* Optional Arguments: Can be used to specify any optional arguments for ACDI.
+
+= Behavior =
+Return 0 if success and > 0 for failure.
+
+= Outputs =
+None 
+
+= Rollback =
+None
+]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
