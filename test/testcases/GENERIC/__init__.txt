@@ -1,0 +1,3 @@
+*** Settings ***
+Documentation     Testing for action PCK.AUTOMIC_CVS.PUB.ACTION.ADD
+Force Tags        ADD
