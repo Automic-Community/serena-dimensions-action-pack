@@ -1,0 +1,47 @@
+*** Settings ***
+Default Tags      win
+Test Template     ECDI Template
+Resource          ../../resources/keywords.txt
+
+*** Variables ***
+${SPACE}          " "
+
+*** Test Cases ***    OK_NOK    USERNAME                               PASSWORD               HOST                                   DN NAME                                   DSN                                   REQUEST                         FOLDER                                     ARGUMENTS                                             RETCODE    STATUS
+1.Successful execute with empty arguments is empty
+                      OK        ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_2                    Qlarius Underwriter                    ${EMPTY}                                              0          ${ENDED_OK}
+
+2.Successful execute with empty arguments is not empty
+                      OK        ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_2                    Qlarius Underwriter                    /LOGFILE="C:\\temp\\hdt\\ECDI.log"                    0          ${ENDED_OK}
+
+3.Successful execute with parameters contain spaces
+                      OK        ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}QLARIUS_CR_2${SPACE}    Qlarius Underwriter    ${SPACE}/LOGFILE="C:\\temp\\hdt\\ECDI.log"${SPACE}    0          ${ENDED_OK}
+
+*** Keywords ***
+ECDI Template
+    [Arguments]    ${OK_NOK}    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}
+    ...    ${request}    ${folder}    ${args}    ${returnCode}    ${returnStatus}
+    [Documentation]    This template used for testing action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ECDI with inputs
+    ...    - ${user}: Username to access Serena Dimensions CM.
+    ...    - ${pass}: Password to access Serena Dimensions CM.
+    ...    - ${host}: Serena Dimensions CM hostname
+    ...    - ${dbname}: Specifies the Serena Dimensions CM database identifier.
+    ...    - ${dsn}: message should be contained in execution report
+    ...    - ${request}: The name of a Dimensions request.
+    ...    - ${folder}: Folder in which files will be extraced to.
+    ...    - ${args}: Optional Arguments, can be used to specify any optional arguments for ECDI.
+    ...    - ${returnCode}: return code of execution
+    ...    - ${returnStatus}: return status of execution
+    Init Action    ${ACTION_ECDI}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${user}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${pass}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${dbname}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${dsn}
+    Action Set    ${UC4RB_DMC_ECDI_REQ_ID}    ${request}
+    Action Set    ${UC4RB_DMC_ECDI_FOLDER}    ${folder}
+    Action Set    ${UC4RB_DMC_ECDI_ARGS}    ${args}
+    Action Execute
+    Action Report Should Be Found
+    Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
+    Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}

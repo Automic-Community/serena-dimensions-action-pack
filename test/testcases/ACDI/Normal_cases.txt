@@ -1,0 +1,49 @@
+*** Settings ***
+Default Tags      win
+Test Template     ACDI Template
+Resource          ../../resources/keywords.txt
+
+*** Variables ***
+${SPACE}          " "
+
+*** Test Cases ***    OK_NOK    USERNAME                               PASSWORD               HOST                                   DN NAME                                   DSN                                   REQUEST                         STATUS        WORKSET                                     ARGUMENTS                                             RETCODE    STATUS
+1.Successful execute with empty arguments is empty
+                      OK        ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_2                    RAISED        QLARIUS:JAVA_BRANCHA_STR                    ${EMPTY}                                              0          ${ENDED_OK}
+
+2.Successful execute with empty arguments is not empty
+                      OK        ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_2                    UNDER WORK    QLARIUS:JAVA_BRANCHA_STR                    /LOGFILE="C:\\temp\\hdt\\ACDI.log"                    0          ${ENDED_OK}
+
+3.Successful execute with parameters contain spaces
+                      OK        ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}QLARIUS_CR_2${SPACE}    IN TEST       ${SPACE}QLARIUS:JAVA_BRANCHA_STR${SPACE}    ${SPACE}/LOGFILE="C:\\temp\\hdt\\ACDI.log"${SPACE}    0          ${ENDED_OK}
+
+*** Keywords ***
+ACDI Template
+    [Arguments]    ${OK_NOK}    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}
+    ...    ${request}    ${status}    ${workset}    ${args}    ${returnCode}    ${returnStatus}
+    [Documentation]    This template used for testing action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI with inputs
+    ...    - ${user}: Username to access Serena Dimensions CM.
+    ...    - ${pass}: Password to access Serena Dimensions CM.
+    ...    - ${host}: Serena Dimensions CM hostname
+    ...    - ${dbname}: Specifies the Serena Dimensions CM database identifier.
+    ...    - ${dsn}: message should be contained in execution report
+    ...    - ${request}: The name of a Dimensions request.
+    ...    - ${status}: Specifies the status to which the request is to be actioned. If this is not specified, the next default state is used.
+    ...    - ${workset}: Comprises: <product-id>:<project-id>. Specifies the project to be processed by this command.
+    ...    - ${args}: Optional Arguments, can be used to specify any optional arguments for ACDI.
+    ...    - ${returnCode}: return code of execution
+    ...    - ${returnStatus}: return status of execution
+    Init Action    ${ACTION_ACDI}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${user}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${pass}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${dbname}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${dsn}
+    Action Set    ${PRT_ACDI_DIMENSIONS_REQUEST_ID}    ${request}
+    Action Set    ${PRT_ACDI_DIMENSIONS_STATUS}    ${status}
+    Action Set    ${PRT_ACDI_DIMENSIONS_WORKSET}    ${workset}
+    Action Set    ${PRT_ACDI_DIMENSIONS_ARGS}    ${args}
+    Action Execute
+    Action Report Should Be Found
+    Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
+    Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
