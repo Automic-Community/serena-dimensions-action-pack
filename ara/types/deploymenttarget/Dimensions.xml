@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Version: 1.0 -->
+<DeploymentTargetType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Deployment_Target.xsd">
+	<Name>Dimensions</Name>
+	<Properties>
+			<!-- Connection -->
+			<Group name="connection" displayName="Connection">
+				<Property name="username" type="SingleLineText" mode="EDITABLE" displayName="Username">
+					<Defaultvalue></Defaultvalue>
+					<Description>Username to access Serena Dimensions CM.</Description>
+				</Property>
+				<Property name="password" type="Protected" mode="EDITABLE" displayName="Password">
+					<Defaultvalue></Defaultvalue>
+					<Description>Password to access Serena Dimensions CM.</Description>
+				</Property>
+				<Property name="hostname" type="SingleLineText" mode="EDITABLE" displayName="Hostname">
+					<Defaultvalue></Defaultvalue>
+					<Description>Serena Dimensions CM hostname.</Description>
+				</Property>
+				<Property name="dbname" type="SingleLineText" mode="EDITABLE" displayName="DBName">
+					<Defaultvalue></Defaultvalue>
+					<Description>Specifies the Serena Dimensions CM database identifier.</Description>
+				</Property>
+				<Property name="dsn" type="SingleLineText" mode="EDITABLE" displayName="DSN">
+					<Defaultvalue></Defaultvalue>
+					<Description>Specifies the data source name for connecting to the database.</Description>
+				</Property>
+			</Group>	
+	</Properties>
+</DeploymentTargetType>

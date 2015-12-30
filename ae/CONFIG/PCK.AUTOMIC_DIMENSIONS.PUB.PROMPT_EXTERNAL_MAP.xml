@@ -26,6 +26,15 @@
 <Variables>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_GEN_COMMAND#" Value="EXT:/dimensions/generic/command" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_GEN_ARGS#" Value="EXT:/dimensions/generic/arguments" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
 </Variables>
 </VARA>
 <DOCU_Docu state="1" type="text">
