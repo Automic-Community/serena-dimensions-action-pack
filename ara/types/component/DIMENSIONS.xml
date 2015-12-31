@@ -59,6 +59,9 @@
             <Property name="directory_filter" displayName="Directory Filter" mode="EDITABLE" type="SingleLineText">
 				<Description>Directory filter to restrict the number of items to be added.</Description>
 			</Property>
+			<Property name="user_directory" displayName="User Directory" mode="EDITABLE" type="SingleLineText">
+				<Description>Specifies the directory to which items are to be fetched. If not set the user's default working area will be used.</Description>
+			</Property>
 			<Property name="request_type" displayName="Request Type" mode="EDITABLE" type="SingleLineText">
 				<Description>Specifies the type of request to be created.</Description>
 			</Property>
@@ -102,6 +105,12 @@
 			</Property>
 			<Property name="report_type" displayName="Report Type" mode="EDITABLE" type="SingleLineText">
 				<Description>Determines which particular report type is returned</Description>
+			</Property>
+			<Property name="delivery_spec" displayName="Delivery Spec" mode="EDITABLE" type="SingleLineText">
+				<Description>Specifies either the name of a file to be delivered, a directory path from where files will be delivered (recursively) or a file spec specifying a file containing a list of filenames to be delivered.</Description>
+			</Property>
+			<Property name="extract_folder" displayName="Extract Folder" mode="EDITABLE" type="SingleLineText">
+				<Description>Folder in which files will be extraced to.</Description>
 			</Property>
 			
 		</Group>
@@ -154,7 +163,7 @@
             <Description>Can be used to specify any optional arguments for ACDI.</Description>
         </Property>
 		<Property name="/dimensions/action_request_items/request_id" highlighted="false">
-            <Value>{custom/request_id}</Value>
+            <Value>{/custom/request_id}</Value>
             <Description>The name of a Dimensions request.</Description>
         </Property>
 		<Property name="/dimensions/action_request_items/status" highlighted="false">
@@ -172,7 +181,7 @@
             <Description>Comma separated list of request names the add item task will be associated with.</Description>
         </Property>
 		<Property name="/dimensions/add_item_revision_to_project/file_name" highlighted="false">
-            <Value>{custom/file_name}</Value>
+            <Value>{/custom/file_name}</Value>
             <Description>Specifies the name of the project file name.</Description>
         </Property>
 		<Property name="/dimensions/add_item_revision_to_project/item_id" highlighted="false">
@@ -188,7 +197,7 @@
             <Description>Product Name</Description>
         </Property>
 		<Property name="/dimensions/add_item_revision_to_project/revision" highlighted="false">
-            <Value>{custom/revision}</Value>
+            <Value>{/custom/revision}</Value>
             <Description>Item Revision.</Description>
         </Property>
 		<Property name="/dimensions/add_item_revision_to_project/varient" highlighted="false">
@@ -210,7 +219,7 @@
             <Description>Directory filter to restrict the number of items to be added.</Description>
         </Property>
 		<Property name="/dimensions/add_request_items_to_project/optional_arguments" highlighted="false">
-            <Value>{custom/optional_arguments}</Value>
+            <Value>{/custom/optional_arguments}</Value>
             <Description>Can be used to specify any optional arguments for ACDWS.</Description>
         </Property>
 		<Property name="/dimensions/add_request_items_to_project/request_id" highlighted="false">
@@ -228,7 +237,7 @@
             <Description>Specifies the name of the file which will be created in the user area, and into which the request will be gotten.</Description>
         </Property>
 		<Property name="/dimensions/browse_request/optional_arguments" highlighted="false">
-            <Value>{custom/optional_arguments}</Value>
+            <Value>{/custom/optional_arguments}</Value>
             <Description>Can be used to specify any optional arguments for BC</Description>
         </Property>
 		<Property name="/dimensions/browse_request/request_id" highlighted="false">
@@ -238,7 +247,7 @@
 		
 		<!--Create Request - CC-->
 		<Property name="/dimensions/create_request/optional_arguments" highlighted="false">
-            <Value>{custom/optional_arguments}</Value>
+            <Value>{/custom/optional_arguments}</Value>
             <Description>Can be used to specify any optional arguments for CC.</Description>
         </Property>
 		<Property name="/dimensions/create_request/product_id" highlighted="false">
@@ -256,7 +265,7 @@
             <Description>Optionally specifies the Dimensions baseline on which to base the new stream</Description>
         </Property>
 		<Property name="/dimensions/create_stream/base_stream" highlighted="false">
-            <Value>{custom/base_stream}</Value>
+            <Value>{/custom/base_stream}</Value>
             <Description>Optionally specifies the stream on which to base the new stream.</Description>
         </Property>
 		<Property name="/dimensions/create_stream/description" highlighted="false">
@@ -284,7 +293,7 @@
             <Description>The comment to apply to all of the newly created item revisions.</Description>
         </Property>
 		<Property name="/dimensions/deliver/change_doc_ids" highlighted="false">
-            <Value>{custom/change_doc_ids}</Value>
+            <Value>{/custom/change_doc_ids}</Value>
             <Description>The requests for the items to be related to. The originally fetched versions will be related as "Affected", and the newly created versions will be "In Response To".</Description>
         </Property>
 		<Property name="/dimensions/deliver/delivery_spec" highlighted="false">
@@ -302,7 +311,7 @@
             <Description>Name of file</Description>
         </Property>
 		<Property name="/dimensions/extract_item/item_id" highlighted="false">
-            <Value>{custom/item_id}</Value>
+            <Value>{/custom/item_id}</Value>
             <Description>Item ID. May be omitted if EXT:/dimensions/Extract_Item/file_name is defined.</Description>
         </Property>
 		<Property name="/dimensions/extract_item/item_type" highlighted="false">
@@ -318,7 +327,7 @@
             <Description>Product Name</Description>
         </Property>
 		<Property name="/dimensions/extract_item/revision" highlighted="false">
-            <Value>{custom/revision}</Value>
+            <Value>{/custom/revision}</Value>
             <Description>Item Revision.</Description>
         </Property>
 		<Property name="/dimensions/extract_item/varient" highlighted="false">
@@ -336,7 +345,7 @@
             <Description>Folder in which files will be extraced to.</Description>
         </Property>
 		<Property name="/dimensions/extract_request_items/optional_arguments" highlighted="false">
-            <Value>{custom/optional_arguments}</Value>
+            <Value>{/custom/optional_arguments}</Value>
             <Description>Can be used to specify any optional arguments for ECDI.</Description>
         </Property>
 		<Property name="/dimensions/extract_request_items/request_id" highlighted="false">
@@ -350,7 +359,7 @@
             <Description>Baseline ID</Description>
         </Property>
 		<Property name="/dimensions/fetch_baseline_items/directory_filter" highlighted="false">
-            <Value>{custom/directory_filter}</Value>
+            <Value>{/custom/directory_filter}</Value>
             <Description>Specifies the directory to which items are to be fetched.</Description>
         </Property>
 		<Property name="/dimensions/fetch_baseline_items/optional_arguments" highlighted="false">
@@ -358,7 +367,7 @@
             <Description>Can be used to specify any optional arguments for FBI.</Description>
         </Property>
 		<Property name="/dimensions/fetch_baseline_items/product_id" highlighted="false">
-            <Value>{custom/product_id}</Value>
+            <Value>{/custom/product_id}</Value>
             <Description>Product ID</Description>
         </Property>
 		<Property name="/dimensions/fetch_baseline_items/user_directory" highlighted="false">
@@ -372,7 +381,7 @@
             <Description>Name of file</Description>
         </Property>
 		<Property name="/dimensions/fetch_item/item_id" highlighted="false">
-            <Value>{custom/item_id}</Value>
+            <Value>{/custom/item_id}</Value>
             <Description>Item ID. May be omitted if 'File name' is defined.</Description>
         </Property>
 		<Property name="/dimensions/fetch_item/item_type" highlighted="false">
@@ -380,7 +389,7 @@
             <Description>Item Type.</Description>
         </Property>
 		<Property name="/dimensions/fetch_item/optional_arguments" highlighted="false">
-            <Value>{custom/optional_arguments}</Value>
+            <Value>{/custom/optional_arguments}</Value>
             <Description>Can be used to specify any optional arguments for FI.</Description>
         </Property>
 		<Property name="/dimensions/fetch_item/product_id" highlighted="false">
@@ -392,7 +401,7 @@
             <Description>Item Revision.</Description>
         </Property>
 		<Property name="/dimensions/fetch_item/varient" highlighted="false">
-            <Value>{custom/varient}</Value>
+            <Value>{/custom/varient}</Value>
             <Description>Varient. May be omitted if only one exists.</Description>
         </Property>
 		<Property name="/dimensions/fetch_item/workset" highlighted="false">
@@ -402,7 +411,7 @@
 		
 		<!-- Fetch (Get) Project Items - FWI -->
 		<Property name="/dimensions/fetch_project_items/directory_filter" highlighted="false">
-            <Value>{custom/directory_filter}</Value>
+            <Value>{/custom/directory_filter}</Value>
             <Description>Specifies the directory to which items are to be fetched.</Description>
         </Property>
 		<Property name="/dimensions/fetch_project_items/optional_arguments" highlighted="false">
@@ -410,11 +419,11 @@
             <Description>Can be used to specify any optional arguments for FWI.</Description>
         </Property>
 		<Property name="/dimensions/fetch_project_items/product_id" highlighted="false">
-            <Value>{custom/product_id}</Value>
+            <Value>{/custom/product_id}</Value>
             <Description>Product ID</Description>
         </Property>
 		<Property name="/dimensions/fetch_project_items/project_id" highlighted="false">
-            <Value>{custom/project_id}</Value>
+            <Value>{/custom/project_id}</Value>
             <Description>Project ID</Description>
         </Property>
 		<Property name="/dimensions/fetch_project_items/user_directory" highlighted="false">
@@ -424,7 +433,7 @@
 		
 		<!-- Fetch Request Items - FCDI  -->
 		<Property name="/dimensions/fetch_request_items/fetch_folder" highlighted="false">
-            <Value>{custom/fetch_folder}</Value>
+            <Value>{/custom/fetch_folder}</Value>
             <Description>Location in which items are fetched into.</Description>
         </Property>
 		<Property name="/dimensions/fetch_request_items/optional_arguments" highlighted="false">
@@ -432,13 +441,13 @@
             <Description>Can be used to specify any optional arguments for FCDI.</Description>
         </Property>
 		<Property name="/dimensions/fetch_request_items/request_id" highlighted="false">
-            <Value>{custom/request_id}</Value>
+            <Value>{/custom/request_id}</Value>
             <Description>The name of a Dimensions request.</Description>
         </Property>
 		
 		<!-- Generic Command - Generic  -->
 		<Property name="/dimensions/generic/arguments" highlighted="false">
-            <Value>{custom/arguments}</Value>
+            <Value>{/custom/arguments}</Value>
             <Description>Specifies any required arguments for the DMCLI command.</Description>
         </Property>
 		<Property name="/dimensions/generic/command" highlighted="false">
@@ -450,7 +459,7 @@
 		
 		<!-- Move Project/Stream Directory - MWSD -->
 		<Property name="/dimensions/move_directory/change_doc_ids" highlighted="false">
-            <Value>{custom/change_doc_ids}</Value>
+            <Value>{/custom/change_doc_ids}</Value>
             <Description>Comma separated list of change ids directory move will be recorded against.</Description>
         </Property>
 		<Property name="/dimensions/move_directory/destination_directory" highlighted="false">
@@ -458,17 +467,17 @@
             <Description>Is the destination directory to move the project/stream structure to.</Description>
         </Property>
 		<Property name="/dimensions/move_directory/source_directory" highlighted="false">
-            <Value>{custom/source_directory}</Value>
+            <Value>{/custom/source_directory}</Value>
             <Description>Is the source directory to move the project/stream structure from.</Description>
         </Property>
 		<Property name="/dimensions/move_directory/workset" highlighted="false">
-            <Value>{custom/workset}</Value>
+            <Value>{/custom/workset}</Value>
             <Description>This optionally specifies the project/stream to be used for this command: failing this, the user's current project/stream will be taken.</Description>
         </Property>
 		
 		<!-- Remove Item Revision from Project - RIWS -->
 		<Property name="/dimensions/remove_item_revision_from_project/change_doc_ids" highlighted="false">
-            <Value>{custom/change_doc_ids}</Value>
+            <Value>{/custom/change_doc_ids}</Value>
             <Description>Comma separated list of request names the add item task will be associated with.</Description>
         </Property>
 		<Property name="/dimensions/remove_item_revision_from_project/file_name" highlighted="false">
@@ -476,15 +485,15 @@
             <Description>Specifies the name of the project file name.</Description>
         </Property>
 		<Property name="/dimensions/remove_item_revision_from_project/item_id" highlighted="false">
-            <Value>{custom/item_id}</Value>
+            <Value>{/custom/item_id}</Value>
             <Description>Item ID. May be omitted if 'File name' is defined.</Description>
         </Property>
 		<Property name="/dimensions/remove_item_revision_from_project/item_type" highlighted="false">
-            <Value>{custom/item_type}</Value>
+            <Value>{/custom/item_type}</Value>
             <Description>Item Type.</Description>
         </Property>
 		<Property name="/dimensions/remove_item_revision_from_project/product_id" highlighted="false">
-            <Value>{custom/product_id}</Value>
+            <Value>{/custom/product_id}</Value>
             <Description>Product Name</Description>
         </Property>
 		<Property name="/dimensions/remove_item_revision_from_project/revision" highlighted="false">
@@ -492,17 +501,17 @@
             <Description>Item Revision.</Description>
         </Property>
 		<Property name="/dimensions/remove_item_revision_from_project/varient" highlighted="false">
-            <Value>{custom/varient}</Value>
+            <Value>{/custom/varient}</Value>
             <Description>Varient. May be omitted if only one exists.</Description>
         </Property>
 		<Property name="/dimensions/remove_item_revision_from_project/workset" highlighted="false">
-            <Value>{custom/workset}</Value>
+            <Value>{/custom/workset}</Value>
             <Description>Workset</Description>
         </Property>
 		
 		<!-- Report Requests - RPT -->
 		<Property name="/dimensions/report_requests/catalogue_type" highlighted="false">
-            <Value>{custom/catalogue_type}</Value>
+            <Value>{/custom/catalogue_type}</Value>
             <Description>Determines the basis for the report. Valid values are:/CATALOGUE - Primary catalog of requests; /CATALOGUE/SECONDARY - Secondary catalog of requests; /PENDING - requests pending to user.</Description>
         </Property>
 		<Property name="/dimensions/report_requests/optional_arguments" highlighted="false">
@@ -510,15 +519,15 @@
             <Description>Can be used to specify any optional arguments for RPT</Description>
         </Property>
 		<Property name="/dimensions/report_requests/product_id" highlighted="false">
-            <Value>{custom/product_id}</Value>
+            <Value>{/custom/product_id}</Value>
             <Description>Product ID report will be generated against.</Description>
         </Property>
 		<Property name="/dimensions/report_requests/report_file" highlighted="false">
-            <Value>{custom/report_file}</Value>
+            <Value>{/custom/report_file}</Value>
             <Description>File where report will be saved.</Description>
         </Property>
 		<Property name="/dimensions/report_requests/report_type" highlighted="false">
-            <Value>{custom/report_type}</Value>
+            <Value>{/custom/report_type}</Value>
             <Description>Determines which particular report type is returned</Description>
         </Property>
 		<Property name="/dimensions/report_requests/request_category" highlighted="false">
@@ -528,7 +537,7 @@
 		
 		<!-- Return (Check In) Item - RI -->
 		<Property name="/dimensions/return_item/file_name" highlighted="false">
-            <Value>{custom/file_name}</Value>
+            <Value>{/custom/file_name}</Value>
             <Description>Name of file</Description>
         </Property>
 		<Property name="/dimensions/return_item/item_id" highlighted="false">
@@ -536,15 +545,15 @@
             <Description>Item ID. May be omitted if EXT:/dimensions/Return_Item/file_name is defined.</Description>
         </Property>
 		<Property name="/dimensions/return_item/item_type" highlighted="false">
-            <Value>{custom/item_type}</Value>
+            <Value>{/custom/item_type}</Value>
             <Description>Item Type.</Description>
         </Property>
 		<Property name="/dimensions/return_item/optional_arguments" highlighted="false">
-            <Value>{custom/optional_arguments}</Value>
+            <Value>{/custom/optional_arguments}</Value>
             <Description>Can be used to specify any optional arguments for RI.</Description>
         </Property>
 		<Property name="/dimensions/return_item/product_id" highlighted="false">
-            <Value>{custom/product_id}</Value>
+            <Value>{/custom/product_id}</Value>
             <Description>Product Name</Description>
         </Property>
 		<Property name="/dimensions/return_item/revision" highlighted="false">
@@ -552,17 +561,17 @@
             <Description>Item Revision.</Description>
         </Property>
 		<Property name="/dimensions/return_item/varient" highlighted="false">
-            <Value>{custom/varient}</Value>
+            <Value>{/custom/varient}</Value>
             <Description>Varient. May be omitted if only one exists.</Description>
         </Property>
 		<Property name="/dimensions/return_item/workset" highlighted="false">
-            <Value>{custom/workset}</Value>
+            <Value>{/custom/workset}</Value>
             <Description>Workset name. If not specified, users current project will be used.</Description>
         </Property>
 		
 		<!-- Update Project/Stream Attributes - UWA -->
 		<Property name="/dimensions/update_attributes/optional_arguments" highlighted="false">
-            <Value>{custom/optional_arguments}</Value>
+            <Value>{/custom/optional_arguments}</Value>
             <Description>Can be used to specify any optional arguments for UWA.</Description>
         </Property>
 		<Property name="/dimensions/update_attributes/product_id" highlighted="false">
@@ -570,52 +579,9 @@
             <Description>Product Name</Description>
         </Property>
 		<Property name="/dimensions/update_attributes/project_id" highlighted="false">
-            <Value>{custom/project_id}</Value>
+            <Value>{/custom/project_id}</Value>
             <Description>Project Name</Description>
         </Property>
-		
-		<!--CONNECTIVITY -->
-		<Property name="/database/jdbc/connection_string" highlighted="false">
-            <Value>{/custom/jdbc_connection_string}</Value>
-            <Description>JDBC connection string. E.g.: jdbc:sqlserver://myServer:1433;databaseName=myDB</Description>
-        </Property>
-		<Property name="/database/jdbc/driver_jar" highlighted="false">
-            <Value>{@target/custom/jdbc_driver_jar}</Value>
-            <Description>URI pointing to the vendor-specific JDBC jar-file</Description>
-        </Property>
-		<Property name="/database/jdbc/driver_class" highlighted="false">
-            <Value>{@target/custom/jdbc_driver_class}</Value>
-            <Description>Name of the class to load when initializing the JDBC connection. E.g "com.microsoft.sqlserver.jdbc.SQLServerDriver"</Description>
-        </Property>
-		<Property name="/database/security/username" highlighted="false">
-            <Value>{@target/custom/username}</Value>
-            <Description>Username used to authenticate with the Database server</Description>
-        </Property>
-		<Property name="/database/security/password" highlighted="false">
-            <Value>{@target/custom/password}</Value>
-            <Description>Password used to authenticate with the Database server</Description>
-        </Property>
-		<Property name="/mssql/name/database_name" protected="false" highlighted="false" type="SingleLineText" allowCustomValues="false" caption="Database Name">
-		  <Value>{/custom/database_name}</Value>
-		  <Description>Name of the database.</Description>
-		</Property>
-	
-		<!-- FILESPECS -->
-		<Property name="/mssql/spec/file_spec" highlighted="false">
-            <Value>{/custom/file_spec}</Value>
-        	<Description>Filespec of the database. Example: PRIMARY (NAME='MyDB_Primary', FILENAME='c:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\data\MyDB_Prm.mdf', SIZE=4MB, MAXSIZE=10MB, FILEGROWTH=1MB)</Description>
-		</Property>
-		
-		<Property name="/mssql/spec/filegroup_spec" highlighted="false">
-            <Value>{/custom/filegroup_spec}</Value>
-        	<Description>Filegroup specification of the database. ( NAME = 'MyDB_FG1_Dat1', FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\data\MyDB_FG1_1.ndf', SIZE = 1MB, MAXSIZE=10MB, FILEGROWTH=1MB), ( NAME = 'MyDB_FG1_Dat2', FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\data\MyDB_FG1_2.ndf', SIZE = 1MB, MAXSIZE=10MB, FILEGROWTH=1MB)</Description>
-		</Property>
- 
-		<Property name="/mssql/spec/log_spec" highlighted="false">
-            <Value>{/custom/log_spec}</Value>
-        	<Description>Log file specification of the database. Example: ( NAME='MyDB_log', FILENAME = 'c:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\data\MyDB.ldf', SIZE=1MB, MAXSIZE=10MB, FILEGROWTH=1MB)</Description>
-		</Property>
-
 
 		<!-- SNAPSHOTS -->
 		<Property name="/snapshot/archive_path" highlighted="false">
