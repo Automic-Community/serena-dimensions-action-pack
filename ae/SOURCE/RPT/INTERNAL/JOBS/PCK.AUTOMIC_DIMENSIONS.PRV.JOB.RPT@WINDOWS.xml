@@ -116,6 +116,9 @@
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
 <MSCRI><![CDATA[! DMCLI RPT command.
+@echo off
+
+:INC PCK.AUTOMIC_DIMENSIONS.PRV.INCLUDE.RPT_LOGGING_PARAMS
 :INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
 ! We must check category as dimensions returns zero for incorrect type.
 : IF &UC4RB_DMC_RPT_CATEGORY# <> 1 OR 2 OR 3 OR 4 OR '%'
