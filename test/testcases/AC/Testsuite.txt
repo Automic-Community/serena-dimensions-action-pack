@@ -7,6 +7,9 @@ Resource          ../../resources/keywords.txt
 1.Successful action request with valid parameters
                       OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_13            ${EMPTY}             ACTION      TEST       0          ${ENDED_OK}     Operation completed
 
+2.Successful action request - closure check with valid parameters
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_13            ${EMPTY}             CLOSURE     TEST       0          ${ENDED_OK}     Operation completed
+
 3.Fail with invalid user
                       NOK       ${_DIMENSIONS_USER}_invalid    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_13            IN TEST              NO CHECK    TEST       0          ${ENDED_NOK}    ${EMPTY}
 
