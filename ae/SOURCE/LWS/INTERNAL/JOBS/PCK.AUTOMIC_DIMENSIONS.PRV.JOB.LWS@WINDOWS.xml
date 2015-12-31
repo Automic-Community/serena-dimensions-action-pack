@@ -125,7 +125,7 @@
 echo === begin output ===
 &UC4RB_DMC_CMD# LWS
 set returncode=%errorlevel%
-echo == end output ===
+echo === end output ===
 
 :INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CHECK_CMDLINE_CMD@WINDOWS]]></MSCRI>
 </SCRIPT>
