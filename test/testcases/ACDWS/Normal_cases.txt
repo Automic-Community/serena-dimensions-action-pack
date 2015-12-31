@@ -1,25 +1,25 @@
 *** Settings ***
 Default Tags      win
-Test Template     ACDWS Template
+Test Template     ACDWS Add Request Items to Project
 Resource          ../../resources/keywords.txt
 
 *** Variables ***
 ${SPACE}          " "
 
-*** Test Cases ***    OK_NOK    USERNAME                               PASSWORD               HOST                                   DN NAME                                   DSN                                   REQUEST                          FILTER       WORKSET                                     ARGUMENTS                                              RETCODE    STATUS
-1.Successful execute with empty arguments is empty
-                      OK        ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_MRG_1                    Documents    QLARIUS:JAVA_BRANCHA_STR                    ${EMPTY}                                               0          ${ENDED_OK}
+*** Test Cases ***    USERNAME                               PASSWORD               HOST                                   DN NAME                                   DSN                                   REQUEST                          FILTER       WORKSET                                     ARGUMENTS                                              RETCODE    STATUS
+1.Successful with empty arguments is empty
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_MRG_1                    Documents    QLARIUS:JAVA_BRANCHA_STR                    ${EMPTY}                                               0          ${ENDED_OK}
 
-2.Successful execute with empty arguments is not empty
-                      OK        ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_MRG_1                    Documents    QLARIUS:JAVA_BRANCHA_STR                    /LOGFILE="C:\\temp\\hdt\\ACDWS.log"                    0          ${ENDED_OK}
+2.Successful with empty arguments is not empty
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_MRG_1                    Documents    QLARIUS:JAVA_BRANCHA_STR                    /LOGFILE="C:\\temp\\hdt\\ACDWS.log"                    0          ${ENDED_OK}
 
-3.Successful execute with parameters contain spaces
-                      OK        ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}QLARIUS_MRG_1${SPACE}    Documents    ${SPACE}QLARIUS:JAVA_BRANCHA_STR${SPACE}    ${SPACE}/LOGFILE="C:\\temp\\hdt\\ACDWS.log"${SPACE}    0          ${ENDED_OK}
+3.Successful with parameters contain spaces
+                      ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}QLARIUS_MRG_1${SPACE}    Documents    ${SPACE}QLARIUS:JAVA_BRANCHA_STR${SPACE}    ${SPACE}/LOGFILE="C:\\temp\\hdt\\ACDWS.log"${SPACE}    0          ${ENDED_OK}
 
 *** Keywords ***
-ACDWS Template
-    [Arguments]    ${OK_NOK}    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}
-    ...    ${request}    ${filter}    ${workset}    ${args}    ${returnCode}    ${returnStatus}
+ACDWS Add Request Items to Project
+    [Arguments]    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}    ${request}
+    ...    ${filter}    ${workset}    ${args}    ${returnCode}    ${returnStatus}
     [Documentation]    This template used for testing action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDWS with inputs
     ...    - ${user}: Username to access Serena Dimensions CM.
     ...    - ${pass}: Password to access Serena Dimensions CM.
@@ -44,6 +44,5 @@ ACDWS Template
     Action Set    ${PRT_ACDWS_DIMENSIONS_ARGS}    ${args}
     Action Execute
     Action Report Should Be Found
-    Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
-    Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Code Should Be    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
