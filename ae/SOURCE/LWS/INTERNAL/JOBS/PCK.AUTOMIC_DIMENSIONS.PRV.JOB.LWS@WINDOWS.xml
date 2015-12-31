@@ -122,12 +122,7 @@
 :INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
 
 ! DMCLI List Projects
-echo === begin output ===
 &UC4RB_DMC_CMD# LWS
-echo === end output ===
-set returncode=%errorlevel%
-IF NOT %RETURNCODE% == 0 exit /b %returncode%
-
 :INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CHECK_CMDLINE_CMD@WINDOWS]]></MSCRI>
 </SCRIPT>
 <OUTPUTSCAN state="1">
