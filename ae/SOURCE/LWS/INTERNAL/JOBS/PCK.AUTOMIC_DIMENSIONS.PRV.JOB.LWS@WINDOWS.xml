@@ -115,15 +115,18 @@
 <PSCRI><![CDATA[:INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.PREPARE_JOB]]></PSCRI>
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[! DMCLI List Projects
-:INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
+<MSCRI><![CDATA[@echo off
 
+:INC PCK.AUTOMIC_DIMENSIONS.PRV.INCLUDE.LWS_LOGGING_PARAMS
+:INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
+:INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
+
+! DMCLI List Projects
 echo === begin output ===
 &UC4RB_DMC_CMD# LWS
 echo === end output ===
 set returncode=%errorlevel%
 IF NOT %RETURNCODE% == 0 exit /b %returncode%
-
 
 :INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CHECK_CMDLINE_CMD@WINDOWS]]></MSCRI>
 </SCRIPT>
@@ -134,8 +137,8 @@ IF NOT %RETURNCODE% == 0 exit /b %returncode%
 <LoginFsc/>
 </OUTPUTSCAN>
 <POST_SCRIPT mode="1" replacementmode="1" state="1">
-<OSCRI><![CDATA[:SET &variableName# = "UC4_RV.VC_DMC.LIST_PROJECTS_&$ACTIVATOR_RUNID#"
-:SET &variablePath# = "RUNBOOK/VERSION_CONTROL/DIMENSIONS/VARIABLES"
+<OSCRI><![CDATA[:SET &variableName# = "PCK.AUTOMIC_DIMENSIONS.PRV.VARA.LIST_PROJECTS_&$ACTIVATOR_RUNID#"
+:SET &variablePath# = "PACKAGES/PCK.AUTOMIC_DIMENSIONS/SOURCE/LWS/INTERNAL/VARIABLES"
 :INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CREATE_PASS_VALUES_VARIABLE
 :SET &process_flag# = 0
 :  SET &hnd# = PREP_PROCESS_REPORT("JOBS",,"REP")
@@ -148,34 +151,34 @@ IF NOT %RETURNCODE% == 0 exit /b %returncode%
 :    SET &PROD_LINE# = str_find(&line#,"Product:")
 :    IF &PROD_LINE# <> 0
 :      SET &PRODUCT# = STR_CUT(&line#,10,18)
-:      SET &PRODUCT#=STR_TRIM(&PRODUCT#)
+:      SET &PRODUCT# = STR_TRIM(&PRODUCT#)
 :      SET &PRJSTRM# = STR_CUT(&line#,39,50)
 :      SET &PRJSTRM# = STR_TRIM(&PRJSTRM#)
-:      SET &KEY#="&PRODUCT#:&PRJSTRM#"
+:      SET &KEY# = "&PRODUCT#:&PRJSTRM#"
 !:      PUT_VAR_COL &variableName#, &KEY# ,1, "&PRODUCT#"
 :    ENDIF
 :    SET &STATUS_LINE# = str_find(&line#,"- Status:")
 :    IF &STATUS_LINE# <> 0
 :      SET &STATUS# = STR_CUT(&line#,11,30)
-:      SET &STATUS#=STR_TRIM(&STATUS#)
+:      SET &STATUS# = STR_TRIM(&STATUS#)
 :      PUT_VAR_COL &variableName#, &KEY# ,1, "&STATUS#"
 :    ENDIF
 :    SET &OWNER_LINE# = str_find(&line#,"- Owner :")
 :    IF &OWNER_LINE# <> 0
 :      SET &OWNER# = STR_CUT(&line#,11,30)
-:      SET &OWNER#=STR_TRIM(&OWNER#)
+:      SET &OWNER# = STR_TRIM(&OWNER#)
 :      PUT_VAR_COL &variableName#, &KEY# ,2, "&OWNER#"
 :    ENDIF
 :    SET &PARENT_LINE# = str_find(&line#,"- Parent:")
 :    IF &PARENT_LINE# <> 0
 :      SET &PARENT# = STR_CUT(&line#,11,120)
-:      SET &PARENT#=STR_TRIM(&PARENT#)
+:      SET &PARENT# = STR_TRIM(&PARENT#)
 :      PUT_VAR_COL &variableName#, &KEY# ,3, "&PARENT#"
 :    ENDIF
 :    SET &PM_LINE# = str_find(&line#,"- Project Manager:")
 :    IF &PM_LINE# <> 0
 :      SET &PM# = STR_CUT(&line#,20,30)
-:      SET &PM#=STR_TRIM(&PM#)
+:      SET &PM# = STR_TRIM(&PM#)
 :      PUT_VAR_COL &variableName#, &KEY# ,4, "&PM#"
 :    ENDIF
 :    ENDIF
