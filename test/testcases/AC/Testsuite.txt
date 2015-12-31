@@ -5,7 +5,7 @@ Resource          ../../resources/keywords.txt
 
 *** Test Cases ***    OK_NOK    USERNAME                       PASSWORD                       HOST                           DN NAME                           DSN                           REQUEST ID                 STATUS               CHECK       COMMENT    RETCODE    STATUS          REPORT MESSAGE
 1.Successful action request with valid parameters
-                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_13            UNDER WORK           NO CHECK    TEST       0          ${ENDED_OK}     Operation completed
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_13            ${EMPTY}             ACTION      TEST       0          ${ENDED_OK}     Operation completed
 
 3.Fail with invalid user
                       NOK       ${_DIMENSIONS_USER}_invalid    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_13            IN TEST              NO CHECK    TEST       0          ${ENDED_NOK}    ${EMPTY}
@@ -26,7 +26,7 @@ Resource          ../../resources/keywords.txt
                       NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_13_invalid    IN TEST              NO CHECK    TEST       0          ${ENDED_NOK}    ${EMPTY}
 
 9.Fail with invalid status
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_13_invalid    NO_STATUS_Invalid    NO CHECK    TEST       0          ${ENDED_NOK}    ${EMPTY}
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_13            NO_STATUS_Invalid    NO CHECK    TEST       0          ${ENDED_NOK}    ${EMPTY}
 
 *** Keywords ***
 AC Template

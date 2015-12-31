@@ -534,7 +534,11 @@
             <Value>{/custom/request_category}</Value>
             <Description>Determines the basis for the report. Valid values are:/CATALOGUE - Primary catalog of requests; /CATALOGUE/SECONDARY - Secondary catalog of requests; /PENDING - requests pending to user.</Description>
         </Property>
-		
+		<Property name="/dimensions/report_requests/name" highlighted="false">
+            <Value>{/custom/name}</Value>
+            <Description>Determines which particular report type is returned.</Description>
+        </Property>
+
 		<!-- Return (Check In) Item - RI -->
 		<Property name="/dimensions/return_item/file_name" highlighted="false">
             <Value>{/custom/file_name}</Value>

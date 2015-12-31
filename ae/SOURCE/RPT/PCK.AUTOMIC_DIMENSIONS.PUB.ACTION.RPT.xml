@@ -291,11 +291,35 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Executes a DMCLI RPT command to produce a report of all requests associated with the specified product for the specified category.
+<DOC><![CDATA[= RB Name =
+PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT
 
-=Output=
+= General description =
+This function executes a DMCLI RPT command to produce a report of all requests associated with the specified product for the specified category
+= Inputs =
+* Username: Username to access Serena Dimensions CM.
+* Password: Password to access Serena Dimensions CM.
+* Hostname: Serena Dimensions CM hostname.
+* DBName: Specifies the Serena Dimensions CM database identifier
+* DSN: Specifies the data source name for connecting to the database.
+* Product ID: Specifies the product that is to own the new request.
+* Request Category: This is the request category for all requests to appear in the report. Valid values are:
+   - 1 is for bugs or problems.
+   - 2 is for change or enhancement requests.
+   - 3 is for "other".
+   - 4 is reserved for work packages.
+   - % is for requests from all categories
+* Optional Arguments: Can be used to specify any optional arguments for RPT.
+  
+= Behavior =
+Return 0 if success and > 0 for failure.
 
-UC4RB_DMC_FILENAME# The report requests for the product and category will be saved here.]]></DOC>
+= Outputs =
+None 
+
+= Rollback =
+None
+]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

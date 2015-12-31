@@ -291,7 +291,7 @@ This function creates a dimensions request.
 * DSN: Specifies the data source name for connecting to the database.
 * Product ID: Specifies the product that is to own the new request.
 * Request Type: Specifies the type of request to be created.
-* Optional Arguments: Can be used to specify any optional arguments for BC.
+* Optional Arguments: Can be used to specify any optional arguments for CC. User must input Request title and Request description here
   
 = Behavior =
 Return 0 if success and > 0 for failure.
