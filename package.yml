@@ -1,2 +1,16 @@
 name: PCK.AUTOMIC_DIMENSIONS
 source: ae
+
+# binary object resource mapping will be defined here
+binaries:
+  - object: RESOURCES/PCK.AUTOMIC_DIMENSIONS.PRV.CUSTOM_TYPES
+    timestamp: disabled
+    resources: 
+    - name: DEPLOYMENTTARGET#DIMENSIONS#1
+      type: TEXT
+      path: ara/types/deploymenttarget/Dimensions.xml
+      version: 1.0.0
+    - name: COMPONENT#DIMENSIONS#2
+      type: TEXT
+      path: ara/types/component/Dimensions.xml
+      version: 1.0.0
