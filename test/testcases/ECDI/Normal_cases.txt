@@ -37,9 +37,9 @@ ECDI Template
     Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
     Action Set    ${PRT_DIMENSIONS_DBNAME}    ${dbname}
     Action Set    ${PRT_DIMENSIONS_DSN}    ${dsn}
-    Action Set    ${UC4RB_DMC_ECDI_REQ_ID}    ${request}
-    Action Set    ${UC4RB_DMC_ECDI_FOLDER}    ${folder}
-    Action Set    ${UC4RB_DMC_ECDI_ARGS}    ${args}
+    Action Set    ${PRT_ECDI_DIMENSIONS_REQUEST_ID}    ${request}
+    Action Set    ${PRT_ECDI_DIMENSIONS_FOLDER}    ${folder}
+    Action Set    ${PRT_ECDI_DIMENSIONS_ARGS}    ${args}
     Action Execute
     Action Report Should Be Found
     Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
