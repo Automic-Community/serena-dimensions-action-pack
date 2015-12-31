@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
-<JOBP AllowExternal="1" name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.LWS">
+<JOBP AllowExternal="1" name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC">
 <XHEADER state="1">
-<Title>DMCLI List Projects - LWS</Title>
+<Title>DMCLI Generic Command</Title>
 <ArchiveKey1/>
 <ArchiveKey2/>
 <Active>1</Active>
@@ -52,14 +52,16 @@
 <result ChkRExec="0" RElseHalt="0" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
 <dynvalues>
 <dyntree>
-<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS">
-<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS">
-<UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
-<UC4RB_DMC_DSNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
-<UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
-<UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
-<UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
+<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC">
+<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC">
+<UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_DSNs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_GEN_ARGSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_GEN_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_GEN_COMMANDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_GEN_COMMAND#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_HOSTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC">--10</UC4RB_DMC_PASSWORDs.00>
+<UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -81,10 +83,10 @@
 </PostCon>
 </postconditions>
 </task>
-<task Alias="" BranchType="0" Col="2" Lnr="2" OType="JOBS" Object="PCK.AUTOMIC_DIMENSIONS.PRV.JOB.LWS@WINDOWS" ParentAlias="" ParentObject="" Row="2" Text2="">
+<task Alias="" BranchType="0" Col="2" Lnr="2" OType="JOBS" Object="PCK.AUTOMIC_DIMENSIONS.PRV.JOB.GENERIC@WINDOWS" ParentAlias="" ParentObject="" Row="2" Text2="">
 <checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
-<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="0" WElseS="0" WElseX="1" WhenExecute="" WtimOn="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
 <preconditions>
 <PreCon>
 <conditions id="CONDITIONS"/>
@@ -105,22 +107,22 @@
 </node>
 <node content="1" id="PVALUE" name="Parent Variables" parent="" type="TASKVALUE">
 <VALUE state="2">
-<Values>
-<row ERTUsage="0" Mod="0" Name="&amp;UC4RB_PROJECTS_LIST#" Value=""/>
-</Values>
+<Values/>
 <Mode>0</Mode>
 </VALUE>
 </node>
 <node content="1" id="PRPTS" name="PromptSets" parent="" pref="1" type="PROMPTSET"/>
 <node content="0" id="PPRPTS" name="Parent PromptSets" parent="" type="PPROMPTSET"/>
-<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS">
-<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS">
-<UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
-<UC4RB_DMC_DSNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
-<UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
-<UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
-<UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
+<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC">
+<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC">
+<UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_DSNs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_GEN_ARGSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_GEN_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_GEN_COMMANDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_GEN_COMMAND#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_HOSTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC">--10</UC4RB_DMC_PASSWORDs.00>
+<UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -145,7 +147,7 @@
 <task Alias="" BranchType="0" Col="3" Lnr="3" OType="&lt;END&gt;" Object="END" ParentAlias="" ParentObject="" Row="2" Text2="">
 <checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
-<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="0" WElseS="0" WElseX="1" WhenExecute="" WtimOn="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
 <preconditions>
 <PreCon>
 <conditions id="CONDITIONS"/>
@@ -158,14 +160,16 @@
 <result ChkRExec="0" RElseHalt="0" RElseIgn="0" RElseJPAbend="0" RExecFlag="0" RExecute="" RRepMTimes="0" RRepOn="0" RRepWait="0" RWhen=""/>
 <dynvalues>
 <dyntree>
-<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS" parent="PPRPTS" type="PPROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS">
-<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS">
-<UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
-<UC4RB_DMC_DSNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
-<UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
-<UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
-<UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS"/>
+<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC" parent="PPRPTS" type="PPROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC">
+<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC">
+<UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_DSNs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_GEN_ARGSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_GEN_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_GEN_COMMANDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_GEN_COMMAND#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_HOSTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
+<UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC">--10</UC4RB_DMC_PASSWORDs.00>
+<UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -228,15 +232,21 @@
 <dyntree>
 <node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
 <VALUE state="1">
-<Values>
-<row ERTUsage="0" Name="&amp;UC4RB_PROJECTS_LIST#" Value=""/>
-</Values>
+<Values/>
 <Mode>0</Mode>
 </VALUE>
 </node>
-<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS" parent="PRPTS" type="PROMPTSET">
-<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.LWS" prptmode="1"/>
+<node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC" ontop="1">
+<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.GENERIC" prptmode="1">
+<UC4RB_DMC_USERNAMEs.00 altview="0" haslist="0"/>
+<UC4RB_DMC_PASSWORDs.00 altview="0" haslist="0">--10</UC4RB_DMC_PASSWORDs.00>
+<UC4RB_DMC_HOSTs.00 altview="0" haslist="0"/>
+<UC4RB_DMC_DBNAMEs.00 altview="0" haslist="0"/>
+<UC4RB_DMC_DSNs.00 altview="0" haslist="0"/>
+<UC4RB_DMC_GEN_COMMANDs.00 altview="0" haslist="0"/>
+<UC4RB_DMC_GEN_ARGSs.00 altview="0" haslist="0"/>
+</PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
@@ -266,12 +276,30 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Executes a DMCLI LWS command to produce a list of all projects currently in use.
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC
+ 
+= General description =
+This action can execute any DMCLI command based on the command string defined by the user in accordance with the DMCLI Command Reference document.
+= Inputs =
+Username: Username to access Serena Dimensions CM.
+Password : Password to access Serena Dimensions CM.
+Hostname: Serena Dimensions CM hostname.
+DBName: Specifies the Serena Dimensions CM database identifier.
+DSN: Specifies the data source name for connecting to the database.
+Command: Specifies a single Dimensions command to be executed.
+Arguments: Specifies any required arguments for the DMCLI command.
 
-For each project, the associated product, project-id, project-status, project-owner (the user who created the project), associated project, and users with the role of WORKSET-MANAGER are returned. If the user specifies a file location for the project list, then the output is written to the file. Otherwise, the information is displayed in the console output.
-
-=Output=
-UC4RB_PROJECTS_LIST# Stores a name of a variable which contains a list of projects currently in use.]]></DOC>
+= Behavior =
+0 if successful, >0 otherwise.
+= Outputs =
+Output will be directed to variables, external files and folders defined within the arguments string.
+= Rollback =
+(none)
+= Logging =
+(none)
+= Example =
+(none)]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

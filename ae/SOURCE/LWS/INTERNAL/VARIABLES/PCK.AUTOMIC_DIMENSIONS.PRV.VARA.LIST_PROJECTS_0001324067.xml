@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<VARA OVD_VRName="FREI" data_type="STATIC" name="PCK.AUTOMIC_DIMENSIONS.PRV.VARA.LIST_PROJECTS_0001324067" replacementmode="2">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType>STATIC</OH_SubType>
+</HEADER>
+<ATTR_VARA state="1">
+<Type>C|Text</Type>
+<lblSource>Static</lblSource>
+<source>STATIC</source>
+<VRName>FREI|Freely selected</VRName>
+<NotFoundErr>0</NotFoundErr>
+<NotFoundDef>1</NotFoundDef>
+<ShareN>0</ShareN>
+<ShareL>0</ShareL>
+<ShareR>0</ShareR>
+<MaxValue_C>1024</MaxValue_C>
+<CheckMax_C>0</CheckMax_C>
+<uppercase>0</uppercase>
+<sortColumn>0</sortColumn>
+<sortDirection>0</sortDirection>
+</ATTR_VARA>
+<VARA state="1">
+<Variables>
+<row Name="$GENERIC:$GLOBAL" Value="UNLOCKED" Value1="DMSYS" Value2="" Value3="" Value4=""/>
+<row Name="QLARIUS:JAVA_BRANCHA_PRJ" Value="OPEN" Value1="DMSYS" Value2="" Value3="DMSYS" Value4=""/>
+<row Name="QLARIUS:MAINLINE_JAVA_PRJ" Value="OPEN" Value1="DMSYS" Value2="" Value3="DMSYS" Value4=""/>
+<row Name="QLARIUS:MAINLINE_JAVA_STR" Value="OPEN" Value1="DMSYS" Value2="" Value3="DMSYS" Value4=""/>
+<row Name="QLARIUS:MAINLINE_VS_PRJ" Value="OPEN" Value1="DMSYS" Value2="" Value3="DMSYS" Value4=""/>
+<row Name="QLARIUS:MAINLINE_VS_STR" Value="OPEN" Value1="DMSYS" Value2="" Value3="DMSYS" Value4=""/>
+<row Name="QLARIUS:TEST_STR" Value="OPEN" Value1="DMSYS" Value2="QLARIUS:MAINLINE_JAVA_STR (Project)" Value3="DMSYS" Value4=""/>
+<row Name="QLARIUS:VS_BRANCHA_PRJ" Value="OPEN" Value1="DMSYS" Value2="" Value3="DMSYS" Value4=""/>
+<row Name="QLARIUS:VS_BRANCHA_STR" Value="OPEN" Value1="DMSYS" Value2="QLARIUS:MAINLINE_VS_STR (Project)" Value3="DMSYS" Value4=""/>
+</Variables>
+</VARA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</VARA>
+</uc-export>

@@ -34,7 +34,7 @@ Generic Template
     ...    - ${pass}: Password to access Serena Dimensions CM.
     ...    - ${host}: Serena Dimensions CM hostname
     ...    - ${dbname}: Specifies the Serena Dimensions CM database identifier.
-    ...    - ${dsn}: message should be contained in execution report
+    ...    - ${dsn}: Specifies the data source name for connecting to the database.
     ...    - ${command}: Specifies the data source name for connecting to the database.
     ...    - ${args}: Specifies any required arguments for the DMCLI command.
     ...    - ${returnCode}: return code of execution
