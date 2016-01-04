@@ -1,0 +1,55 @@
+*** Settings ***
+Default Tags      win
+Test Template     ECDI Extract (Check Out) Request Items
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    USERNAME                               PASSWORD               HOST                                   DN NAME                                   DSN                                   REQUEST                         FOLDER                                     ARGUMENTS                                             RETCODE    STATUS
+1.Failed with invalid Username
+                      Invalid_${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_2                    Qlarius Underwriter                    ${EMPTY}                                              0          ${ENDED_NOK}
+
+2.Failed with invalid Password
+                      ${_DIMENSIONS_USER}                    Invalid_${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_2                    Qlarius Underwriter                    ${EMPTY}                                              0          ${ENDED_NOK}
+
+3.Failed with invalid Host
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    Invalid_${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_2                    Qlarius Underwriter                    ${EMPTY}                                              0          ${ENDED_NOK}
+                      
+4.Failed with invalid DB Name
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    Invalid_${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_2                    Qlarius Underwriter                    ${EMPTY}                                              0          ${ENDED_NOK}
+                      
+5.Failed with invalid DSN
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    Invalid_${_DIMENSIONS_DSN}                    QLARIUS_CR_2                    Qlarius Underwriter                    ${EMPTY}                                              0          ${ENDED_NOK}
+
+6.Failed with invalid Request
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    Invalid_QLARIUS_CR_2                    Qlarius Underwriter                    ${EMPTY}                                              0          ${ENDED_NOK}
+                      
+7.Failed with invalid Arguments
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_2                    Qlarius Underwriter                    /INVALID="INVALID"                                              0          ${ENDED_NOK}
+
+*** Keywords ***
+ECDI Extract (Check Out) Request Items
+    [Arguments]    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}
+    ...    ${request}    ${folder}    ${args}    ${returnCode}    ${returnStatus}
+    [Documentation]    This template used for testing action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ECDI with inputs
+    ...    - ${user}: Username to access Serena Dimensions CM.
+    ...    - ${pass}: Password to access Serena Dimensions CM.
+    ...    - ${host}: Serena Dimensions CM hostname
+    ...    - ${dbname}: Specifies the Serena Dimensions CM database identifier.
+    ...    - ${dsn}: message should be contained in execution report
+    ...    - ${request}: The name of a Dimensions request.
+    ...    - ${folder}: Folder in which files will be extraced to.
+    ...    - ${args}: Optional Arguments, can be used to specify any optional arguments for ECDI.
+    ...    - ${returnCode}: return code of execution
+    ...    - ${returnStatus}: return status of execution
+    Init Action    ${ACTION_ECDI}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${user}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${pass}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${dbname}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${dsn}
+    Action Set    ${PRT_ECDI_DIMENSIONS_REQUEST_ID}    ${request}
+    Action Set    ${PRT_ECDI_DIMENSIONS_FOLDER}    ${folder}
+    Action Set    ${PRT_ECDI_DIMENSIONS_ARGS}    ${args}
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
