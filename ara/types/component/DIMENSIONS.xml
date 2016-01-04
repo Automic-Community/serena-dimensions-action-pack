@@ -50,8 +50,8 @@
 			<Property name="revision" displayName="Revision" mode="EDITABLE" type="SingleLineText">
 				<Description>Item Revision.</Description>
 			</Property>
-			<Property name="varient" displayName="Varient" mode="EDITABLE" type="SingleLineText">
-				<Description>Varient. May be omitted if only one exists.</Description>
+			<Property name="variant" displayName="Variant" mode="EDITABLE" type="SingleLineText">
+				<Description>Variant. May be omitted if only one exists.</Description>
 			</Property>
 			<Property name="ws_filename" displayName="WS Filename" mode="EDITABLE" type="SingleLineText">
 				<Description>The WS_FILENAME qualifier specifies the workset filename for the item when adding the item to a project.</Description>
@@ -122,7 +122,7 @@
             <Value>{@target/custom/username}</Value>
             <Description>Username to access Serena Dimensions CM.</Description>
         </Property>
-		<Property name="/dimensions/password" highlighted="false">
+		<Property name="/dimensions/password" highlighted="false" type="Protected">
             <Value>{@target/custom/password}</Value>
             <Description>Password to access Serena Dimensions CM.</Description>
         </Property>
@@ -200,9 +200,9 @@
             <Value>{/custom/revision}</Value>
             <Description>Item Revision.</Description>
         </Property>
-		<Property name="/dimensions/add_item_revision_to_project/varient" highlighted="false">
-            <Value>{/custom/varient}</Value>
-            <Description>Varient. May be omitted if only one exists.</Description>
+		<Property name="/dimensions/add_item_revision_to_project/variant" highlighted="false">
+            <Value>{/custom/variant}</Value>
+            <Description>Variant. May be omitted if only one exists.</Description>
         </Property>
 		<Property name="/dimensions/add_item_revision_to_project/workset" highlighted="false">
             <Value>{/custom/workset}</Value>
@@ -312,7 +312,7 @@
         </Property>
 		<Property name="/dimensions/extract_item/item_id" highlighted="false">
             <Value>{/custom/item_id}</Value>
-            <Description>Item ID. May be omitted if EXT:/dimensions/Extract_Item/file_name is defined.</Description>
+            <Description>Item ID. May be omitted if 'File name' is defined.</Description>
         </Property>
 		<Property name="/dimensions/extract_item/item_type" highlighted="false">
             <Value>{/custom/item_type}</Value>
@@ -320,19 +320,19 @@
         </Property>
 		<Property name="/dimensions/extract_item/optional_arguments" highlighted="false">
             <Value>{/custom/optional_arguments}</Value>
-            <Description>an be used to specify any optional arguments for EI.</Description>
+            <Description>Can be used to specify any optional arguments for EI.</Description>
         </Property>
 		<Property name="/dimensions/extract_item/product_id" highlighted="false">
             <Value>{/custom/product_id}</Value>
-            <Description>Product Name</Description>
+            <Description>Specifies the product for update.</Description>
         </Property>
 		<Property name="/dimensions/extract_item/revision" highlighted="false">
             <Value>{/custom/revision}</Value>
             <Description>Item Revision.</Description>
         </Property>
-		<Property name="/dimensions/extract_item/varient" highlighted="false">
-            <Value>{/custom/varient}</Value>
-            <Description>Varient. May be omitted if only one exists.</Description>
+		<Property name="/dimensions/extract_item/variant" highlighted="false">
+            <Value>{/custom/variant}</Value>
+            <Description>Variant. May be omitted if only one exists.</Description>
         </Property>
 		<Property name="/dimensions/extract_item/workset" highlighted="false">
             <Value>{/custom/workset}</Value>
@@ -400,9 +400,9 @@
             <Value>{/custom/revision}</Value>
             <Description>Item Revision.</Description>
         </Property>
-		<Property name="/dimensions/fetch_item/varient" highlighted="false">
-            <Value>{/custom/varient}</Value>
-            <Description>Varient. May be omitted if only one exists.</Description>
+		<Property name="/dimensions/fetch_item/variant" highlighted="false">
+            <Value>{/custom/variant}</Value>
+            <Description>Variant. May be omitted if only one exists.</Description>
         </Property>
 		<Property name="/dimensions/fetch_item/workset" highlighted="false">
             <Value>{/custom/workset}</Value>
@@ -500,9 +500,9 @@
             <Value>{/custom/revision}</Value>
             <Description>Item Revision.</Description>
         </Property>
-		<Property name="/dimensions/remove_item_revision_from_project/varient" highlighted="false">
-            <Value>{/custom/varient}</Value>
-            <Description>Varient. May be omitted if only one exists.</Description>
+		<Property name="/dimensions/remove_item_revision_from_project/variant" highlighted="false">
+            <Value>{/custom/variant}</Value>
+            <Description>Variant. May be omitted if only one exists.</Description>
         </Property>
 		<Property name="/dimensions/remove_item_revision_from_project/workset" highlighted="false">
             <Value>{/custom/workset}</Value>
@@ -542,7 +542,7 @@
         </Property>
 		<Property name="/dimensions/return_item/item_id" highlighted="false">
             <Value>{/custom/item_id}</Value>
-            <Description>Item ID. May be omitted if EXT:/dimensions/Return_Item/file_name is defined.</Description>
+            <Description>Item ID. May be omitted if 'File name' is defined.</Description>
         </Property>
 		<Property name="/dimensions/return_item/item_type" highlighted="false">
             <Value>{/custom/item_type}</Value>
@@ -560,9 +560,9 @@
             <Value>{/custom/revision}</Value>
             <Description>Item Revision.</Description>
         </Property>
-		<Property name="/dimensions/return_item/varient" highlighted="false">
-            <Value>{/custom/varient}</Value>
-            <Description>Varient. May be omitted if only one exists.</Description>
+		<Property name="/dimensions/return_item/variant" highlighted="false">
+            <Value>{/custom/variant}</Value>
+            <Description>Variant. May be omitted if only one exists.</Description>
         </Property>
 		<Property name="/dimensions/return_item/workset" highlighted="false">
             <Value>{/custom/workset}</Value>
