@@ -4,10 +4,16 @@ Test Template     AC Template
 Resource          ../../resources/keywords.txt
 
 *** Test Cases ***    OK_NOK    USERNAME                       PASSWORD                       HOST                           DN NAME                           DSN                           REQUEST ID                 STATUS               CHECK       COMMENT    RETCODE    STATUS          REPORT MESSAGE
-1.Successful action request with valid parameters
+1.Successful action request with valid parameters_ACTION
                       OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_13            ${EMPTY}             ACTION      TEST       0          ${ENDED_OK}     Operation completed
 
-2.Successful action request - closure check with valid parameters
+1+.Successful action request with valid parameters_NOCHECK
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_15            Under Work           NO CHECK    TEST       0          ${ENDED_OK}     Operation completed
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_15            Peer Review          NO CHECK    TEST       0          ${ENDED_OK}     Operation completed
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_15            Closed               NO CHECK    TEST       0          ${ENDED_OK}     Operation completed
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_15            Raised               NO CHECK    TEST       0          ${ENDED_OK}     Operation completed
+
+2.Successful action request - closure check with valid parameters_CLOSURE
                       OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_TASK_13            ${EMPTY}             CLOSURE     TEST       0          ${ENDED_OK}     Operation completed
 
 3.Fail with invalid user

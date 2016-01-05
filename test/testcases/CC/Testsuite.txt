@@ -3,27 +3,42 @@ Default Tags      win
 Test Template     CC Template
 Resource          ../../resources/keywords.txt
 
-*** Test Cases ***    OK_NOK    USERNAME                       PASSWORD                       HOST                           DN NAME                           DSN                           PRODUCT ID         REQUEST TYPE    ARGS                                                              RETCODE    STATUS          REPORT MESSAGE
-1.Successful action request with valid parameters
-                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            /ATTRIB=(TITLE="I can create request nowq") /DESC=C:\\desc.txt    0          ${ENDED_OK}     Operation completed
+*** Test Cases ***    OK_NOK    USERNAME                       PASSWORD                       HOST                           DN NAME                           DSN                           PRODUCT ID         REQUEST TYPE    ARGS                                                                                   RETCODE    STATUS          REPORT MESSAGE
+1.Successful action request with valid parameters_TASK
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            /ATTRIB=(TITLE="I can create request nowq") /DESC=C:\\desc.txt                         0          ${ENDED_OK}     Operation completed
 
-2.Fail with invalid user
-                      NOK       ${_DIMENSIONS_USER}_invalid    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt     0          ${ENDED_NOK}    ${EMPTY}
+2.Successful action request with valid parameters_MRG
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            MRG             /ATTRIB=(TITLE="I can create request nowq") /DESC=C:\\desc.txt                         0          ${ENDED_OK}     Operation completed
 
-3.Fail with invalid password
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}_invalid    ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt     0          ${ENDED_NOK}    ${EMPTY}
+3.Successful action request with valid parameters_CR
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            CR              /ATTRIB=(TITLE="I can create request nowq", SEVERITY=Never Do) /DESC="C:\\desc.txt"    0          ${ENDED_OK}     Operation completed
 
-4.Fail with invalid host
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}_invalid    ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt     0          ${ENDED_NOK}    ${EMPTY}
+4.Successful action request with valid parameters_BR
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            BR              /ATTRIB=(TITLE="I can create request nowq") /DESC=C:\\desc.txt                         0          ${ENDED_OK}     Operation completed
 
-5.Fail with invalid database name
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}_invalid    ${_DIMENSIONS_DSN}            QLARIUS            TASK            /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt     0          ${ENDED_NOK}    ${EMPTY}
+5.Fail with invalid user
+                      NOK       ${_DIMENSIONS_USER}_invalid    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt                          0          ${ENDED_NOK}    ${EMPTY}
 
-6.Fail with invalid dsn
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}_invalid    QLARIUS            TASK            /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt     0          ${ENDED_NOK}    ${EMPTY}
+6.Fail with invalid password
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}_invalid    ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt                          0          ${ENDED_NOK}    ${EMPTY}
 
-7.Fail with invalid product id
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_invalid    TASK            /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt     0          ${ENDED_NOK}    ${EMPTY}
+7.Fail with invalid host
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}_invalid    ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt                          0          ${ENDED_NOK}    ${EMPTY}
+
+8.Fail with invalid database name
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}_invalid    ${_DIMENSIONS_DSN}            QLARIUS            TASK            /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt                          0          ${ENDED_NOK}    ${EMPTY}
+
+9.Fail with invalid dsn
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}_invalid    QLARIUS            TASK            /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt                          0          ${ENDED_NOK}    ${EMPTY}
+
+10.Fail with invalid product id
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_invalid    TASK            /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt                          0          ${ENDED_NOK}    ${EMPTY}
+
+11.Fail with invalid request type
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK_invalid    /ATTRIB=(TITLE="I can create request now") /DESC=C:\\desc.txt                          0          ${ENDED_NOK}    ${EMPTY}
+
+12.Fail with invalid optional arguments
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            /ATTRIB=(TITLE_invalid="I can create request now") /DESC=C:\\desc.txt                  0          ${ENDED_NOK}    ${EMPTY}
 
 *** Keywords ***
 CC Template
