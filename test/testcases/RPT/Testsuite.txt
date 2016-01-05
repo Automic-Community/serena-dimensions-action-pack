@@ -3,45 +3,42 @@ Default Tags      win
 Test Template     RPT Template
 Resource          ../../resources/keywords.txt
 
-*** Test Cases ***    OK_NOK    USERNAME                       PASSWORD                       HOST                           DN NAME                           DSN                           PRODUCT ID         CATEGORY    NAME                   CATALOGUE               FILENAME                  ARGS        RETCODE    STATUS          REPORT MESSAGE
+*** Test Cases ***    OK_NOK    USERNAME                       PASSWORD                       HOST                           DN NAME                           DSN                           PRODUCT ID         CATEGORY    NAME                   CATALOGUE               FILENAME             ARGS        RETCODE    STATUS          REPORT MESSAGE
 1.Successful action request with valid parameters_RequestType_%
-                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html         ${EMPTY}    0          ${ENDED_OK}     Operation completed
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_OK}     Operation completed
 
-1+.Successful action request with valid parameters_RequestType_1
-                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            1           CH_DOC_LIST            /CATALOGUE              workpack_all.html         ${EMPTY}    0          ${ENDED_OK}     Operation completed
+2.Successful action request with valid parameters_RequestType_1
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            1           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_OK}     Operation completed
 
-1++.Successful action request with valid parameters_RequestType_2
-                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            2           CH_DOC_LIST            /CATALOGUE/SECONDARY    workpack_all.html         ${EMPTY}    0          ${ENDED_OK}     Operation completed
+3.Successful action request with valid parameters_RequestType_2
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            2           CH_DOC_LIST            /CATALOGUE/SECONDARY    workpack_all.html    ${EMPTY}    0          ${ENDED_OK}     Operation completed
 
-1+++.Successful action request with valid parameters_RequestType_3
-                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            3           CH_DOC_LIST            /CATALOGUE              workpack_all.html         ${EMPTY}    0          ${ENDED_OK}     Operation completed
+4.Successful action request with valid parameters_RequestType_3
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            3           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_OK}     Operation completed
 
-1++++.Successful action request with valid parameters_RequestType_4
-                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            4           CH_DOC_LIST            /PENDING                workpack_all.html         ${EMPTY}    0          ${ENDED_OK}     Operation completed
+5.Successful action request with valid parameters_RequestType_4
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            4           CH_DOC_LIST            /PENDING                workpack_all.html    ${EMPTY}    0          ${ENDED_OK}     Operation completed
 
-2.Fail with invalid user
-                      NOK       ${_DIMENSIONS_USER}_invalid    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html         ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+6.Fail with invalid user
+                      NOK       ${_DIMENSIONS_USER}_invalid    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
 
-3.Fail with invalid password
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}_invalid    ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html         ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+7.Fail with invalid password
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}_invalid    ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
 
-4.Fail with invalid host
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}_invalid    ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html         ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+8.Fail with invalid host
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}_invalid    ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
 
-5.Fail with invalid database name
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}_invalid    ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html         ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+9.Fail with invalid database name
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}_invalid    ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
 
-6.Fail with invalid dsn
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}_invalid    QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html         ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+10.Fail with invalid dsn
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}_invalid    QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
 
-7.Fail with invalid product id
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_Invalid    %           CH_DOC_LIST            /CATALOGUE              workpack_all.html         ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+11.Fail with invalid product id
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_Invalid    %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
 
-8.Fail with invalid report type (name)
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST_invalid    /CATALOGUE              workpack_all.html         ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
-
-9.Fail with invalid filename
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              ggg:\workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+12.Fail with invalid report type (name)
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST_invalid    /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
 
 *** Keywords ***
 RPT Template
