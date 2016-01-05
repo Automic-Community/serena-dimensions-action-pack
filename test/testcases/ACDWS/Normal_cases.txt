@@ -6,15 +6,15 @@ Resource          ../../resources/keywords.txt
 *** Variables ***
 ${SPACE}          " "
 
-*** Test Cases ***    USERNAME                               PASSWORD               HOST                                   DN NAME                                   DSN                                   REQUEST                          FILTER       WORKSET                                     ARGUMENTS                                              RETCODE    STATUS
+*** Test Cases ***    USERNAME                               PASSWORD               HOST                                   DN NAME                                   DSN                                   REQUEST                          FILTER       WORKSET                                      ARGUMENTS                                              RETCODE    STATUS
 1.Successful with empty arguments is empty
-                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_MRG_1                    Documents    QLARIUS:JAVA_BRANCHA_STR                    ${EMPTY}                                               0          ${ENDED_OK}
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_34                    Documents    QLARIUS:MAINLINE_JAVA_STR                    ${EMPTY}                                               0          ${ENDED_OK}
 
 2.Successful with empty arguments is not empty
-                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_MRG_1                    Documents    QLARIUS:JAVA_BRANCHA_STR                    /LOGFILE="C:\\temp\\hdt\\ACDWS.log"                    0          ${ENDED_OK}
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_34                    Documents    QLARIUS:MAINLINE_JAVA_STR                    /LOGFILE="C:\\temp\\hdt\\ACDWS.log"                    0          ${ENDED_OK}
 
 3.Successful with parameters contain spaces
-                      ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}QLARIUS_MRG_1${SPACE}    Documents    ${SPACE}QLARIUS:JAVA_BRANCHA_STR${SPACE}    ${SPACE}/LOGFILE="C:\\temp\\hdt\\ACDWS.log"${SPACE}    0          ${ENDED_OK}
+                      ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}QLARIUS_CR_34${SPACE}    Documents    ${SPACE}QLARIUS:MAINLINE_JAVA_STR${SPACE}    ${SPACE}/LOGFILE="C:\\temp\\hdt\\ACDWS.log"${SPACE}    0          ${ENDED_OK}
 
 *** Keywords ***
 ACDWS Add Request Items to Project

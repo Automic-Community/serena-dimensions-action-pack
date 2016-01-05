@@ -7,15 +7,15 @@ Resource          ../../resources/keywords.txt
 *** Variables ***
 ${SPACE}          " "
 
-*** Test Cases ***    USERNAME                               PASSWORD               HOST                                   DN NAME                                   DSN                                   REQUEST                         STATUS        WORKSET                                     ARGUMENTS                                             RETCODE    STATUS
+*** Test Cases ***    USERNAME                               PASSWORD               HOST                                   DN NAME                                   DSN                                   REQUEST                          STATUS        WORKSET                                      ARGUMENTS                                             RETCODE    STATUS
 1.Successful with empty arguments is empty
-                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_2                    UNDER WORK    QLARIUS:JAVA_BRANCHA_STR                    ${EMPTY}                                              0          ${ENDED_OK}
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_33                    UNDER WORK    QLARIUS:MAINLINE_JAVA_STR                    ${EMPTY}                                              0          ${ENDED_OK}
 
 2.Successful with empty arguments is not empty
-                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_2                    IN TEST       QLARIUS:JAVA_BRANCHA_STR                    /LOGFILE="C:\\temp\\hdt\\ACDI.log"                    0          ${ENDED_OK}
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS_CR_33                    IN TEST       QLARIUS:MAINLINE_JAVA_STR                    /LOGFILE="C:\\temp\\hdt\\ACDI.log"                    0          ${ENDED_OK}
 
 3.Successful with parameters contain spaces
-                      ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}QLARIUS_CR_2${SPACE}    CLOSED        ${SPACE}QLARIUS:JAVA_BRANCHA_STR${SPACE}    ${SPACE}/LOGFILE="C:\\temp\\hdt\\ACDI.log"${SPACE}    0          ${ENDED_OK}
+                      ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}QLARIUS_CR_33${SPACE}    CLOSED        ${SPACE}QLARIUS:MAINLINE_JAVA_STR${SPACE}    ${SPACE}/LOGFILE="C:\\temp\\hdt\\ACDI.log"${SPACE}    0          ${ENDED_OK}
 
 *** Keywords ***
 ACDI Action Request Items
@@ -51,5 +51,5 @@ ACDI Action Request Items
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start setup testing for ACDI Action Request Items
-    ACDI Action Request Items    ${_DIMENSIONS_USER}    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}    ${_DIMENSIONS_DB_NAME}    ${_DIMENSIONS_DSN}    QLARIUS_CR_2
-    ...    RAISED    QLARIUS:JAVA_BRANCHA_STR    ${EMPTY}    0    ${ENDED_OK}
+    ACDI Action Request Items    ${_DIMENSIONS_USER}    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}    ${_DIMENSIONS_DB_NAME}    ${_DIMENSIONS_DSN}    QLARIUS_CR_33
+    ...    RAISED    QLARIUS:MAINLINE_JAVA_STR    ${EMPTY}    0    ${ENDED_OK}
