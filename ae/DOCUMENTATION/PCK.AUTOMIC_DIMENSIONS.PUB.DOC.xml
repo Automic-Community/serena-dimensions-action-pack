@@ -19,7 +19,7 @@ Note, that not every single argument option is provided as doing so could make t
 
 =Setup=
 
-* Set environment variable UC4RB_DMC_DMCLI_PATH to the directory that contains the Serena Dimensions DMCLI.exe which is used to interact with Serena Dimensions CM from the command line. 
+* Set environment variable PATH to the directory that contains the Serena Dimensions DMCLI.exe which is used to interact with Serena Dimensions CM from the command line. 
 
 =Rollback=
 
