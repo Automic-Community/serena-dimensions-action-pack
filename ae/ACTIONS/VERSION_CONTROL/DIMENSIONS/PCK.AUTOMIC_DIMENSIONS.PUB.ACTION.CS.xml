@@ -19,10 +19,10 @@
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
 <IntAccount/>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
-<DeactWhen/>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
+<DeactWhen>ANY_OK</DeactWhen>
 <AutoDeactAlways>0</AutoDeactAlways>
 <DeactDelay>0</DeactDelay>
 <ActAtRun>1</ActAtRun>
@@ -57,7 +57,7 @@
 <PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS">
 <UC4RB_DMC_CS_ARGSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
 <UC4RB_DMC_CS_BASELINEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_BASELINE#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
-<UC4RB_DMC_CS_DESCRIPTIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_DESCRIPTION#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
+<UC4RB_DMC_CS_DESCRIPTIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_DESCRIPTION#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
 <UC4RB_DMC_CS_STREAMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_STREAM#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
 <UC4RB_DMC_CS_STREAM_IDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_STREAM_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
 <UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
@@ -71,7 +71,7 @@
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
-<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">CVSUNIX01</AGENTs.00>
 <LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -89,7 +89,7 @@
 <task Alias="" BranchType="0" Col="2" Lnr="2" OType="JOBS" Object="PCK.AUTOMIC_DIMENSIONS.PRV.JOB.CS@WINDOWS" ParentAlias="" ParentObject="" Row="2" Text2="">
 <checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
-<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="0" WElseS="0" WElseX="1" WhenExecute="" WtimOn="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
 <preconditions>
 <PreCon>
 <conditions id="CONDITIONS"/>
@@ -121,7 +121,7 @@
 <PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS">
 <UC4RB_DMC_CS_ARGSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
 <UC4RB_DMC_CS_BASELINEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_BASELINE#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
-<UC4RB_DMC_CS_DESCRIPTIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_DESCRIPTION#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
+<UC4RB_DMC_CS_DESCRIPTIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_DESCRIPTION#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
 <UC4RB_DMC_CS_STREAMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_STREAM#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
 <UC4RB_DMC_CS_STREAM_IDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_STREAM_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
 <UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
@@ -135,7 +135,7 @@
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
-<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">CVSUNIX01</AGENTs.00>
 <LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -153,7 +153,7 @@
 <task Alias="" BranchType="0" Col="3" Lnr="3" OType="&lt;END&gt;" Object="END" ParentAlias="" ParentObject="" Row="2" Text2="">
 <checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
-<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="0" WElseS="0" WElseX="1" WhenExecute="" WtimOn="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
 <preconditions>
 <PreCon>
 <conditions id="CONDITIONS"/>
@@ -171,7 +171,7 @@
 <PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS">
 <UC4RB_DMC_CS_ARGSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
 <UC4RB_DMC_CS_BASELINEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_BASELINE#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
-<UC4RB_DMC_CS_DESCRIPTIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_DESCRIPTION#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
+<UC4RB_DMC_CS_DESCRIPTIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_DESCRIPTION#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
 <UC4RB_DMC_CS_STREAMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_STREAM#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
 <UC4RB_DMC_CS_STREAM_IDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CS_STREAM_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
 <UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS"/>
@@ -185,7 +185,7 @@
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
-<AGENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">CVSUNIX01</AGENTs.00>
 <LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -247,12 +247,16 @@
 </node>
 <node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS" prptmode="1"/>
+<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CS" prptmode="1">
+<UC4RB_DMC_CS_DESCRIPTIONs.00 altview="0" haslist="0"/>
+</PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" ontop="1">
-<PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" prptmode="1"/>
+<PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" prptmode="1">
+<AGENTs.00 altview="0" haslist="0">CVSUNIX01</AGENTs.00>
+</PRPTBOX>
 </PROMPTSET>
 </node>
 </dyntree>

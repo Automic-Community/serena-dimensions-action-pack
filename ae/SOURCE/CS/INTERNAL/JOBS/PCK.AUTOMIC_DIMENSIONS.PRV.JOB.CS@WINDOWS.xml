@@ -115,11 +115,15 @@
 <PSCRI><![CDATA[:INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.PREPARE_JOB]]></PSCRI>
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[! Run book to run the Dimensions CM CS command through the DMCLI.
-:INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
+<MSCRI><![CDATA[@echo off
+:INC PCK.AUTOMIC_DIMENSIONS.PRV.INCLUDE.CS_LOGGING_PARAMS
+
+! Run book to run the Dimensions CM CS command through the DMCLI.
+:INC PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
+:INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
 ! Ensure that a Stream name is specified
 : IF &UC4RB_DMC_CS_STREAM_ID#=''
-:  P "Specify a stream name"
+:  P "Specify a Stream ID"
 :  EXIT 1
 : ENDIF
 
