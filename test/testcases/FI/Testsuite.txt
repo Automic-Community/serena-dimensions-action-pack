@@ -1,0 +1,107 @@
+*** Settings ***
+Default Tags      win
+Test Template     FI Template
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    OK_NOK                               USERNAME                       PASSWORD                       HOST                           DN NAME                           DSN                           PRODUCT ID         ITEM ID                                     VARIANT      ITEM TYPE      REVISION               FILE NAME                             WORKSET                    ARGUMENTS           RETCODE    STATUS          REPORT MESSAGE
+1.Successful with needed fields
+                      OK                                   ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A            DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_OK}     ${EMPTY}
+
+2.Successful with empty variant
+                      OK                                   ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            ${EMPTY}     DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_OK}     ${EMPTY}
+
+3.Successful with empty item type
+                      OK                                   ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A            ${EMPTY}       java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_OK}     ${EMPTY}
+                      #4.Successful with empty revision
+                      #OK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS TESTSPECIFICATION DOC-4220417       A            DOC            ${EMPTY}               ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_OK}     ${EMPTY}
+
+4.Successful with empty item id and specified file name
+                      OK                                   ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            ${EMPTY}                                    ${EMPTY}     ${EMPTY}       java_s1_1#1            Documents/Qlarius_Requirements.doc    QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_OK}     ${EMPTY}
+
+5.Successful with optional arguments
+                      OK                                   ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A            DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            /TOUCH              0          ${ENDED_OK}     ${EMPTY}
+
+5.Fail with invalid user
+                      NOK                                  ${_DIMENSIONS_USER}_invalid    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A            DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+6.Fail with invalid password
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}_invalid    ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A            DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+7.Fail with invalid host
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}_invalid    ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A            DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+8.Fail with invalid database name
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}_invalid    ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A            DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+9.Fail with invalid dsn
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}_invalid    QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A            DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+10.Fail with empty item id and file name
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            ${EMPTY}                                    A            DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+11.Fail with invalid Product
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_invalid    QLARIUS REQUIREMENTS DOC-4220412            A            DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+12.Fail with invalid item ID
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412_invalid    A            DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+13.Fail with invalid Variant
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A_invalid    DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+14.Fail with invalid Item Type
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A            DOC_invalid    java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+15.Fail with invalid Revision
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A            DOC            java_s1_1#1_invalid    ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+16.Fail with invalid File name
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            ${EMPTY}                                    A            DOC            java_s1_1#1            ${EMPTY}_invalid                      QLARIUS:TEST_WS            ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+17.Fail with invalid Workset
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A            DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS_invalid    ${EMPTY}            0          ${ENDED_NOK}    ${EMPTY}
+
+18.Fail with invalid Optional Arguments
+                      NOK                                  ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            QLARIUS REQUIREMENTS DOC-4220412            A            DOC            java_s1_1#1            ${EMPTY}                              QLARIUS:TEST_WS            ${EMPTY}_invalid    0          ${ENDED_NOK}    ${EMPTY}
+
+*** Keywords ***
+FI Template
+    [Arguments]    ${OK_NOK}    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}
+    ...    ${product_id}    ${item_id}    ${variant}    ${item_type}    ${revision}    ${file_name}
+    ...    ${workset}    ${args}    ${returnCode}    ${returnStatus}    ${reportMessage}
+    [Documentation]    This template used for testing action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI with inputs
+    ...    - ${user}: Username to access Serena Dimensions CM.
+    ...    - ${pass}: Password to access Serena Dimensions CM.
+    ...    - ${host}: Serena Dimensions CM hostname
+    ...    - ${dbname}: Specifies the Serena Dimensions CM database identifier.
+    ...    - ${dsn}: Specifies the data source name for connecting to the database.
+    ...    - ${product_id}: Product ID
+    ...    - ${item_id}: Item ID. May be omitted if 'File Name' is defined
+    ...    - ${variant}: Variant. May be omitted if only one exists.
+    ...    - ${item_type}: item type
+    ...    - ${revision}: item revision
+    ...    - ${file_name}: Specifies the name of the project file name
+    ...    - ${workset}: Workset name. If not specified, users current project will be used.
+    ...    - ${args}: Can be used to specify any optional arguments for FI.
+    ...    - ${returnCode}: return code of execution
+    ...    - ${returnStatus}: return status of execution
+    ...    - ${reportMessage}: message should be contained in execution report
+    Init Action    ${ACTION_FI}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${user}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${pass}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${dbname}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${dsn}
+    Action Set    ${PRT_FI_DIMENSIONS_PRODUCT_ID}    ${product_id}
+    Action Set    ${PRT_FI_DIMENSIONS_ITEM_ID}    ${item_id}
+    Action Set    ${PRT_FI_DIMENSIONS_VARIANT}    ${variant}
+    Action Set    ${PRT_FI_DIMENSIONS_ITEM_TYPE}    ${item_type}
+    Action Set    ${PRT_FI_DIMENSIONS_REVISION}    ${revision}
+    Action Set    ${PRT_FI_DIMENSIONS_FILE_NAME}    ${file_name}
+    Action Set    ${PRT_FI_DIMENSIONS_WORKSET}    ${workset}
+    Action Set    ${PRT_FI_DIMENSIONS_ARGS}    ${args}
+    Action Execute
+    Action Report Should Be Found
+    Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
+    Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${reportMessage}
