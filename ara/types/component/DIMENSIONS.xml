@@ -308,7 +308,7 @@
 		<!-- Extract (Check Out) Item for Update - EI -->
 		<Property name="/dimensions/extract_item/file_name" highlighted="false">
             <Value>{/custom/file_name}</Value>
-            <Description>Name of file</Description>
+            <Description>Specifies the name of the project file name. If /ROOT_PROJECT is used to specify a the root project, /FILENAME is interpreted in the scope of that project.</Description>
         </Property>
 		<Property name="/dimensions/extract_item/item_id" highlighted="false">
             <Value>{/custom/item_id}</Value>
@@ -378,7 +378,7 @@
 		<!-- Fetch (Get) Item - FI -->
 		<Property name="/dimensions/fetch_item/file_name" highlighted="false">
             <Value>{/custom/file_name}</Value>
-            <Description>Name of file</Description>
+            <Description>Specifies the name of the project file name. If /ROOT_PROJECT is used to specify a the root project, /FILENAME is interpreted in the scope of that project.</Description>
         </Property>
 		<Property name="/dimensions/fetch_item/item_id" highlighted="false">
             <Value>{/custom/item_id}</Value>
@@ -394,7 +394,7 @@
         </Property>
 		<Property name="/dimensions/fetch_item/product_id" highlighted="false">
             <Value>{/custom/product_id}</Value>
-            <Description>Product Name</Description>
+            <Description>Specifies the product name.</Description>
         </Property>
 		<Property name="/dimensions/fetch_item/revision" highlighted="false">
             <Value>{/custom/revision}</Value>
@@ -538,7 +538,7 @@
 		<!-- Return (Check In) Item - RI -->
 		<Property name="/dimensions/return_item/file_name" highlighted="false">
             <Value>{/custom/file_name}</Value>
-            <Description>Name of file</Description>
+            <Description>Specifies the name of the project file name. If /ROOT_PROJECT is used to specify a the root project, /FILENAME is interpreted in the scope of that project.</Description>
         </Property>
 		<Property name="/dimensions/return_item/item_id" highlighted="false">
             <Value>{/custom/item_id}</Value>

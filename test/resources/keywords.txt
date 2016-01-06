@@ -90,3 +90,23 @@ Copy
     Action Set    &UC4RB_DIR_FILE_CP_OVERWRITE#    YES
     Action Set    &UC4RB_COPY_EXCLUDE#    ${EMPTY}
     Action Execute
+
+EI checkout for update
+    [Arguments]    ${host}    ${product_id}    ${item_id}    ${variant}    ${item_type}    ${revision}
+    ...    ${file_name}    ${workset}    ${args}
+    [Documentation]    Keyword to commit changes in ${workingCopy} to ${module} with ${revision} and ${message}
+    Init Action    ${ACTION_EI}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    dmsys
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    S3rv3r@Aut
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    CM_TYPICAL
+    Action Set    ${PRT_DIMENSIONS_DSN}    DIM10
+    Action Set    ${PRT_EI_DIMENSIONS_PRODUCT_ID}    ${product_id}
+    Action Set    ${PRT_EI_DIMENSIONS_ITEM_ID}    ${item_id}
+    Action Set    ${PRT_EI_DIMENSIONS_VARIANT}    ${variant}
+    Action Set    ${PRT_EI_DIMENSIONS_ITEM_TYPE}    ${item_type}
+    Action Set    ${PRT_EI_DIMENSIONS_REVISION}    ${revision}
+    Action Set    ${PRT_EI_DIMENSIONS_FILE_NAME}    ${file_name}
+    Action Set    ${PRT_EI_DIMENSIONS_WORKSET}    ${workset}
+    Action Set    ${PRT_EI_DIMENSIONS_ARGS}    ${args}
+    Action Execute
