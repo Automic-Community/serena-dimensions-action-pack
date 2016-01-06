@@ -1,0 +1,80 @@
+*** Settings ***
+Default Tags      win
+Test Template     RPT Template
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    OK_NOK    USERNAME                       PASSWORD                       HOST                           DN NAME                           DSN                           PRODUCT ID         CATEGORY    NAME                   CATALOGUE               FILENAME             ARGS        RETCODE    STATUS          REPORT MESSAGE
+1.Successful action request with valid parameters_RequestType_%
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_OK}     Operation completed
+
+2.Successful action request with valid parameters_RequestType_1
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            1           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_OK}     Operation completed
+
+3.Successful action request with valid parameters_RequestType_2
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            2           CH_DOC_LIST            /CATALOGUE/SECONDARY    workpack_all.html    ${EMPTY}    0          ${ENDED_OK}     Operation completed
+
+4.Successful action request with valid parameters_RequestType_3
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            3           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_OK}     Operation completed
+
+5.Successful action request with valid parameters_RequestType_4
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            4           CH_DOC_LIST            /PENDING                workpack_all.html    ${EMPTY}    0          ${ENDED_OK}     Operation completed
+
+6.Fail with invalid user
+                      NOK       ${_DIMENSIONS_USER}_invalid    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+7.Fail with invalid password
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}_invalid    ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+8.Fail with invalid host
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}_invalid    ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+9.Fail with invalid database name
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}_invalid    ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+10.Fail with invalid dsn
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}_invalid    QLARIUS            %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+11.Fail with invalid product id
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_Invalid    %           CH_DOC_LIST            /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+12.Fail with invalid report type (name)
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            %           CH_DOC_LIST_invalid    /CATALOGUE              workpack_all.html    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+*** Keywords ***
+RPT Template
+    [Arguments]    ${OK_NOK}    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}
+    ...    ${productId}    ${category}    ${name}    ${catalogueType}    ${fileName}    ${args}
+    ...    ${returnCode}    ${returnStatus}    ${reportMessage}
+    [Documentation]    This template used for testing action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT with inputs
+    ...    - ${user}: Username to access Serena Dimensions CM.
+    ...    - ${pass}: Password to access Serena Dimensions CM.
+    ...    - ${host}: Serena Dimensions CM hostname
+    ...    - ${dbname}: Specifies the Serena Dimensions CM database identifier.
+    ...    - ${dsn}: message should be contained in execution report
+    ...    - ${productId}: Specifies the Request Id.
+    ...    - ${category}: Specifies next status.
+    ...    - ${name}: Specifies check action request.
+    ...    - ${catalogueType}: Specifies comment of user when change status.
+    ...    - ${fileName}: Specifies check action request.
+    ...    - ${args}: Specifies comment of user when change status.
+    ...    - ${returnCode}: return code of execution
+    ...    - ${returnStatus}: return status of execution
+    ...    - ${reportMessage}: message should be contained in execution report
+    Init Action    ${ACTION_RPT}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${user}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${pass}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${dbname}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${dsn}
+    Action Set    ${PRT_FWI_DIMENSIONS_RPT_PRODUCT_ID}    ${productId}
+    Action Set    ${PRT_FWI_DIMENSIONS_RPT_CATEGORY}    ${category}
+    Action Set    ${PRT_FWI_DIMENSIONS_RPT_NAME}    ${name}
+    Action Set    ${PRT_FWI_DIMENSIONS_RPT_CATALOGUE_TYPE}    ${catalogueType}
+    Action Set    ${PRT_FWI_DIMENSIONS_RPT_FILENAME}    ${fileName}
+    Action Set    ${PRT_FWI_DIMENSIONS_RPT_ARGS}    ${args}
+    Action Execute
+    Action Report Should Be Found
+    Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
+    Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${reportMessage}

@@ -88,7 +88,7 @@
 <task Alias="" BranchType="0" Col="2" Lnr="2" OType="JOBS" Object="PCK.AUTOMIC_DIMENSIONS.PRV.JOB.ACDI@WINDOWS" ParentAlias="" ParentObject="" Row="2" Text2="">
 <checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
-<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="0" WElseS="0" WElseX="1" WhenExecute="" WtimOn="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
 <preconditions>
 <PreCon>
 <conditions id="CONDITIONS"/>
@@ -151,7 +151,7 @@
 <task Alias="" BranchType="0" Col="3" Lnr="3" OType="&lt;END&gt;" Object="END" ParentAlias="" ParentObject="" Row="2" Text2="">
 <checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
-<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="0" WElseS="0" WElseX="1" WhenExecute="" WtimOn="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
 <preconditions>
 <PreCon>
 <conditions id="CONDITIONS"/>
@@ -274,7 +274,33 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Executes a DMCLI ACDI command which actions to a specified state all the items and requests that are related to a specified request.]]></DOC>
+<DOC><![CDATA[= Name =
+PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI
+
+= General description =
+Executes a DMCLI ACDI command which actions to a specified state all the items and requests that are related to a specified request.
+
+= Inputs =
+* Username: Username to access Serena Dimensions CM.
+* Password: Password to access Serena Dimensions CM.
+* Hostname: Serena Dimensions CM hostname.
+* DBName: Specifies the Serena Dimensions CM database identifier.
+* DSN: Specifies the data source name for connecting to the database.
+* Request ID: The name of a Dimensions request.
+* Status: Specifies the status to which the request is to be actioned. If this is not specified, the next default state is used.
+* Workset: Comprises: <product-id>:<project-id>
+Specifies the project to be processed by this command.
+* Optional Arguments: Can be used to specify any optional arguments for ACDI.
+
+= Behavior =
+Return 0 if success and > 0 for failure.
+
+= Outputs =
+None 
+
+= Rollback =
+None
+]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
