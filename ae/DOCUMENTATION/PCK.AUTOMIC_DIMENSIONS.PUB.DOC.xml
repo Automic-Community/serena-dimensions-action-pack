@@ -7,10 +7,37 @@
 <OH_SubType/>
 </HEADER>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[The actions execute the most commonly used or required DMCLI commands. 
+<DOC><![CDATA[Dimensions package contains actions for executing Serena Dimensions CM command by compiling a DMCLI command on the Automation Engine. DMCLI requires a username, password, hostname, DB name and DSN. The user account has to be a valid Serena Dimensions CM user. These parameters are mandatory for every DMCLI command run from command line within a script. They can either be passed each time a command is run or they can be defined within a parameters file which is then passed using the -param switch.These connection parameters can also be saved as a connection object using the -con switch. This connection object is then passed to each subsequent call via dmcli.
 
-Note, that not every single argument option is provided as doing so could make the actions cumbersome. Where an explicit argument option is not provided, these can always be passed via plain text in 'Optional arguments'. 
+Function descriptions shown here assume each parameter is passed separately.
+Specific actions will be provided for those Dimensions CM commands most commonly associated with artifact delivery. Where a required function has not been provided as an action, there is a generic action allowing any valid DMCLI command and arguments to be passed as free text.
+Note, that not every single argument option is provided as doing so could make the actions cumbersome. Where an explicit argument option is not provided, these can always be passed via plain text in 'Optional arguments'. With argument uses quotation characters within double quotation characters requires double backslashes and three double quotation characters (\\""") before and after quoted string. For example
+/LOGFILE=\\"""C:\temp\ACDI command.log\\"""
 
+=Functionality=
+* DMCLI Generic Command
+* DMCLI List Projects - LWS
+* DMCLI Report Requests - RPT
+* DMCLI Extract (Check Out) Request Items - ECDI
+* DMCLI Extract (Check Out) Item for Update - EI
+* DMCLI Return (Check In) Item - RI
+* DMCLI Browse Request - BC
+* DMCLI Fetch Request Items - FCDI 
+* DMCLI Fetch (Get) Baseline Items - FBI
+* DMCLI Fetch (Get) Item - FI
+* DMCLI Fetch (Get) Project Items - FWI
+* DMCLI Add Request Items to Project - ACDWS
+* DMCLI Add Item Revision to Project - AIWS
+* DMCLI Remove Item Revision from Project - RIWS
+* DMCLI Action Request Items - ACDI
+* DMCLI Create Request - CC
+* DMCLI Action Request - AC
+* DMCLI Create a Stream - CS
+* DMCLI Deliver to a Stream - DELIVER
+* DMCLI Delete Stream - DS
+* DMCLI Move Project/Stream Directory - MWSD
+* DMCLI Update Project/Stream Attributes - UWA
+	
 =Supported Platforms=
 
 * Windows Server 2008 R2
@@ -19,7 +46,8 @@ Note, that not every single argument option is provided as doing so could make t
 
 =Setup=
 
-* Set environment variable UC4RB_DMC_DMCLI_PATH to the directory that contains the Serena Dimensions DMCLI.exe which is used to interact with Serena Dimensions CM from the command line. 
+Set environment variable PATH to the directory that contains the Serena Dimensions DMCLI.exe which is used to interact with Serena Dimensions CM from the command line.
+The DMCLI commands are constructed in the Automation Engine using the values passed through from the Automated Release Builder. Once constructed, the commands are executed locally on the target machine.
 
 =Rollback=
 
