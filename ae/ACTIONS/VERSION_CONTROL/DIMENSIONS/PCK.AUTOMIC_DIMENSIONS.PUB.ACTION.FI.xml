@@ -19,9 +19,9 @@
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
 <IntAccount/>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
 <DeactWhen/>
 <AutoDeactAlways>0</AutoDeactAlways>
 <DeactDelay>0</DeactDelay>
@@ -63,7 +63,7 @@
 <UC4RB_DMC_FI_ITEM_TYPEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_ITEM_TYPE#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_FI_PROD_IDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_PROD_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_FI_REVISIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_REVISION#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
-<UC4RB_DMC_FI_VARIENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_VARIENT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
+<UC4RB_DMC_FI_VARIANTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_VARIANT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_FI_WORKSETs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_WORKSET#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
@@ -92,7 +92,7 @@
 <task Alias="" BranchType="0" Col="2" Lnr="2" OType="JOBS" Object="PCK.AUTOMIC_DIMENSIONS.PRV.JOB.FI@WINDOWS" ParentAlias="" ParentObject="" Row="2" Text2="">
 <checkpoint RollbackFlag="1" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
-<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="0" WElseS="0" WElseX="1" WhenExecute="" WtimOn="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
 <preconditions>
 <PreCon>
 <conditions id="CONDITIONS"/>
@@ -130,7 +130,7 @@
 <UC4RB_DMC_FI_ITEM_TYPEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_ITEM_TYPE#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_FI_PROD_IDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_PROD_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_FI_REVISIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_REVISION#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
-<UC4RB_DMC_FI_VARIENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_VARIENT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
+<UC4RB_DMC_FI_VARIANTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_VARIANT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_FI_WORKSETs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_WORKSET#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
@@ -159,7 +159,7 @@
 <task Alias="" BranchType="0" Col="3" Lnr="3" OType="&lt;END&gt;" Object="END" ParentAlias="" ParentObject="" Row="2" Text2="">
 <checkpoint RollbackFlag="0" RunPerPatch="0" RunPerTarget="0" TcpADays="0" TcpATime="00:00" TcpATimeTZ="" TcpExecute="" TcpOn="0" promptatgen="0" showprompt="0"/>
 <after ActFlg="1" AtimOn="0" ErlstStDays="0" ErlstStTime="00:00" ErlstStTimeTZ="" HoldFlg="0"/>
-<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="0" WElseH="0" WElseS="0" WElseX="1" WhenExecute="" WtimOn="0"/>
+<when ChkWhenExec="0" LtstEnd="0" LtstEndDays="0" LtstEndTime="00:00" LtstSt="0" LtstStDays="0" LtstStTime="00:00" LtstTimeTZ="" WCTypeAND="1" WCTypeOR="0" WElseA="1" WElseH="0" WElseS="0" WElseX="0" WhenExecute="" WtimOn="0"/>
 <preconditions>
 <PreCon>
 <conditions id="CONDITIONS"/>
@@ -183,7 +183,7 @@
 <UC4RB_DMC_FI_ITEM_TYPEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_ITEM_TYPE#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_FI_PROD_IDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_PROD_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_FI_REVISIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_REVISION#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
-<UC4RB_DMC_FI_VARIENTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_VARIENT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
+<UC4RB_DMC_FI_VARIANTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_VARIANT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_FI_WORKSETs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_FI_WORKSET#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
 <UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.FI"/>
@@ -286,9 +286,37 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Executes a DMCLI FI command which fetches (gets) the specified item.
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI
+ 
+= General description =
+This action executes a DMCLI Fetch (Get) Item - FI command which fetches (gets) the specified item.
+= Inputs =
+Username: Username to access Serena Dimensions CM.
+Password : Password to access Serena Dimensions CM.
+Hostname: Serena Dimensions CM hostname.
+DBName: Specifies the Serena Dimensions CM database identifier.
+DSN: Specifies the data source name for connecting to the database.
+Product ID: Specifies the product name.
+Item ID: Item ID. May be omitted if 'File Name' is defined
+Variant: Variant. May be omitted if only one exists.
+Item Type: Item Type.
+Revision: Item Revision.
+File Name: Specifies the name of the project file name. If /ROOT_PROJECT is used to specify a
+the root project, /FILENAME is interpreted in the scope of that project.
+Workset: Workset name. If not specified, users current project will be used.
+Optional Arguments: Can be used to specify any optional arguments for FI.
 
-The specified item is fetched and saved in the specified user file ('File name') in the user area.]]></DOC>
+= Behavior =
+0 if successful, >0 otherwise.
+= Outputs =
+The specified item is fetched and saved in the specified user file ('File name') in the user area.
+= Rollback =
+(none)
+= Logging =
+(none)
+= Example =
+(none)]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
