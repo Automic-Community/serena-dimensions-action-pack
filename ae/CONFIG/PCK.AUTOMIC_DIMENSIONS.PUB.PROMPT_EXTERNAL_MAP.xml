@@ -191,7 +191,7 @@
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_ARGS#" Value="EXT:/dimensions/report_requests/optional_arguments&#10;" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_ARGS#" Value="EXT:/dimensions/report_requests/optional_arguments" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_FILENAME#" Value="EXT:/dimensions/report_requests/report_file" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_NAME#" Value="EXT:/dimensions/report_requests/report_type" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_PRODUCT_ID#" Value="EXT:/dimensions/report_requests/product_id" Value1="" Value2="" Value3="" Value4=""/>

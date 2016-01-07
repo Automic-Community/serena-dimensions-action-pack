@@ -7,37 +7,6 @@
 	<Properties>
 		<!--Properties-->
 		<Group name="properties" displayName="Properties">
-			<Property name="request_id" displayName="Request ID" mode="EDITABLE" type="SingleLineText">
-				<Description>The name of a Dimensions request.</Description>
-			</Property>
-			<Property name="status" displayName="Status" mode="EDITABLE" type="SingleLineText">
-				<Description>Specifies the status to which the request is to be actioned. If this is not specified, the next default state is used.</Description>
-			</Property>
-			<Property name="workset" displayName="Workset" mode="EDITABLE" type="SingleLineText">
-				<Description>Comprises: (product-id):(project-id). Specifies the project to be processed by this command.</Description>
-			</Property>
-			<Property name="optional_arguments" displayName="Optional Arguments" mode="EDITABLE" type="SingleLineText">
-				<Description>Can be used to specify any optional arguments</Description>
-			</Property>
-			<Property name="comment" displayName="Comment" mode="EDITABLE" type="SingleLineText">
-				<Description>A description of the action.</Description>
-			</Property>
-            <Property name="check" displayName="Check" mode="EDITABLE" type="SingleLineText">
-				<Defaultvalue>NO CHECK</Defaultvalue>
-				<Description>Valid Values are: ACTION - Check whether the  request can be  actioned to the state specified by the Status qualifier or the next normal state if 'Status' is not specified, while conforming to the current rules; CLOSURE - Check whether the specified request can be actioned to the final state in its normal lifecycle, while conforming to the current rules. This qualifier must not be used with the 'Status'; NO CHECK - No check is performed.</Description>
-			</Property>
-            <Property name="change_doc_ids" displayName="Change Doc IDs" mode="EDITABLE" type="SingleLineText">
-				<Description>Comma separated list of request names the add item task will be associated with.</Description>
-			</Property>
-			<Property name="file_name" displayName="File Name" mode="EDITABLE" type="SingleLineText">
-				<Description>Specifies the name of the file.</Description>
-			</Property>
-			<Property name="item_id" displayName="Item ID" mode="EDITABLE" type="SingleLineText">
-				<Description>Item ID. May be omitted if 'File name' is defined.</Description>
-			</Property>
-			<Property name="item_type" displayName="Item Type" mode="EDITABLE" type="SingleLineText">
-				<Description>Item Type.</Description>
-			</Property>
 			<Property name="product_id" displayName="Product ID" mode="EDITABLE" type="SingleLineText">
 				<Description>Product Name</Description>
 			</Property>
@@ -46,6 +15,32 @@
 			</Property>
 			<Property name="baseline_id" displayName="Baseline ID" mode="EDITABLE" type="SingleLineText">
 				<Description>Product Name</Description>
+			</Property>
+			<Property name="command" displayName="Command" mode="EDITABLE" type="SingleLineText">
+				<Description>Specifies a single Dimensions command to be executed.</Description>
+			</Property>
+			<Property name="comment" displayName="Comment" mode="EDITABLE" type="SingleLineText">
+				<Description>A description of the action.</Description>
+			</Property>
+			<Property name="arguments" displayName="Arguments" mode="EDITABLE" type="SingleLineText">
+				<Description>Specifies any required arguments for the DMCLI command.</Description>
+			</Property>
+			<Property name="optional_arguments" displayName="Optional Arguments" mode="EDITABLE" type="SingleLineText">
+				<Description>Can be used to specify any optional arguments</Description>
+			</Property>
+		</Group>
+		<Group name="item" displayName="Items">
+			<Property name="item_id" displayName="Item ID" mode="EDITABLE" type="SingleLineText">
+				<Description>Item ID. May be omitted if 'File name' is defined.</Description>
+			</Property>
+			<Property name="item_type" displayName="Item Type" mode="EDITABLE" type="SingleLineText">
+				<Description>Item Type.</Description>
+			</Property>
+			<Property name="workset" displayName="Workset" mode="EDITABLE" type="SingleLineText">
+				<Description>Comprises: (product-id):(project-id). Specifies the project to be processed by this command.</Description>
+			</Property>
+			<Property name="file_name" displayName="File Name" mode="EDITABLE" type="SingleLineText">
+				<Description>Specifies the name of the file.</Description>
 			</Property>
 			<Property name="revision" displayName="Revision" mode="EDITABLE" type="SingleLineText">
 				<Description>Item Revision.</Description>
@@ -56,14 +51,50 @@
 			<Property name="ws_filename" displayName="WS Filename" mode="EDITABLE" type="SingleLineText">
 				<Description>The WS_FILENAME qualifier specifies the workset filename for the item when adding the item to a project.</Description>
 			</Property>
-            <Property name="directory_filter" displayName="Directory Filter" mode="EDITABLE" type="SingleLineText">
+			<Property name="directory_filter" displayName="Directory Filter" mode="EDITABLE" type="SingleLineText">
 				<Description>Directory filter to restrict the number of items to be added.</Description>
 			</Property>
 			<Property name="user_directory" displayName="User Directory" mode="EDITABLE" type="SingleLineText">
 				<Description>Specifies the directory to which items are to be fetched. If not set the user's default working area will be used.</Description>
 			</Property>
+			<Property name="fetch_folder" displayName="Fetch Folder" mode="EDITABLE" type="SingleLineText">
+				<Description>Location in which items are fetched into.</Description>
+			</Property>
+		</Group>
+		<Group name="request" displayName="Request">
+			<Property name="request_id" displayName="Request ID" mode="EDITABLE" type="SingleLineText">
+				<Description>The name of a Dimensions request.</Description>
+			</Property>
+			<Property name="status" displayName="Status" mode="EDITABLE" type="SingleLineText">
+				<Description>Specifies the status to which the request is to be actioned. If this is not specified, the next default state is used.</Description>
+			</Property>
+			<Property name="check" displayName="Check" mode="EDITABLE" type="SingleLineText">
+				<Defaultvalue>NO CHECK</Defaultvalue>
+				<Description>Valid Values are: ACTION - Check whether the  request can be  actioned to the state specified by the Status qualifier or the next normal state if 'Status' is not specified, while conforming to the current rules; CLOSURE - Check whether the specified request can be actioned to the final state in its normal lifecycle, while conforming to the current rules. This qualifier must not be used with the 'Status'; NO CHECK - No check is performed.</Description>
+			</Property>
 			<Property name="request_type" displayName="Request Type" mode="EDITABLE" type="SingleLineText">
 				<Description>Specifies the type of request to be created.</Description>
+			</Property>
+			<Property name="catalogue_type" displayName="Catalogue Type" mode="EDITABLE" type="SingleChoice">
+				<Defaultvalue>/CATALOGUE</Defaultvalue>
+				<Description>Determines the basis for the report. Valid values are:/CATALOGUE - Primary catalog of requests; /CATALOGUE/SECONDARY - Secondary catalog of requests; /PENDING - requests pending to user.</Description>
+				<List>/CATALOGUE#;#/CATALOGUE/SECONDARY#;#/PENDING</List>
+			</Property>
+			<Property name="request_category" displayName="Request Category" mode="EDITABLE" type="SingleChoice">
+				<Defaultvalue>%</Defaultvalue>
+				<Description>This is the request category for all requests to appear in the report. Valid values are: 1 is for bugs or problems; 2 is for change or enhancement requests; 3 is for "other"; 4 is reserved for work packages; % is for requests from all categories.</Description>
+				<List>1#;#2#;#3#;#4#;#%</List>
+			</Property>
+			<Property name="report_file" displayName="Report File" mode="EDITABLE" type="SingleLineText">
+				<Description>File where report will be saved.</Description>
+			</Property>
+			<Property name="report_type" displayName="Report Type" mode="EDITABLE" type="SingleLineText">
+				<Description>Determines which particular report type is returned</Description>
+			</Property>
+		</Group>
+		<Group name="stream" displayName="Stream">
+			<Property name="change_doc_ids" displayName="Change Doc IDs" mode="EDITABLE" type="SingleLineText">
+				<Description>Comma separated list of request names the add item task will be associated with.</Description>
 			</Property>
 			<Property name="baseline" displayName="Baseline" mode="EDITABLE" type="SingleLineText">
 				<Description>Optionally specifies the Dimensions baseline on which to base the new stream.</Description>
@@ -77,34 +108,11 @@
 			<Property name="description" displayName="Description" mode="EDITABLE" type="SingleLineText">
 				<Description>Specifies a description for the stream.</Description>
 			</Property>
-			<Property name="fetch_folder" displayName="Fetch Folder" mode="EDITABLE" type="SingleLineText">
-				<Description>Location in which items are fetched into.</Description>
-			</Property>
-			<Property name="arguments" displayName="Arguments" mode="EDITABLE" type="SingleLineText">
-				<Description>Specifies any required arguments for the DMCLI command.</Description>
-			</Property>
-			<Property name="command" displayName="Command" mode="EDITABLE" type="SingleLineText">
-				<Description>Specifies a single Dimensions command to be executed.</Description>
-			</Property>
 			<Property name="destination_directory" displayName="Destination Directory" mode="EDITABLE" type="SingleLineText">
 				<Description>Is the destination directory to move the project/stream structure to.</Description>
 			</Property>
 			<Property name="source_directory" displayName="Source Directory" mode="EDITABLE" type="SingleLineText">
 				<Description>Is the source directory to move the project/stream structure from.</Description>
-			</Property>
-			<Property name="catalogue_type" displayName="Catalogue Type" mode="EDITABLE" type="SingleLineText">
-				<Defaultvalue>/CATALOGUE</Defaultvalue>
-				<Description>Determines the basis for the report. Valid values are:/CATALOGUE - Primary catalog of requests; /CATALOGUE/SECONDARY - Secondary catalog of requests; /PENDING - requests pending to user.</Description>
-			</Property>
-			<Property name="request_category" displayName="Request Category" mode="EDITABLE" type="SingleLineText">
-				<Defaultvalue>%</Defaultvalue>
-				<Description>Determines the basis for the report. Valid values are:/CATALOGUE - Primary catalog of requests; /CATALOGUE/SECONDARY - Secondary catalog of requests; /PENDING - requests pending to user.</Description>
-			</Property>
-			<Property name="report_file" displayName="Report File" mode="EDITABLE" type="SingleLineText">
-				<Description>File where report will be saved.</Description>
-			</Property>
-			<Property name="report_type" displayName="Report Type" mode="EDITABLE" type="SingleLineText">
-				<Description>Determines which particular report type is returned</Description>
 			</Property>
 			<Property name="delivery_spec" displayName="Delivery Spec" mode="EDITABLE" type="SingleLineText">
 				<Description>Specifies either the name of a file to be delivered, a directory path from where files will be delivered (recursively) or a file spec specifying a file containing a list of filenames to be delivered.</Description>
@@ -112,7 +120,6 @@
 			<Property name="extract_folder" displayName="Extract Folder" mode="EDITABLE" type="SingleLineText">
 				<Description>Folder in which files will be extraced to.</Description>
 			</Property>
-			
 		</Group>
 	</Properties>
 	
@@ -510,9 +517,10 @@
         </Property>
 		
 		<!-- Report Requests - RPT -->
-		<Property name="/dimensions/report_requests/catalogue_type" highlighted="false">
+		<Property name="/dimensions/report_requests/catalogue_type" highlighted="false" type="SingleChoice">
             <Value>{/custom/catalogue_type}</Value>
             <Description>Determines the basis for the report. Valid values are:/CATALOGUE - Primary catalog of requests; /CATALOGUE/SECONDARY - Secondary catalog of requests; /PENDING - requests pending to user.</Description>
+			<List>/CATALOGUE#;#/CATALOGUE/SECONDARY#;#/PENDING</List>
         </Property>
 		<Property name="/dimensions/report_requests/optional_arguments" highlighted="false">
             <Value>{/custom/optional_arguments}</Value>
@@ -530,9 +538,10 @@
             <Value>{/custom/report_type}</Value>
             <Description>Determines which particular report type is returned</Description>
         </Property>
-		<Property name="/dimensions/report_requests/request_category" highlighted="false">
+		<Property name="/dimensions/report_requests/request_category" highlighted="false" type="SingleChoice">
             <Value>{/custom/request_category}</Value>
-            <Description>Determines the basis for the report. Valid values are:/CATALOGUE - Primary catalog of requests; /CATALOGUE/SECONDARY - Secondary catalog of requests; /PENDING - requests pending to user.</Description>
+            <Description>This is the request category for all requests to appear in the report. Valid values are: 1 is for bugs or problems; 2 is for change or enhancement requests; 3 is for "other"; 4 is reserved for work packages; % is for requests from all categories.</Description>
+			<List>1#;#2#;#3#;#4#;#%</List>
         </Property>
 
 		<!-- Return (Check In) Item - RI -->
