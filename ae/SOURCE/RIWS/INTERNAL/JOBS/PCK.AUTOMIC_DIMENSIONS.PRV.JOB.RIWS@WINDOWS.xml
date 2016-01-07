@@ -124,12 +124,7 @@
 : IF &UC4RB_DMC_AIWS_ITEM_ID#=''
 :   IF &UC4RB_DMC_AIWS_FILENAME#=''
 :     P 'Should provide at lease filename or item Id'
-:   ENDIF
-: ENDIF
-
-: IF &UC4RB_DMC_AIWS_FILENAME#=''
-:   IF &UC4RB_DMC_AIWS_ITEM_ID#=''
-:     P 'Should provide at lease filename or item Id'
+:     EXIT 1
 :   ENDIF
 : ENDIF
 
