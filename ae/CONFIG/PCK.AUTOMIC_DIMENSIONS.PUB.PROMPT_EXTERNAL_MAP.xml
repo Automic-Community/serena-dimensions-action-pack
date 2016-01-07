@@ -26,6 +26,7 @@
 <Variables>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/UC4RB_DMC_AC_CHECK#" Value="EXT:/dimensions/action_request/check" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/UC4RB_DMC_AC_REQUEST_ID#" Value="EXT:/dimensions/action_request/request_id" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/UC4RB_DMC_AC_STATUS#" Value="EXT:/dimensions/action_request/status" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
@@ -178,6 +179,8 @@
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_CATEGORY#" Value="EXT:/dimensions/report_requests/request_category" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_CATALOGUE_TYPE#" Value="EXT:/dimensions/report_requests/catalogue_type" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_FILENAME#" Value="EXT:/dimensions/report_requests/report_file" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_NAME#" Value="EXT:/dimensions/report_requests/report_type" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_PRODUCT_ID#" Value="EXT:/dimensions/report_requests/product_id" Value1="" Value2="" Value3="" Value4=""/>
