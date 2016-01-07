@@ -84,7 +84,7 @@
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_ITEM_TYPE#" Value="EXT:/dimensions/add_item_revision_to_project/item_type" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_PROD_ID#" Value="EXT:/dimensions/add_item_revision_to_project/product_id" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_REVISION#" Value="EXT:/dimensions/add_item_revision_to_project/revision" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_VARIANT#" Value="EXT:/dimensions/add_item_revision_to_project/varient" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_VARIANT#" Value="EXT:/dimensions/add_item_revision_to_project/variant" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_WORKSET#" Value="EXT:/dimensions/add_item_revision_to_project/workset" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_WSFILENAME#" Value="EXT:/dimensions/add_item_revision_to_project/ws_filename" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
@@ -224,7 +224,7 @@
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_ITEM_TYPE#" Value="EXT:/dimensions/remove_item_revision_from_project/item_type" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_PROD_ID#" Value="EXT:/dimensions/remove_item_revision_from_project/product_id" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_REVISION#" Value="EXT:/dimensions/remove_item_revision_from_project/revision" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_VARIENT#" Value="EXT:/dimensions/remove_item_revision_from_project/varient" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_VARIANT#" Value="EXT:/dimensions/remove_item_revision_from_project/variant" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_WORKSET#" Value="EXT:/dimensions/remove_item_revision_from_project/workset" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
 </Variables>
