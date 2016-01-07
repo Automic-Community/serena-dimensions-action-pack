@@ -36,8 +36,8 @@ Init DIMENSIONS in VVNFIBOSDC01
 
 Init DIMENSIONS in VVNFIBOCVS02
     [Documentation]    TODO: Write server description here
-    Set Global Variable    ${_AGENT}    CVSWIN02
-    Set Global Variable    ${_LOGIN}    RM.AUTOMIC.1316
+    Set Global Variable    ${_AGENT}    VVNFIBOSDC01
+    Set Global Variable    ${_LOGIN}    UC4_RL.LOGIN.ALL
     Set Global Variable    ${_WORKING_DIR}    C:/AT_DIMENSIONS
     Set Global Variable    ${/}    /
     Set Global Variable    ${_DIMENSIONS_USER}    dmsys

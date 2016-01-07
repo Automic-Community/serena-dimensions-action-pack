@@ -2,7 +2,7 @@
 
 *** Variables ***
 #---- AE -------------------------
-@{AE}             AUTOMIC    172.16.36.145    2217    ${AE_CLIENT}/TQH/SBB01    Abcd123-    # system, host, port, user, pass
+@{AE}             AUTOMIC    172.16.36.72    2217    ${AE_CLIENT}/AUTOMIC/AUTOMIC    automic    # system, host, port, user, pass
 # this package will be tested on client 3203 of ae AE11ITPA on machine pc080020
 #---- GLOBAL CONTEXT VARIABLES ---
 ${_AE_SYSTEM}     @{AE}[0]

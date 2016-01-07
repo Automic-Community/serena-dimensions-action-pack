@@ -1,5 +1,4 @@
 *** Settings ***
-Suite Setup       Setup_suite
 Default Tags      win
 Test Template     AIWS Template
 Resource          ../../resources/keywords.txt
@@ -89,6 +88,3 @@ AIWS Template
     Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
     Action Report Should Contain    ${reportMessage}
-
-Setup_suite
-    Add Item Workset
