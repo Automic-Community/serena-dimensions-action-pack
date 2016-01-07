@@ -312,8 +312,8 @@ This function add an item revision to a specified project.
 * DBName: Specifies the Serena Dimensions CM database identifier
 * DSN: Specifies the data source name for connecting to the database.
 * Product ID: Product Name
-* Item ID: Specifies the name of the file which will be created in the user area, and into which the request will be gotten.
-* Variant: Can be used to specify any optional arguments for BC.
+* Item ID: Item ID. May be omitted if 'File name' is defined.
+* Variant: Varient. May be omitted if only one exists.
 * Item Type: Item Type.
 * Revision: Item Revision.
 * Filename: Specifies the name of the project file name.

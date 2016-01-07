@@ -122,10 +122,17 @@
 :INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
 :INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
 
-! Ensure a product ID has been specified
-: IF &UC4RB_DMC_AIWS_PROD_ID#=''
-:   P 'Specify a Product ID'
-:   EXIT 1
+! Ensure a ITEM_ID & filename is not null together
+: IF &UC4RB_DMC_AIWS_ITEM_ID#=''
+:   IF &UC4RB_DMC_AIWS_FILENAME#=''
+:     P 'Should provide at lease filename or item Id'
+:   ENDIF
+: ENDIF
+
+: IF &UC4RB_DMC_AIWS_FILENAME#=''
+:   IF &UC4RB_DMC_AIWS_ITEM_ID#=''
+:     P 'Should provide at lease filename or item Id'
+:   ENDIF
 : ENDIF
 
 ! Ensure a workset has been defined
@@ -143,7 +150,7 @@
 :     P 'You must specify at least item id or filename'
 :     EXIT 1
 :   ELSE
-:     SET &FILENAME#='/FILENAME=\\"""&UC4RB_DMC_AIWS_FILENAME# \\"""'
+:     SET &FILENAME#='/FILENAME=\\"""&UC4RB_DMC_AIWS_FILENAME#\\"""'
 :   ENDIF
 : ENDIF
 ! Create the item-spec
@@ -152,7 +159,7 @@
 ! Check if WS Filename has been set
 : SET &WS_FILENAME#=''
 : IF &UC4RB_DMC_AIWS_WSFILENAME#<>''
-:  SET &WS_FILENAME#='/WS_FILENAME=\\"""&UC4RB_DMC_AIWS_WSFILENAME# \\"""'
+:  SET &WS_FILENAME#='/WS_FILENAME=\\"""&UC4RB_DMC_AIWS_WSFILENAME#\\"""'
 : ENDIF
 
 ! Check if hange Doc IDs have been set

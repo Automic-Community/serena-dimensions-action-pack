@@ -120,10 +120,17 @@
 ! Run book to run the Dimensions CM RIWS command through the DMCLI.
 :INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
 :INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
-! Ensure a product ID has been specified
-: IF &UC4RB_DMC_RIWS_PROD_ID#=''
-:   P 'Specify a Product ID'
-:   EXIT 1
+! Ensure a ITEM_ID & filename is not null together
+: IF &UC4RB_DMC_AIWS_ITEM_ID#=''
+:   IF &UC4RB_DMC_AIWS_FILENAME#=''
+:     P 'Should provide at lease filename or item Id'
+:   ENDIF
+: ENDIF
+
+: IF &UC4RB_DMC_AIWS_FILENAME#=''
+:   IF &UC4RB_DMC_AIWS_ITEM_ID#=''
+:     P 'Should provide at lease filename or item Id'
+:   ENDIF
 : ENDIF
 
 ! Ensure a workset has been defined
@@ -141,11 +148,11 @@
 :     P 'You must specify at least item id or filename'
 :     EXIT 1
 :   ELSE
-:     SET &FILENAME#='/FILENAME=\\"""&UC4RB_DMC_RIWS_FILENAME# \\"""'
+:     SET &FILENAME#='/FILENAME=\\"""&UC4RB_DMC_RIWS_FILENAME#\\"""'
 :   ENDIF
 : ENDIF
 ! Create the item-spec
-: SET &ITEMSPEC#='\\"""&UC4RB_DMC_RIWS_PROD_ID#:&UC4RB_DMC_RIWS_ITEM_ID#.&UC4RB_DMC_RIWS_VARIENT#-&UC4RB_DMC_RIWS_ITEM_TYPE#;&UC4RB_DMC_RIWS_REVISION#\\"""'
+: SET &ITEMSPEC#='\\"""&UC4RB_DMC_RIWS_PROD_ID#:&UC4RB_DMC_RIWS_ITEM_ID#.&UC4RB_DMC_RIWS_VARIANT#-&UC4RB_DMC_RIWS_ITEM_TYPE#;&UC4RB_DMC_RIWS_REVISION#\\"""'
 
 ! Check if hange Doc IDs have been set
 : SET &CHANGEDOCIDS#=''

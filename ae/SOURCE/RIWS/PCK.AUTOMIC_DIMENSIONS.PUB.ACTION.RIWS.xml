@@ -19,8 +19,8 @@
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
 <IntAccount/>
-<AutoDeactNo>1</AutoDeactNo>
-<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactNo>0</AutoDeactNo>
+<AutoDeact1ErrorFree>1</AutoDeact1ErrorFree>
 <AutoDeactErrorFree>0</AutoDeactErrorFree>
 <DeactWhen/>
 <AutoDeactAlways>0</AutoDeactAlways>
@@ -65,7 +65,8 @@
 <UC4RB_DMC_RIWS_ITEM_TYPEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_ITEM_TYPE#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 <UC4RB_DMC_RIWS_PROD_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_PROD_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 <UC4RB_DMC_RIWS_REVISIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_REVISION#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
-<UC4RB_DMC_RIWS_VARIENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_VARIENT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
+<UC4RB_DMC_RIWS_VARIANTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_VARIANT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
+<UC4RB_DMC_RIWS_VARIENTs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_VARIENT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 <UC4RB_DMC_RIWS_WORKSETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_WORKSET#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 <UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 </PRPTBOX>
@@ -132,7 +133,8 @@
 <UC4RB_DMC_RIWS_ITEM_TYPEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_ITEM_TYPE#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 <UC4RB_DMC_RIWS_PROD_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_PROD_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 <UC4RB_DMC_RIWS_REVISIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_REVISION#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
-<UC4RB_DMC_RIWS_VARIENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_VARIENT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
+<UC4RB_DMC_RIWS_VARIANTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_VARIANT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
+<UC4RB_DMC_RIWS_VARIENTs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_VARIENT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 <UC4RB_DMC_RIWS_WORKSETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_WORKSET#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 <UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 </PRPTBOX>
@@ -185,7 +187,8 @@
 <UC4RB_DMC_RIWS_ITEM_TYPEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_ITEM_TYPE#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 <UC4RB_DMC_RIWS_PROD_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_PROD_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 <UC4RB_DMC_RIWS_REVISIONs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_REVISION#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
-<UC4RB_DMC_RIWS_VARIENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_VARIENT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
+<UC4RB_DMC_RIWS_VARIANTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_VARIANT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
+<UC4RB_DMC_RIWS_VARIENTs.00 ReadFromTable="OPUD" altview="1" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_VARIENT#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 <UC4RB_DMC_RIWS_WORKSETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_RIWS_WORKSET#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 <UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS"/>
 </PRPTBOX>
@@ -259,7 +262,6 @@
 <PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.RIWS" prptmode="1">
 <UC4RB_DMC_RIWS_PROD_IDs.00 altview="0" haslist="0"/>
 <UC4RB_DMC_RIWS_ITEM_IDs.00 altview="0" haslist="0"/>
-<UC4RB_DMC_RIWS_VARIENTs.00 altview="0" haslist="0"/>
 <UC4RB_DMC_RIWS_ITEM_TYPEs.00 altview="0" haslist="0"/>
 <UC4RB_DMC_RIWS_REVISIONs.00 altview="0" haslist="0"/>
 <UC4RB_DMC_RIWS_WORKSETs.00 altview="0" haslist="0"/>
@@ -307,8 +309,8 @@ Executes a DMCLI RIWS command which will remove the item specified from the give
 * DBName: Specifies the Serena Dimensions CM database identifier
 * DSN: Specifies the data source name for connecting to the database.
 * Product ID: Product Name
-* Item ID: Specifies the name of the file which will be created in the user area, and into which the request will be gotten.
-* Variant: Can be used to specify any optional arguments for BC.
+* Item ID: Item ID. May be omitted if 'File name' is defined.
+* Variant: Varient. May be omitted if only one exists.
 * Item Type: Item Type.
 * Revision: Item Revision.
 * Filename: Specifies the name of the project file name.

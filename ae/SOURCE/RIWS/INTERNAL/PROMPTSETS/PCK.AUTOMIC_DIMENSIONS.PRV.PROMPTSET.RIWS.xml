@@ -169,7 +169,7 @@
             <entry name="customfield"/>
             <entry name="modifiable">1</entry>
             <entry name="regex"/>
-            <entry name="required">0</entry>
+            <entry name="required">1</entry>
             <entry name="initvalue"/>
             <entry name="xmlkey"/>
             <entry name="xmlpath"/>
@@ -253,7 +253,7 @@
             <entry name="customfield"/>
             <entry name="modifiable">1</entry>
             <entry name="regex"/>
-            <entry name="required">1</entry>
+            <entry name="required">0</entry>
             <entry name="initvalue"/>
             <entry name="xmlkey"/>
             <entry name="xmlpath"/>
@@ -309,7 +309,7 @@
             <entry name="customfield"/>
             <entry name="modifiable">1</entry>
             <entry name="regex"/>
-            <entry name="required">0</entry>
+            <entry name="required">1</entry>
             <entry name="initvalue"/>
             <entry name="xmlkey"/>
             <entry name="xmlpath"/>
