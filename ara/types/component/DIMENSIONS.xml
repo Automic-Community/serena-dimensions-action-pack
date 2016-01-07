@@ -6,27 +6,21 @@
    	
 	<Properties>
 		<!--Properties-->
-		<Group name="properties" displayName="Properties">
+		<Group name="generic" displayName="Generic">
 			<Property name="product_id" displayName="Product ID" mode="EDITABLE" type="SingleLineText">
 				<Description>Product Name</Description>
 			</Property>
 			<Property name="project_id" displayName="Project ID" mode="EDITABLE" type="SingleLineText">
-				<Description>Product Name</Description>
+				<Description>Project Name</Description>
 			</Property>
 			<Property name="baseline_id" displayName="Baseline ID" mode="EDITABLE" type="SingleLineText">
-				<Description>Product Name</Description>
+				<Description>Baseline Name</Description>
 			</Property>
 			<Property name="command" displayName="Command" mode="EDITABLE" type="SingleLineText">
 				<Description>Specifies a single Dimensions command to be executed.</Description>
 			</Property>
-			<Property name="comment" displayName="Comment" mode="EDITABLE" type="SingleLineText">
-				<Description>A description of the action.</Description>
-			</Property>
 			<Property name="arguments" displayName="Arguments" mode="EDITABLE" type="SingleLineText">
 				<Description>Specifies any required arguments for the DMCLI command.</Description>
-			</Property>
-			<Property name="optional_arguments" displayName="Optional Arguments" mode="EDITABLE" type="SingleLineText">
-				<Description>Can be used to specify any optional arguments</Description>
 			</Property>
 		</Group>
 		<Group name="item" displayName="Items">
@@ -52,7 +46,7 @@
 				<Description>The WS_FILENAME qualifier specifies the workset filename for the item when adding the item to a project.</Description>
 			</Property>
 			<Property name="directory_filter" displayName="Directory Filter" mode="EDITABLE" type="SingleLineText">
-				<Description>Directory filter to restrict the number of items to be added.</Description>
+				<Description>Directory filter to restrict the number of items.</Description>
 			</Property>
 			<Property name="user_directory" displayName="User Directory" mode="EDITABLE" type="SingleLineText">
 				<Description>Specifies the directory to which items are to be fetched. If not set the user's default working area will be used.</Description>
@@ -68,9 +62,10 @@
 			<Property name="status" displayName="Status" mode="EDITABLE" type="SingleLineText">
 				<Description>Specifies the status to which the request is to be actioned. If this is not specified, the next default state is used.</Description>
 			</Property>
-			<Property name="check" displayName="Check" mode="EDITABLE" type="SingleLineText">
+			<Property name="check" displayName="Check" mode="EDITABLE" type="SingleChoice">
 				<Defaultvalue>NO CHECK</Defaultvalue>
-				<Description>Valid Values are: ACTION - Check whether the  request can be  actioned to the state specified by the Status qualifier or the next normal state if 'Status' is not specified, while conforming to the current rules; CLOSURE - Check whether the specified request can be actioned to the final state in its normal lifecycle, while conforming to the current rules. This qualifier must not be used with the 'Status'; NO CHECK - No check is performed.</Description>
+				<Description>Valid Values are: ACTION - Check whether the request can be actioned to the state specified by the Status qualifier or the next normal state if 'Status' is not specified, while conforming to the current rules; CLOSURE - Check whether the specified request can be actioned to the final state in its normal lifecycle, while conforming to the current rules. This qualifier must not be used with the 'Status'; NO CHECK - No check is performed.</Description>
+				<List>ACTION#;#CLOSURE#;#NO CHECK</List>
 			</Property>
 			<Property name="request_type" displayName="Request Type" mode="EDITABLE" type="SingleLineText">
 				<Description>Specifies the type of request to be created.</Description>
@@ -147,13 +142,10 @@
         </Property>
 		
 		<!--Action Request - AC -->
-		<Property name="/dimensions/action_request/comment" highlighted="false">
-            <Value>{/custom/comment}</Value>
-            <Description>A description of the action.</Description>
-        </Property>
-		<Property name="/dimensions/action_request/check" highlighted="false">
+		<Property name="/dimensions/action_request/check" highlighted="false" type="SingleChoice">
             <Value>{/custom/check}</Value>
-            <Description>Valid Values are: ACTION - Check whether the  request can be  actioned to the state specified by the Status qualifier or the next normal state if 'Status' is not specified, while conforming to the current rules; CLOSURE - Check whether the specified request can be actioned to the final state in its normal lifecycle, while conforming to the current rules. This qualifier must not be used with the 'Status'; NO CHECK - No check is performed.</Description>
+            <Description>Valid Values are: ACTION - Check whether the request can be actioned to the state specified by the Status qualifier or the next normal state if 'Status' is not specified, while conforming to the current rules; CLOSURE - Check whether the specified request can be actioned to the final state in its normal lifecycle, while conforming to the current rules. This qualifier must not be used with the 'Status'; NO CHECK - No check is performed.</Description>
+			<List>ACTION#;#CLOSURE#;#NO CHECK</List>
         </Property>
 		<Property name="/dimensions/action_request/request_id" highlighted="false">
             <Value>{/custom/request_id}</Value>
@@ -165,10 +157,6 @@
         </Property>
 		
 		<!--Action Request Items - ACDI-->
-		<Property name="/dimensions/action_request_items/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for ACDI.</Description>
-        </Property>
 		<Property name="/dimensions/action_request_items/request_id" highlighted="false">
             <Value>{/custom/request_id}</Value>
             <Description>The name of a Dimensions request.</Description>
@@ -225,10 +213,6 @@
             <Value>{/custom/directory_filter}</Value>
             <Description>Directory filter to restrict the number of items to be added.</Description>
         </Property>
-		<Property name="/dimensions/add_request_items_to_project/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for ACDWS.</Description>
-        </Property>
 		<Property name="/dimensions/add_request_items_to_project/request_id" highlighted="false">
             <Value>{/custom/request_id}</Value>
             <Description>The name of a Dimensions request.</Description>
@@ -243,20 +227,12 @@
             <Value>{/custom/file_name}</Value>
             <Description>Specifies the name of the file which will be created in the user area, and into which the request will be gotten.</Description>
         </Property>
-		<Property name="/dimensions/browse_request/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for BC</Description>
-        </Property>
 		<Property name="/dimensions/browse_request/request_id" highlighted="false">
             <Value>{/custom/request_id}</Value>
             <Description>The name of a Dimensions request.</Description>
         </Property>
 		
 		<!--Create Request - CC-->
-		<Property name="/dimensions/create_request/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for CC.</Description>
-        </Property>
 		<Property name="/dimensions/create_request/product_id" highlighted="false">
             <Value>{/custom/product_id}</Value>
             <Description>Specifies the product that is to own the new request.</Description>
@@ -279,10 +255,6 @@
             <Value>{/custom/description}</Value>
             <Description>Specifies a description for the stream.</Description>
         </Property>
-		<Property name="/dimensions/create_stream/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for CS.</Description>
-        </Property>
 		<Property name="/dimensions/create_stream/stream_id" highlighted="false">
             <Value>{/custom/stream_id}</Value>
             <Description>The name of stream.</Description>
@@ -295,10 +267,6 @@
         </Property>
 		
 		<!--Deliver Stream - Deliver-->
-		<Property name="/dimensions/deliver/comment" highlighted="false">
-            <Value>{/custom/comment}</Value>
-            <Description>The comment to apply to all of the newly created item revisions.</Description>
-        </Property>
 		<Property name="/dimensions/deliver/change_doc_ids" highlighted="false">
             <Value>{/custom/change_doc_ids}</Value>
             <Description>The requests for the items to be related to. The originally fetched versions will be related as "Affected", and the newly created versions will be "In Response To".</Description>
@@ -306,10 +274,6 @@
 		<Property name="/dimensions/deliver/delivery_spec" highlighted="false">
             <Value>{/custom/delivery_spec}</Value>
             <Description>Specifies either the name of a file to be delivered, a directory path from where files will be delivered (recursively) or a file spec specifying a file containing a list of filenames to be delivered.</Description>
-        </Property>
-		<Property name="/dimensions/deliver/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for DELIVER.</Description>
         </Property>
 		
 		<!-- Extract (Check Out) Item for Update - EI -->
@@ -324,10 +288,6 @@
 		<Property name="/dimensions/extract_item/item_type" highlighted="false">
             <Value>{/custom/item_type}</Value>
             <Description>Item Type.</Description>
-        </Property>
-		<Property name="/dimensions/extract_item/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for EI.</Description>
         </Property>
 		<Property name="/dimensions/extract_item/product_id" highlighted="false">
             <Value>{/custom/product_id}</Value>
@@ -351,10 +311,6 @@
             <Value>{/custom/extract_folder}</Value>
             <Description>Folder in which files will be extraced to.</Description>
         </Property>
-		<Property name="/dimensions/extract_request_items/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for ECDI.</Description>
-        </Property>
 		<Property name="/dimensions/extract_request_items/request_id" highlighted="false">
             <Value>{/custom/request_id}</Value>
             <Description>The name of a Dimensions request.</Description>
@@ -368,10 +324,6 @@
 		<Property name="/dimensions/fetch_baseline_items/directory_filter" highlighted="false">
             <Value>{/custom/directory_filter}</Value>
             <Description>Specifies the directory to which items are to be fetched.</Description>
-        </Property>
-		<Property name="/dimensions/fetch_baseline_items/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for FBI.</Description>
         </Property>
 		<Property name="/dimensions/fetch_baseline_items/product_id" highlighted="false">
             <Value>{/custom/product_id}</Value>
@@ -395,10 +347,6 @@
             <Value>{/custom/item_type}</Value>
             <Description>Item Type.</Description>
         </Property>
-		<Property name="/dimensions/fetch_item/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for FI.</Description>
-        </Property>
 		<Property name="/dimensions/fetch_item/product_id" highlighted="false">
             <Value>{/custom/product_id}</Value>
             <Description>Specifies the product name.</Description>
@@ -421,10 +369,6 @@
             <Value>{/custom/directory_filter}</Value>
             <Description>Specifies the directory to which items are to be fetched.</Description>
         </Property>
-		<Property name="/dimensions/fetch_project_items/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for FWI.</Description>
-        </Property>
 		<Property name="/dimensions/fetch_project_items/product_id" highlighted="false">
             <Value>{/custom/product_id}</Value>
             <Description>Product ID</Description>
@@ -442,10 +386,6 @@
 		<Property name="/dimensions/fetch_request_items/fetch_folder" highlighted="false">
             <Value>{/custom/fetch_folder}</Value>
             <Description>Location in which items are fetched into.</Description>
-        </Property>
-		<Property name="/dimensions/fetch_request_items/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for FCDI.</Description>
         </Property>
 		<Property name="/dimensions/fetch_request_items/request_id" highlighted="false">
             <Value>{/custom/request_id}</Value>
@@ -522,10 +462,6 @@
             <Description>Determines the basis for the report. Valid values are:/CATALOGUE - Primary catalog of requests; /CATALOGUE/SECONDARY - Secondary catalog of requests; /PENDING - requests pending to user.</Description>
 			<List>/CATALOGUE#;#/CATALOGUE/SECONDARY#;#/PENDING</List>
         </Property>
-		<Property name="/dimensions/report_requests/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for RPT</Description>
-        </Property>
 		<Property name="/dimensions/report_requests/product_id" highlighted="false">
             <Value>{/custom/product_id}</Value>
             <Description>Product ID report will be generated against.</Description>
@@ -557,10 +493,6 @@
             <Value>{/custom/item_type}</Value>
             <Description>Item Type.</Description>
         </Property>
-		<Property name="/dimensions/return_item/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for RI.</Description>
-        </Property>
 		<Property name="/dimensions/return_item/product_id" highlighted="false">
             <Value>{/custom/product_id}</Value>
             <Description>Product Name</Description>
@@ -579,10 +511,6 @@
         </Property>
 		
 		<!-- Update Project/Stream Attributes - UWA -->
-		<Property name="/dimensions/update_attributes/optional_arguments" highlighted="false">
-            <Value>{/custom/optional_arguments}</Value>
-            <Description>Can be used to specify any optional arguments for UWA.</Description>
-        </Property>
 		<Property name="/dimensions/update_attributes/product_id" highlighted="false">
             <Value>{/custom/product_id}</Value>
             <Description>Product Name</Description>
