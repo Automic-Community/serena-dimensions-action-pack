@@ -51,5 +51,4 @@ ACDI Action Request Items
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start setup testing for ACDI Action Request Items
-    ACDI Action Request Items    ${_DIMENSIONS_USER}    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}    ${_DIMENSIONS_DB_NAME}    ${_DIMENSIONS_DSN}    QLARIUS_CR_33
-    ...    RAISED    QLARIUS:MAINLINE_JAVA_STR    ${EMPTY}    0    ${ENDED_OK}
+    ACDI    QLARIUS_CR_33    RAISED    QLARIUS:MAINLINE_JAVA_STR

@@ -1,0 +1,52 @@
+*** Settings ***
+Suite Setup       Setup_suite
+Default Tags      win
+Test Template     DELIVER Template
+Resource          ../../resources/keywords.txt
+
+*** Variables ***
+${SPACE}          " "
+
+*** Test Cases ***    USERNAME                               PASSWORD               HOST                                   DB_NAME                                   DSN                                   SPEC                                                                                                             COMMENT                                        DOC             ARGS    RET    CODE            STATUS
+1.Successful          ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    \\\\"""C:\\Serena_Workareas\\cm_typical\\WORK\\AREA_01\\Qlarius Underwriter\\build.xml\\\\"""                    1.Successful                                   QLARIUS_CR_7    /ALL    0      ${ENDED_OK}
+
+2.Successful with parameters contain spaces
+                      ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}\\\\"""C:\\Serena_Workareas\\cm_typical\\WORK\\AREA_01\\Qlarius Underwriter\\build.xml\\\\"""${SPACE}    2.Successful with parameters contain spaces    QLARIUS_CR_7    /ALL    0      ${ENDED_OK}
+
+3.Fail Successful with Stream ID
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    \\\\"""C:\\Serena_Workareas\\cm_typical\\WORK\\AREA_01\\Qlarius Underwriter\\INVALID.md\\\\"""                   3.Fail Successful with Stream ID               QLARIUS_CR_7    /ALL    1      ${ENDED_NOK}
+
+*** Keywords ***
+DELIVER Template
+    [Arguments]    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}    ${spec}
+    ...    ${comment}    ${docids}    ${args}    ${returnCode}    ${returnStatus}
+    [Documentation]    This template used for testing action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DS with inputs
+    ...    - ${user}: Username to access Serena Dimensions CM.
+    ...    - ${pass}: Password to access Serena Dimensions CM.
+    ...    - ${host}: Serena Dimensions CM hostname
+    ...    - ${dbname}: Specifies the Serena Dimensions CM database identifier.
+    ...    - ${dsn}: Specifies the data source name for connecting to the database.
+    ...    - ${spec}: Specifies either the name of a file to be delivered, a directory path from where files will be delivered (recursively) or a file spec specifying a file containing a list of file names to be delivered.
+    ...    - ${comment}: The comment to apply to all of the newly created item revisions.
+    ...    - ${docids}: The requests for the items to be related to. The originally fetched versions will be related as "Affected", and the newly created versions will be "In Response To".
+    ...    - ${args}: Can be used to specify any optional arguments for DELIVER.
+    ...    - ${returnCode}: return code of execution
+    ...    - ${returnStatus}: return status of execution
+    Init Action    ${ACTION_DELIVER}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${user}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${pass}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${dbname}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${dsn}
+    Action Set    ${PRT_DELV_DIMENSIONS_SPEC}    ${spec}
+    Action Set    ${PRT_DELV_DIMENSIONS_COMMENT}    ${comment}
+    Action Set    ${PRT_DELV_DIMENSIONS_CHANGEIDS}    ${docids}
+    Action Set    ${PRT_DELV_DIMENSIONS_ARGS}    ${args}
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start setup testing for DELIVER Action Request Items

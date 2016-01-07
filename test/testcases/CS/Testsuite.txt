@@ -1,31 +1,47 @@
 *** Settings ***
+Suite Setup       Setup_suite
 Default Tags      win
 Test Template     CS Template
 Resource          ../../resources/keywords.txt
 
-*** Test Cases ***    OK_NOK    USERNAME                       PASSWORD                       HOST                           DB_NAME                           DSN                           STREAM_ID                  DESCRIPTION                          BASE_STREAM             BASELINE                  ARGS                   RETCODE    STATUS          REPORT MESSAGE
-1.Successful          OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            ${_DIMENSION_STREAM_ID}    1.Successful                         ${_DIMENSION_STREAM}    ${_DIMENSION_BASELINE}    /PRODUCT=AT_PRODUCT    0          ${ENDED_OK}     ${EMPTY}
+*** Variables ***
+${SPACE}          " "
 
-2.Fail with invalid user
-                      NOK       ${_DIMENSIONS_USER}_invalid    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            ${_DIMENSION_STREAM_ID}    2.Fail with invalid user             ${_DIMENSION_STREAM}    ${_DIMENSION_BASELINE}    /PRODUCT=AT_PRODUCT    0          ${ENDED_NOK}    ${EMPTY}
+*** Test Cases ***    USERNAME                               PASSWORD                       HOST                                   DB_NAME                                   DSN                                   STREAM_ID                                                             DESCRIPTION                                      STREAM                       BASELINE                                 ARGS                    RETCODE    STATUS
+1.Successful with Stream not empty
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    CS_STREAM_&$PHYS_DATE_YYYYMMDD#&$PHYS_TIME_HHMMSS#                    "1.Successful with Stream not empty"             QLARIUS:MAINLINE_JAVA_STR    ${EMPTY}                                 /ALL                    0          ${ENDED_OK}
 
-3.Fail with invalid password
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}_invalid    ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            ${_DIMENSION_STREAM_ID}    3.Fail with invalid password         ${_DIMENSION_STREAM}    ${_DIMENSION_BASELINE}    /PRODUCT=AT_PRODUCT    0          ${ENDED_NOK}    ${EMPTY}
+2.Successful with Baseline not empty
+                      ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}            ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}CS_STREAM_&$PHYS_DATE_YYYYMMDD#&$PHYS_TIME_HHMMSS#${SPACE}    "2.Successful with Baseline not empty"           ${EMPTY}                     ${SPACE}QLARIUS:MAIN_JAVA_TIP${SPACE}    ${SPACE}/ALL${SPACE}    0          ${ENDED_OK}
 
-4.Fail with invalid host
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}_invalid    ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            ${_DIMENSION_STREAM_ID}    4.Fail with invalid host             ${_DIMENSION_STREAM}    ${_DIMENSION_BASELINE}    /PRODUCT=AT_PRODUCT    0          ${ENDED_NOK}    ${EMPTY}
+3.Successful with parameters contain spaces
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    CS_STREAM_&$PHYS_DATE_YYYYMMDD#&$PHYS_TIME_HHMMSS#                    "3.Successful with parameters contain spaces"    ${EMPTY}                     QLARIUS:MAIN_JAVA_TIP                    /ALL                    0          ${ENDED_OK}
 
-5.Fail with invalid database name
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}_invalid    ${_DIMENSIONS_DSN}            ${_DIMENSION_STREAM_ID}    5.Fail with invalid database name    ${_DIMENSION_STREAM}    ${_DIMENSION_BASELINE}    /PRODUCT=AT_PRODUCT    0          ${ENDED_NOK}    ${EMPTY}
+4.Fail with invalid user
+                      ${_DIMENSIONS_USER}_invalid            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    CS_STREAM_&$PHYS_DATE_YYYYMMDD#&$PHYS_TIME_HHMMSS#                    4.Fail with invalid user                         QLARIUS:MAINLINE_JAVA_STR    ${EMPTY}                                 /ALL                    1          ${ENDED_NOK}
 
-6.Fail with invalid dsn
-                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}_invalid    ${_DIMENSION_STREAM_ID}    6.Fail with invalid dsn              ${_DIMENSION_STREAM}    ${_DIMENSION_BASELINE}    /PRODUCT=AT_PRODUCT    0          ${ENDED_NOK}    ${EMPTY}
+5.Fail with invalid password
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}_invalid    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    CS_STREAM_&$PHYS_DATE_YYYYMMDD#&$PHYS_TIME_HHMMSS#                    5.Fail with invalid password                     QLARIUS:MAINLINE_JAVA_STR    ${EMPTY}                                 /ALL                    1          ${ENDED_NOK}
+
+6.Fail with invalid host
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}_invalid            ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    CS_STREAM_&$PHYS_DATE_YYYYMMDD#&$PHYS_TIME_HHMMSS#                    6.Fail with invalid host                         QLARIUS:MAINLINE_JAVA_STR    ${EMPTY}                                 /ALL                    1          ${ENDED_NOK}
+
+7.Fail with invalid database name
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}_invalid            ${_DIMENSIONS_DSN}                    CS_STREAM_&$PHYS_DATE_YYYYMMDD#&$PHYS_TIME_HHMMSS#                    7.Fail with invalid database name                QLARIUS:MAINLINE_JAVA_STR    ${EMPTY}                                 /ALL                    1          ${ENDED_NOK}
+
+8.Fail with invalid dsn
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}_invalid            CS_STREAM_&$PHYS_DATE_YYYYMMDD#&$PHYS_TIME_HHMMSS#                    8.Fail with invalid dsn                          QLARIUS:MAINLINE_JAVA_STR    ${EMPTY}                                 /ALL                    1          ${ENDED_NOK}
+
+9.Fail with invalid Baseline
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    CS_STREAM_&$PHYS_DATE_YYYYMMDD#&$PHYS_TIME_HHMMSS#                    9.Fail with invalid Baseline                     ${EMPTY}                     INVALID_QLARIUS:MAIN_JAVA_TIP            /ALL                    1          ${ENDED_NOK}
+
+10.Fail with invalid Args
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    CS_STREAM_&$PHYS_DATE_YYYYMMDD#&$PHYS_TIME_HHMMSS#                    10.Fail with invalid Args                        ${EMPTY}                     INVALID_QLARIUS:MAIN_JAVA_TIP            /INVALID                1          ${ENDED_NOK}
 
 *** Keywords ***
 CS Template
-    [Arguments]    ${OK_NOK}    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}
-    ...    ${stream_id}    ${description}    ${stream}    ${baseline}    ${args}    ${returnCode}
-    ...    ${returnStatus}    ${reportMessage}
+    [Arguments]    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}    ${stream_id}
+    ...    ${description}    ${stream}    ${baseline}    ${args}    ${returnCode}    ${returnStatus}
     [Documentation]    This template used for testing action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS with inputs
     ...    - ${user}: Username to access Serena Dimensions CM.
     ...    - ${pass}: Password to access Serena Dimensions CM.
@@ -39,7 +55,6 @@ CS Template
     ...    - ${args}: Optionally specify any optional arguments for CS.
     ...    - ${returnCode}: return code of execution
     ...    - ${returnStatus}: return status of execution
-    ...    - ${reportMessage}: message should be contained in execution report
     Init Action    ${ACTION_CS}
     Action Set    ${PRT_DIMENSIONS_USERNAME}    ${user}
     Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${pass}
@@ -53,7 +68,9 @@ CS Template
     Action Set    ${PRT_CS_DIMENSIONS_ARGS}    ${args}
     Action Execute
     Action Report Should Be Found
-    Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
-    Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Code Should Be    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
-    Action Report Should Contain    ${reportMessage}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start setup testing for CS Action Request Items
