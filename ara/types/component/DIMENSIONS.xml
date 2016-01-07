@@ -6,7 +6,7 @@
    	
 	<Properties>
 		<!--Properties-->
-		<Group name="properties" displayName="Properties">
+		<Group name="generic" displayName="Generic">
 			<Property name="product_id" displayName="Product ID" mode="EDITABLE" type="SingleLineText">
 				<Description>Product Name</Description>
 			</Property>
