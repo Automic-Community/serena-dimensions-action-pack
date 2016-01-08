@@ -298,7 +298,7 @@
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
 <DOC><![CDATA[= RB Name =
-PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS
+PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS
 
 = General description =
 Executes a DMCLI RIWS command which will remove the item specified from the given project. The specified item and project must exist.
@@ -310,7 +310,7 @@ Executes a DMCLI RIWS command which will remove the item specified from the give
 * DSN: Specifies the data source name for connecting to the database.
 * Product ID: Product Name
 * Item ID: Item ID. May be omitted if 'File name' is defined.
-* Variant: Varient. May be omitted if only one exists.
+* Variant: Variant. May be omitted if only one exists.
 * Item Type: Item Type.
 * Revision: Item Revision.
 * Filename: Specifies the name of the project file name.

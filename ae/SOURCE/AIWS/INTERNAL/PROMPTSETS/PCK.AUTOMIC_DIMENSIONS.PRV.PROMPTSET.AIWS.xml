@@ -10,7 +10,7 @@
 <DESIGNER/>
 </PROMPTDESIGNER>
 <PROMPTSETXUI state="1">
-<XUIEDITOR><![CDATA[<dialog height="506" icon="PRPT" id="PRPTS" left="122" top="-1" width="420"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Add Item Workset Params"><properties><entry name="text">Add Item Workset Params</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DMC_USERNAMEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Username" tooltip="Username to access Serena Dimensions CM." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+<XUIEDITOR><![CDATA[<dialog height="506" icon="PRPT" id="PRPTS" left="0" top="0" width="420"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="Add Item Workset Params"><properties><entry name="text">Add Item Workset Params</entry><entry name="modifiable">0</entry></properties><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DMC_USERNAMEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Username" tooltip="Username to access Serena Dimensions CM." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
          <properties>
             <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
@@ -374,7 +374,7 @@
             <entry name="onchangereset"/>
             <entry name="resetable">1</entry>
          </properties>
-      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DMC_AIWS_CHANGEIDSs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Change Doc IDs" tooltip="Identifies the requests to which this change to the project is to be related to." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DMC_AIWS_CHANGEIDSs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Change Doc IDs" tooltip="Comma separated list of request names the add item task will be associated with." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
          <properties>
             <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
@@ -389,7 +389,7 @@
             <entry name="upper">0</entry>
             <entry name="focus">0</entry>
             <entry name="showaspassword">0</entry>
-            <entry name="tooltip">Identifies the requests to which this change to the project is to be related to.</entry>
+            <entry name="tooltip">Comma separated list of request names the add item task will be associated with.</entry>
             <entry name="customfield"/>
             <entry name="modifiable">1</entry>
             <entry name="regex"/>
