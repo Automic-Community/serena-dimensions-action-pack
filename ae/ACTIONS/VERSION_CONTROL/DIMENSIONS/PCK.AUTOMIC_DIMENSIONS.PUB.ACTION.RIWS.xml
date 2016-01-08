@@ -315,7 +315,6 @@ Executes a DMCLI RIWS command which will remove the item specified from the give
 * Revision: Item Revision.
 * Filename: Specifies the name of the project file name.
 * Workset: Workset
-* WS Filename: The WS_FILENAME qualifier specifies the workset filename for the item when adding the item to a project.
 * Change Doc IDs : Comma separated list of request names the add item task will be associated with.
 = Behavior =
 Return 0 if success and > 0 for failure.
