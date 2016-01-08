@@ -19,9 +19,9 @@
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
 <IntAccount/>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
 <DeactWhen/>
 <AutoDeactAlways>0</AutoDeactAlways>
 <DeactDelay>0</DeactDelay>
@@ -56,7 +56,8 @@
 <PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC">
 <PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC">
 <UC4RB_DMC_CC_ARGSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
-<UC4RB_DMC_CC_DESCs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_DESC#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
+<UC4RB_DMC_CC_ATTRIBs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_ATTRIB#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
+<UC4RB_DMC_CC_DESCs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_DESC#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
 <UC4RB_DMC_CC_PRODUCT_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_PRODUCT_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
 <UC4RB_DMC_CC_REQUEST_TYPEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_REQUEST_TYPE#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
 <UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
@@ -119,7 +120,8 @@
 <PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC">
 <PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC">
 <UC4RB_DMC_CC_ARGSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
-<UC4RB_DMC_CC_DESCs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_DESC#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
+<UC4RB_DMC_CC_ATTRIBs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_ATTRIB#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
+<UC4RB_DMC_CC_DESCs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_DESC#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
 <UC4RB_DMC_CC_PRODUCT_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_PRODUCT_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
 <UC4RB_DMC_CC_REQUEST_TYPEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_REQUEST_TYPE#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
 <UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
@@ -168,7 +170,8 @@
 <PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC">
 <PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC">
 <UC4RB_DMC_CC_ARGSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_ARGS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
-<UC4RB_DMC_CC_DESCs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_DESC#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
+<UC4RB_DMC_CC_ATTRIBs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_ATTRIB#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
+<UC4RB_DMC_CC_DESCs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_DESC#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
 <UC4RB_DMC_CC_PRODUCT_IDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_PRODUCT_ID#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
 <UC4RB_DMC_CC_REQUEST_TYPEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_CC_REQUEST_TYPE#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
 <UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.CC"/>
@@ -291,6 +294,8 @@ This function creates a dimensions request.
 * DSN: Specifies the data source name for connecting to the database.
 * Product ID: Specifies the product that is to own the new request.
 * Request Type: Specifies the type of request to be created.
+* Attributes: Specifies a file containing the text body to be used as the detailed description of the request. This file must contain text data only.
+* Description File: Specifies a file containing the text body to be used as the detailed description of the request. This file must contain text data only.
 * Optional Arguments: Can be used to specify any optional arguments for CC. User must input Request title and Request description here
   
 = Behavior =
