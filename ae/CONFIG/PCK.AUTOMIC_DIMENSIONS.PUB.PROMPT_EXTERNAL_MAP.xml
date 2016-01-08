@@ -45,6 +45,8 @@
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.BC/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_CC_ATTRIB#" Value="EXT:/dimensions/create_request/attributes" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_CC_DESC#" Value="EXT:/dimensions/create_request/description_file" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_CC_PRODUCT_ID#" Value="EXT:/dimensions/create_request/product_id" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_CC_REQUEST_TYPE#" Value="EXT:/dimensions/create_request/request_type" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
