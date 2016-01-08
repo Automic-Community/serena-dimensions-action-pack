@@ -13,7 +13,7 @@ ${SPACE}          " "
 2.Successful with parameters contain spaces
                       ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}\\\\"""C:\\Serena_Workareas\\cm_typical\\WORK\\AREA_01\\Qlarius Underwriter\\build.xml\\\\"""${SPACE}    2.Successful with parameters contain spaces    QLARIUS_CR_7    /ALL    0      ${ENDED_OK}
 
-3.Fail Successful with Stream ID
+3.Fail with invalid Deliver Spec
                       ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    \\\\"""C:\\Serena_Workareas\\cm_typical\\WORK\\AREA_01\\Qlarius Underwriter\\INVALID.md\\\\"""                   3.Fail Successful with Stream ID               QLARIUS_CR_7    /ALL    1      ${ENDED_NOK}
 
 *** Keywords ***

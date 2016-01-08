@@ -71,7 +71,7 @@
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
-<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">CVSUNIX01</AGENTs.00>
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
 <LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -135,7 +135,7 @@
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
-<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">CVSUNIX01</AGENTs.00>
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
 <LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -185,7 +185,7 @@
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">
-<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT">CVSUNIX01</AGENTs.00>
+<AGENTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="AGENT#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
 <LOGINs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="LOGIN#" promptsetname="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT"/>
 </PRPTBOX>
 </PROMPTSET>
@@ -255,7 +255,7 @@
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" ontop="1">
 <PRPTBOX promptset="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" prptmode="1">
-<AGENTs.00 altview="0" haslist="0">CVSUNIX01</AGENTs.00>
+<AGENTs.00 altview="0" haslist="0"/>
 </PRPTBOX>
 </PROMPTSET>
 </node>

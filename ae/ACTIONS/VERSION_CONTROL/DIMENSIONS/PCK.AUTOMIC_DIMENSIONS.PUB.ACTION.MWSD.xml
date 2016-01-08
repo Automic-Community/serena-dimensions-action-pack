@@ -19,10 +19,10 @@
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
 <IntAccount/>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
-<DeactWhen/>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
+<DeactWhen>ANY_OK</DeactWhen>
 <AutoDeactAlways>0</AutoDeactAlways>
 <DeactDelay>0</DeactDelay>
 <ActAtRun>1</ActAtRun>
@@ -58,10 +58,10 @@
 <UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 <UC4RB_DMC_DSNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 <UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
-<UC4RB_DMC_MSWD_CHANGE_IDSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_CHANGE_IDS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
-<UC4RB_DMC_MSWD_DEST_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_DEST_DIR#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
-<UC4RB_DMC_MSWD_WORKSETs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_WORKSET#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
-<UC4RB_DMC_MWSD_SRC_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MWSD_SRC_DIR#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
+<UC4RB_DMC_MSWD_CHANGE_IDSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_CHANGE_IDS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
+<UC4RB_DMC_MSWD_DEST_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_DEST_DIR#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
+<UC4RB_DMC_MSWD_WORKSETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_WORKSET#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
+<UC4RB_DMC_MWSD_SRC_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MWSD_SRC_DIR#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 <UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 <UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 </PRPTBOX>
@@ -121,10 +121,10 @@
 <UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 <UC4RB_DMC_DSNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 <UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
-<UC4RB_DMC_MSWD_CHANGE_IDSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_CHANGE_IDS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
-<UC4RB_DMC_MSWD_DEST_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_DEST_DIR#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
-<UC4RB_DMC_MSWD_WORKSETs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_WORKSET#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
-<UC4RB_DMC_MWSD_SRC_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MWSD_SRC_DIR#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
+<UC4RB_DMC_MSWD_CHANGE_IDSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_CHANGE_IDS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
+<UC4RB_DMC_MSWD_DEST_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_DEST_DIR#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
+<UC4RB_DMC_MSWD_WORKSETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_WORKSET#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
+<UC4RB_DMC_MWSD_SRC_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MWSD_SRC_DIR#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 <UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 <UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 </PRPTBOX>
@@ -170,10 +170,10 @@
 <UC4RB_DMC_DBNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DBNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 <UC4RB_DMC_DSNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_DSN#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 <UC4RB_DMC_HOSTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_HOST#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
-<UC4RB_DMC_MSWD_CHANGE_IDSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_CHANGE_IDS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
-<UC4RB_DMC_MSWD_DEST_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_DEST_DIR#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
-<UC4RB_DMC_MSWD_WORKSETs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_WORKSET#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
-<UC4RB_DMC_MWSD_SRC_DIRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MWSD_SRC_DIR#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
+<UC4RB_DMC_MSWD_CHANGE_IDSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_CHANGE_IDS#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
+<UC4RB_DMC_MSWD_DEST_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_DEST_DIR#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
+<UC4RB_DMC_MSWD_WORKSETs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MSWD_WORKSET#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
+<UC4RB_DMC_MWSD_SRC_DIRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_MWSD_SRC_DIR#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 <UC4RB_DMC_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_PASSWORD#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 <UC4RB_DMC_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DMC_USERNAME#" promptsetname="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD"/>
 </PRPTBOX>
@@ -244,7 +244,12 @@
 </node>
 <node content="1" id="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD" name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD" prptmode="1"/>
+<PRPTBOX promptset="PCK.AUTOMIC_DIMENSIONS.PRV.PROMPTSET.MWSD" prptmode="1">
+<UC4RB_DMC_MWSD_SRC_DIRs.00 altview="0" haslist="0"/>
+<UC4RB_DMC_MSWD_DEST_DIRs.00 altview="0" haslist="0"/>
+<UC4RB_DMC_MSWD_WORKSETs.00 altview="0" haslist="0"/>
+<UC4RB_DMC_MSWD_CHANGE_IDSs.00 altview="0" haslist="0"/>
+</PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
