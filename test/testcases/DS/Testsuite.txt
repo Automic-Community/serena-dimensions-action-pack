@@ -10,9 +10,11 @@ ${STREAM_ID}      "DS_STREAM"
 ${STREAM}         "QLARIUS:MAINLINE_JAVA_STR"
 
 *** Test Cases ***    USERNAME                               PASSWORD               HOST                                   DB_NAME                                   DSN                                   STREAM_ID                       RETCODE    STATUS
-1.Successful          ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    ${STREAM_ID}                    0          ${ENDED_OK}
+1.Successful          [Setup]                                CS Create a Stream     ${STREAM_ID}                           "Stream Setup for Delete Stream"          ${STREAM}
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    ${STREAM_ID}                    0          ${ENDED_OK}
 
 2.Successful with parameters contain spaces
+                      [Setup]                                CS Create a Stream     ${STREAM_ID}                           "Stream Setup for Delete Stream"          ${STREAM}
                       ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}${STREAM_ID}${SPACE}    0          ${ENDED_OK}
 
 3.Fail Successful with Stream ID
@@ -46,4 +48,3 @@ DS Template
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start setup testing for DS Action Request Items
-    CS Create a Stream    ${STREAM_ID}    "Stream Setup for Delete Stream"    ${STREAM}
