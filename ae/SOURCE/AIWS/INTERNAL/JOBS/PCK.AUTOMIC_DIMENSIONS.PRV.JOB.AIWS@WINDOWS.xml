@@ -115,22 +115,15 @@
 <PSCRI><![CDATA[:INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.PREPARE_JOB]]></PSCRI>
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[! Run book to run the Dimensions CM AIWS command through the DMCLI.
+<MSCRI><![CDATA[@echo off
+:INC PCK.AUTOMIC_DIMENSIONS.PRV.INCLUDE.AIWS_LOGGING_PARAMS
+
+! Run book to run the Dimensions CM AIWS command through the DMCLI.
 :INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
+:INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
 
-! Ensure a product ID has been specified
-: IF &UC4RB_DMC_AIWS_PROD_ID#=''
-:   P 'Specify a Product ID'
-:   EXIT 1
-: ENDIF
-
-! Ensure a workset has been defined
-: IF &UC4RB_DMC_AIWS_WORKSET#=''
-:   P 'Specify a workset'
-:   EXIT 1
-: ELSE
-:   SET &WORKSET#='/WORKSET=&UC4RB_DMC_AIWS_WORKSET#'
-: ENDIF
+! Set value for workset field
+: SET &WORKSET#='/WORKSET=&UC4RB_DMC_AIWS_WORKSET#'
 
 ! Check that at least item id or filename has been specified
 : SET &FILENAME#=''
@@ -139,19 +132,19 @@
 :     P 'You must specify at least item id or filename'
 :     EXIT 1
 :   ELSE
-:     SET &FILENAME#='/FILENAME=\\"""&UC4RB_DMC_AIWS_FILENAME# \\"""'
+:     SET &FILENAME#='/FILENAME=\\"""&UC4RB_DMC_AIWS_FILENAME#\\"""'
 :   ENDIF
 : ENDIF
 ! Create the item-spec
-: SET &ITEMSPEC#='\\"""&UC4RB_DMC_AIWS_PROD_ID#:&UC4RB_DMC_AIWS_ITEM_ID#.&UC4RB_DMC_AIWS_VARIENT#-&UC4RB_DMC_AIWS_ITEM_TYPE#;&UC4RB_DMC_AIWS_REVISION#\\"""'
+: SET &ITEMSPEC#='\\"""&UC4RB_DMC_AIWS_PROD_ID#:&UC4RB_DMC_AIWS_ITEM_ID#.&UC4RB_DMC_AIWS_VARIANT#-&UC4RB_DMC_AIWS_ITEM_TYPE#;&UC4RB_DMC_AIWS_REVISION#\\"""'
 
 ! Check if WS Filename has been set
 : SET &WS_FILENAME#=''
 : IF &UC4RB_DMC_AIWS_WSFILENAME#<>''
-:  SET &WS_FILENAME#='/WS_FILENAME=\\"""&UC4RB_DMC_AIWS_WSFILENAME# \\"""'
+:  SET &WS_FILENAME#='/WS_FILENAME=\\"""&UC4RB_DMC_AIWS_WSFILENAME#\\"""'
 : ENDIF
 
-! Check if hange Doc IDs have been set
+! Check if change Doc IDs have been set
 : SET &CHANGEDOCIDS#=''
 : IF &UC4RB_DMC_AIWS_CHANGEIDS#<>''
 :   SET &CHANGEDOCIDS#='/CHANGE_DOC_IDS=(&UC4RB_DMC_AIWS_CHANGEIDS#)'
