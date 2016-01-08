@@ -110,3 +110,38 @@ EI checkout for update
     Action Set    ${PRT_EI_DIMENSIONS_WORKSET}    ${workset}
     Action Set    ${PRT_EI_DIMENSIONS_ARGS}    ${args}
     Action Execute
+
+Add Item Workset
+    Init Action    ${ACTION_AIWS}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${_DIMENSIONS_USER}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${_DIMENSIONS_PASS}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${_DIMENSIONS_HOST}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${_DIMENSIONS_DB_NAME}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${_DIMENSIONS_DSN}
+    Action Set    ${PRT_AIWS_DIMENSIONS_PRODUCT_ID}    QLARIUS
+    Action Set    ${PRT_AIWS_DIMENSIONS_ITEM_ID}    HUYTQ TEST RTF-189061173X2500X0
+    Action Set    ${PRT_AIWS_DIMENSIONS_VARIANT}    A
+    Action Set    ${PRT_AIWS_DIMENSIONS_ITEM_TYPE}    SRC
+    Action Set    ${PRT_AIWS_DIMENSIONS_REVISION}    java_s1_1#2
+    Action Set    ${PRT_AIWS_DIMENSIONS_WORKSET}    QLARIUS:ABC
+    Action Set    ${PRT_AIWS_DIMENSIONS_FILENAME}    HuyTQ_test.rtf
+    Action Set    ${PRT_AIWS_DIMENSIONS_WSFILENAME}    New_HuyTQ_test.rtf
+    Action Set    ${PRT_AIWS_DIMENSIONS_CHANGEIDS}    QLARIUS_CR_42
+    Action Execute
+
+Remove Item Workset
+    Init Action    ${ACTION_RIWS}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${_DIMENSIONS_USER}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${_DIMENSIONS_PASS}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${_DIMENSIONS_HOST}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${_DIMENSIONS_DB_NAME}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${_DIMENSIONS_DSN}
+    Action Set    ${PRT_RIWS_DIMENSIONS_PRODUCT_ID}    QLARIUS
+    Action Set    ${PRT_RIWS_DIMENSIONS_ITEM_ID}    HUYTQ TEST RTF-189061173X2500X0
+    Action Set    ${PRT_RIWS_DIMENSIONS_VARIANT}    A
+    Action Set    ${PRT_RIWS_DIMENSIONS_ITEM_TYPE}    SRC
+    Action Set    ${PRT_RIWS_DIMENSIONS_REVISION}    java_s1_1#2
+    Action Set    ${PRT_RIWS_DIMENSIONS_WORKSET}    QLARIUS:ABC
+    Action Set    ${PRT_RIWS_DIMENSIONS_FILENAME}    HuyTQ_test.rtf
+    Action Set    ${PRT_RIWS_DIMENSIONS_CHANGEIDS}    QLARIUS_CR_42
+    Action Execute

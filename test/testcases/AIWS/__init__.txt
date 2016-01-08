@@ -1,0 +1,3 @@
+*** Settings ***
+Documentation     Testing for action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS
+Force Tags        AIWS
