@@ -122,21 +122,8 @@
 :INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
 :INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
 
-! Ensure a ITEM_ID & filename is not null together
-: IF &UC4RB_DMC_AIWS_ITEM_ID#=''
-:   IF &UC4RB_DMC_AIWS_FILENAME#=''
-:     P 'Should provide at lease filename or item Id'
-:     EXIT 1
-:   ENDIF
-: ENDIF
-
-! Ensure a workset has been defined
-: IF &UC4RB_DMC_AIWS_WORKSET#=''
-:   P 'Specify a workset'
-:   EXIT 1
-: ELSE
-:   SET &WORKSET#='/WORKSET=&UC4RB_DMC_AIWS_WORKSET#'
-: ENDIF
+! Set value for workset field
+: SET &WORKSET#='/WORKSET=&UC4RB_DMC_AIWS_WORKSET#'
 
 ! Check that at least item id or filename has been specified
 : SET &FILENAME#=''
@@ -157,7 +144,7 @@
 :  SET &WS_FILENAME#='/WS_FILENAME=\\"""&UC4RB_DMC_AIWS_WSFILENAME#\\"""'
 : ENDIF
 
-! Check if hange Doc IDs have been set
+! Check if change Doc IDs have been set
 : SET &CHANGEDOCIDS#=''
 : IF &UC4RB_DMC_AIWS_CHANGEIDS#<>''
 :   SET &CHANGEDOCIDS#='/CHANGE_DOC_IDS=(&UC4RB_DMC_AIWS_CHANGEIDS#)'

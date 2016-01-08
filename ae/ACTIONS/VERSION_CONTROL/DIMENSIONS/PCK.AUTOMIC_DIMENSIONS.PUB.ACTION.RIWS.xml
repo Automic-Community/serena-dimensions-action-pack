@@ -20,8 +20,8 @@
 <ExtRepNone>0</ExtRepNone>
 <IntAccount/>
 <AutoDeactNo>0</AutoDeactNo>
-<AutoDeact1ErrorFree>1</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
 <DeactWhen/>
 <AutoDeactAlways>0</AutoDeactAlways>
 <DeactDelay>0</DeactDelay>
