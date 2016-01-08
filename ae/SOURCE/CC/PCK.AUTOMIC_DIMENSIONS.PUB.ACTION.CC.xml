@@ -294,9 +294,9 @@ This function creates a dimensions request.
 * DSN: Specifies the data source name for connecting to the database.
 * Product ID: Specifies the product that is to own the new request.
 * Request Type: Specifies the type of request to be created.
-* Attributes: Specifies a file containing the text body to be used as the detailed description of the request. This file must contain text data only.
+* Attributes: Attributes of request - User must input at least Request title here. For example: attri1=value1,attr2=value2
 * Description File: Specifies a file containing the text body to be used as the detailed description of the request. This file must contain text data only.
-* Optional Arguments: Can be used to specify any optional arguments for CC. User must input Request title and Request description here
+* Optional Arguments: Can be used to specify any optional arguments for CC
   
 = Behavior =
 Return 0 if success and > 0 for failure.
