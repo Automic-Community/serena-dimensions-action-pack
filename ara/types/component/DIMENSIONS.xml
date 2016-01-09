@@ -86,6 +86,12 @@
 			<Property name="report_type" displayName="Report Type" mode="EDITABLE" type="SingleLineText">
 				<Description>Determines which particular report type is returned</Description>
 			</Property>
+			<Property name="attributes" displayName="Attributes" mode="EDITABLE" type="SingleLineText">
+				<Description>Attributes of request - User must input at least Request title here. For example: attri1=value1,attr2=value2</Description>
+			</Property>
+			<Property name="description_file" displayName="Description File" mode="EDITABLE" type="SingleLineText">
+				<Description>Specifies a file containing the text body to be used as the detailed description of the request. This file must contain text data only.</Description>
+			</Property>			
 		</Group>
 		<Group name="stream" displayName="Stream">
 			<Property name="change_doc_ids" displayName="Change Doc IDs" mode="EDITABLE" type="SingleLineText">
@@ -241,7 +247,15 @@
             <Value>{/custom/request_type}</Value>
             <Description>Specifies the type of request to be created.</Description>
         </Property>
-		
+		<Property name="/dimensions/create_request/attributes" highlighted="false">
+            <Value>{/custom/attributes}</Value>
+            <Description>Attributes of request - User must input at least Request title here. For example: attri1=value1,attr2=value2</Description>
+        </Property>
+		<Property name="/dimensions/create_request/description_file" highlighted="false">
+            <Value>{/custom/description_file}</Value>
+            <Description>Specifies a file containing the text body to be used as the detailed description of the request. This file must contain text data only.</Description>
+        </Property>
+				
 		<!--Create Stream - CS-->
 		<Property name="/dimensions/create_stream/baseline" highlighted="false">
             <Value>{/custom/baseline}</Value>
