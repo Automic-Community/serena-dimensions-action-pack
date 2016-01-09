@@ -281,9 +281,36 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Executes a DMCLI CS command which is used to create a new stream within a Dimensions product. 
+<DOC><![CDATA[= Name =
+PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS
 
-The stream can be empty, based on an existing stream, or based on an existing baseline.]]></DOC>
+= General description =
+Executes a DMCLI CS command which is used to create a new stream within a Dimensions product. The stream can be empty, based on an existing stream, or based on an existing baseline.
+
+= Inputs =
+* Username: Username to access Serena Dimensions CM.
+* Password: Password to access Serena Dimensions CM.
+* Hostname: Serena Dimensions CM hostname.
+* DBName: Specifies the Serena Dimensions CM database identifier.
+* DSN: Specifies the data source name for connecting to the database.
+* Stream ID: The name of stream.
+* Description: Specifies a description for the stream.
+* Stream: Optionally specifies the stream on which to base the new stream, (Note: If input this field, ignore Baseline field).
+* Baseline: Optionally specifies the Dimensions baseline on which to base the new stream, (Note: If input this field, ignore Stream field).
+* Optional Arguments: Can be used to specify any optional arguments for CS.
+
+=Note=
+Additional parameters may be specified, depending on the type of stream required (see synopsis and refer to the Serena Dimensions CM Command Line Reference). These can be passed in as plain text in optional arguments.
+
+= Behavior =
+Return 0 if success and > 0 for failure.
+
+= Outputs =
+None 
+
+= Rollback =
+None
+]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

@@ -275,7 +275,34 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Executes a DMCLI UWA command to update project or stream attributes.]]></DOC>
+<DOC><![CDATA[= Name =
+PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.UWA
+
+= General description =
+This action executes a DMCLI UWA command to update project or stream attributes.
+
+= Inputs =
+* Username: Username to access Serena Dimensions CM.
+* Password: Password to access Serena Dimensions CM.
+* Hostname: Serena Dimensions CM hostname.
+* DBName: Specifies the Serena Dimensions CM database identifier.
+* DSN: Specifies the data source name for connecting to the database.
+* Product ID: Product Name.
+* Project ID: Project Name.
+* Optional Arguments: Can be used to specify any optional arguments for UWA.
+
+= Note =
+Additional parameters may be specified depending on the type of update required (refer to the Serena Dimensions CM Command Line Reference). These can be passed in as plain text in optional arguments.
+
+= Behavior =
+Return 0 if success and > 0 for failure.
+
+= Outputs =
+None 
+
+= Rollback =
+None
+]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

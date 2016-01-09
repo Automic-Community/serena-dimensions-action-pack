@@ -274,9 +274,35 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Executes a DMCLI DELIVER command which allows the delivery of a specified file or directory into a stream. 
+<DOC><![CDATA[= Name =
+PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DELIVER
 
-If any conflicts are found between the repository and the work area, they will be reported and the deliver will fail.]]></DOC>
+= General description =
+Executes a DMCLI DELIVER command which allows the delivery of a specified file or directory into a stream. If any conflicts are found between the repository and the work area, they will be reported and the deliver will fail.
+
+= Inputs =
+* Username: Username to access Serena Dimensions CM.
+* Password: Password to access Serena Dimensions CM.
+* Hostname: Serena Dimensions CM hostname.
+* DBName: Specifies the Serena Dimensions CM database identifier.
+* DSN: Specifies the data source name for connecting to the database.
+* Delivery Spec: Specifies either the name of a file to be delivered, a directory path from where files will be delivered (recursively) or a file spec specifying a file containing a list of file names to be delivered. For example: \\"""C:\Serena_Workareas\cm_typical\WORK\AREA_01\Qlarius Underwriter\README.md\\"""
+* Comment: The comment to apply to all of the newly created item revisions.
+* Change Doc IDs: The requests for the items to be related to. The originally fetched versions will be related as "Affected", and the newly created versions will be "In Response To".
+* Optional Arguments: Can be used to specify any optional arguments for DELIVER.
+
+=Note=
+Additional parameters may be specified depending on the type of deliver required (refer to the Serena Dimensions CM Command Line Reference). These can be passed in as plain text in optional arguments.
+
+= Behavior =
+Return 0 if success and > 0 for failure.
+
+= Outputs =
+None 
+
+= Rollback =
+None
+]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

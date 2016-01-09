@@ -279,7 +279,32 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Executes a DMCLI MWSD command which moves the project structure (and items) from the source directory to the destination directory.]]></DOC>
+<DOC><![CDATA[= Name =
+PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD
+
+= General description =
+This action executes a DMCLI MWSD command which moves the project structure (and items) from the source directory to the destination directory.
+
+= Inputs =
+* Username: Username to access Serena Dimensions CM.
+* Password: Password to access Serena Dimensions CM.
+* Hostname: Serena Dimensions CM hostname.
+* DBName: Specifies the Serena Dimensions CM database identifier.
+* DSN: Specifies the data source name for connecting to the database.
+* Source Directory: Is the source directory to move the project/stream structure from.
+* Destination Directory: Is the destination directory to move the project/stream structure to.
+* Workset: This optionally specifies the project/stream to be used for this command: failing this, the user's current project/stream will be taken.
+* Change Doc IDs: Comma separated list of change ids directory move will be recorded against.
+
+= Behavior =
+Return 0 if success and > 0 for failure.
+
+= Outputs =
+None 
+
+= Rollback =
+None
+]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
