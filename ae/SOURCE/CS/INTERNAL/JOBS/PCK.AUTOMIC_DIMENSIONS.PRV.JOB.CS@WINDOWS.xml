@@ -130,6 +130,13 @@
 :   SET &DESC#='/DESCRIPTION=\\"""&UC4RB_DMC_CS_DESCRIPTION#\\"""'
 : ENDIF
 
+:IF &UC4RB_DMC_CS_STREAM# <> ''
+: IF &UC4RB_DMC_CS_BASELINE# <> ''
+:  P 'You must not specify both stream and baseline on which to base the new stream'
+:  EXIT 1
+: ENDIF
+:ENDIF
+
 !Check if a base stream has been specified
 :IF &UC4RB_DMC_CS_STREAM#=''
 :  SET &STREAM#=''
