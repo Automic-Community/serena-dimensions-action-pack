@@ -115,14 +115,13 @@
 <PSCRI><![CDATA[:INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.PREPARE_JOB]]></PSCRI>
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[! Run book to run the Dimensions CM DELIVER command through the DMCLI.
-:INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
+<MSCRI><![CDATA[@echo off
+:INC PCK.AUTOMIC_DIMENSIONS.PRV.INCLUDE.DELIVER_LOGGING_PARAMS
 
-! Ensure a delivery spec has been defined
-: IF &UC4RB_DMC_DELV_SPEC#=''
-:   P 'Specify a delivery spec. Either: <file-spec>, /DIR=<directory-spec>, /USER_FILELIST=<filelist-file> or /USER_DIRECTORY=<directory-path>'
-:   EXIT 1
-: ENDIF
+:INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
+
+! Action to run the Dimensions CM DELIVER command through the DMCLI.
+:INC PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
 
 ! Check if a comment has been specified
 : SET &COMMENT#=''

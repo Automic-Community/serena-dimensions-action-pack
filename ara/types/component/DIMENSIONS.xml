@@ -275,7 +275,7 @@
         </Property>
 		
 		<!--Delete Stream - DS-->
-		<Property name="/dimensions/delete_steam/stream_id" highlighted="false">
+		<Property name="/dimensions/delete_stream/stream_id" highlighted="false">
             <Value>{/custom/stream_id}</Value>
             <Description>The identity of a Dimensions stream to delete.</Description>
         </Property>

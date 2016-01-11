@@ -115,21 +115,13 @@
 <PSCRI><![CDATA[:INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.PREPARE_JOB]]></PSCRI>
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[! Run book to run the Dimensions CM CS command through the DMCLI.
-:INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
-! Ensure that a Stream name is specified
-: IF &UC4RB_DMC_CS_STREAM_ID#=''
-:  P "Specify a stream name"
-:  EXIT 1
-: ENDIF
+<MSCRI><![CDATA[@echo off
+:INC PCK.AUTOMIC_DIMENSIONS.PRV.INCLUDE.CS_LOGGING_PARAMS
 
-! Ensure user has only specified either base stream or basebaseline, not both
-: IF &UC4RB_DMC_CS_BASELINE#<>''
-:   IF &UC4RB_DMC_CS_STREAM#<>''
-:     P 'Specify either a base stream or baseline. Not both'
-:     EXIT 1
-:   ENDIF
-: ENDIF
+:INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
+
+! Action to run the Dimensions CM CS command through the DMCLI.
+:INC PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
 
 !Check if a description has been specified
 : IF &UC4RB_DMC_CS_DESCRIPTION#=''
@@ -137,6 +129,13 @@
 : ELSE
 :   SET &DESC#='/DESCRIPTION=\\"""&UC4RB_DMC_CS_DESCRIPTION#\\"""'
 : ENDIF
+
+:IF &UC4RB_DMC_CS_STREAM# <> ''
+: IF &UC4RB_DMC_CS_BASELINE# <> ''
+:  P 'You must not specify both stream and baseline on which to base the new stream'
+:  EXIT 1
+: ENDIF
+:ENDIF
 
 !Check if a base stream has been specified
 :IF &UC4RB_DMC_CS_STREAM#=''

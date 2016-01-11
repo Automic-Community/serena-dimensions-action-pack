@@ -1,0 +1,56 @@
+*** Settings ***
+Suite Setup       Setup_suite
+Default Tags      win
+Test Template     UWA Template
+Resource          ../../resources/keywords.txt
+
+*** Variables ***
+${SPACE}          " "
+
+*** Test Cases ***    USERNAME                               PASSWORD               HOST                                   DB_NAME                                   DSN                                   PRODUCTID                  PROJECTID                            ARGS                                 RETCODE    STATUS
+1.Successful          ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS                    MAINLINE_JAVA_STR                    /USE_LOCAL_STAGES                    0          ${ENDED_OK}
+
+2.Successful with parameters contain spaces
+                      ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}QLARIUS${SPACE}    ${SPACE}MAINLINE_JAVA_STR${SPACE}    ${SPACE}/USE_LOCAL_STAGES${SPACE}    0          ${ENDED_OK}
+
+3.Fail with invalid Product Id
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    INVALID                    MAINLINE_JAVA_STR                    /USE_LOCAL_STAGES                    1          ${ENDED_NOK}
+
+4.Fail with invalid Project Id
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS                    INVALID                              /USE_LOCAL_STAGES                    1          ${ENDED_NOK}
+
+5.Fail with invalid Args
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    QLARIUS                    MAINLINE_JAVA_STR                    /INVALID                             1          ${ENDED_NOK}
+
+*** Keywords ***
+UWA Template
+    [Arguments]    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}    ${product_id}
+    ...    ${project_id}    ${args}    ${returnCode}    ${returnStatus}
+    [Documentation]    This template used for testing action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.UWA with inputs
+    ...    - ${user}: Username to access Serena Dimensions CM.
+    ...    - ${pass}: Password to access Serena Dimensions CM.
+    ...    - ${host}: Serena Dimensions CM hostname
+    ...    - ${dbname}: Specifies the Serena Dimensions CM database identifier.
+    ...    - ${dsn}: Specifies the data source name for connecting to the database.
+    ...    - ${product_id}: Product Name.
+    ...    - ${project_id}: Project Name.
+    ...    - ${args}: Can be used to specify any optional arguments for UWA.
+    ...    - ${returnCode}: return code of execution
+    ...    - ${returnStatus}: return status of execution
+    Init Action    ${ACTION_UWA}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${user}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${pass}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${dbname}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${dsn}
+    Action Set    ${PRT_UWA_DIMENSIONS_PRODUCT_ID}    ${product_id}
+    Action Set    ${PRT_UWA_DIMENSIONS_PROJECT_ID}    ${project_id}
+    Action Set    ${PRT_UWA_DIMENSIONS_ARGS}    ${args}
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start setup testing for UWA Action Request Items

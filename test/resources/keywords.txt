@@ -91,6 +91,48 @@ Copy
     Action Set    &UC4RB_COPY_EXCLUDE#    ${EMPTY}
     Action Execute
 
+ACDI
+    [Arguments]    ${request}    ${status}    ${workset}
+    Init Action    PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${_DIMENSIONS_USER}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${_DIMENSIONS_PASS}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${_DIMENSIONS_HOST}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${_DIMENSIONS_DB_NAME}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${_DIMENSIONS_DSN}
+    Action Set    ${PRT_ACDI_DIMENSIONS_REQUEST_ID}    ${request}
+    Action Set    ${PRT_ACDI_DIMENSIONS_STATUS}    ${status}
+    Action Set    ${PRT_ACDI_DIMENSIONS_WORKSET}    ${workset}
+    Action Set    ${PRT_ACDI_DIMENSIONS_ARGS}    ${EMPTY}
+    Action Execute
+
+CS Create a Stream
+    [Arguments]    ${stream_id}    ${description}    ${stream}
+    Init Action    PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${_DIMENSIONS_USER}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${_DIMENSIONS_PASS}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${_DIMENSIONS_HOST}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${_DIMENSIONS_DB_NAME}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${_DIMENSIONS_DSN}
+    Action Set    ${PRT_CS_DIMENSIONS_STREAM_ID}    ${stream_id}
+    Action Set    ${PRT_CS_DIMENSIONS_DESCRIPTION}    ${description}
+    Action Set    ${PRT_CS_DIMENSIONS_STREAM}    ${stream}
+    Action Set    ${PRT_CS_DIMENSIONS_BASELINE}    ${EMPTY}
+    Action Set    ${PRT_CS_DIMENSIONS_ARGS}    ${EMPTY}
+    Action Execute
+
+MWSD Move Project Stream Directory
+    [Arguments]    ${source}    ${dest}    ${workset}    ${doc}
+    Init Action    PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${_DIMENSIONS_USER}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${_DIMENSIONS_PASS}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${_DIMENSIONS_HOST}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${_DIMENSIONS_DB_NAME}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${_DIMENSIONS_DSN}
+    Action Set    ${PRT_MWSD_DIMENSIONS_SRC_DIR}    ${source}
+    Action Set    ${PRT_MWSD_DIMENSIONS_DEST_DIR}    ${dest}
+    Action Set    ${PRT_MWSD_DIMENSIONS_WORKSET}    ${workset}
+    Action Set    ${PRT_MWSD_DIMENSIONS_CHANGE_IDS}    ${doc}
+    Action Execute
 EI checkout for update
     [Arguments]    ${host}    ${product_id}    ${item_id}    ${variant}    ${item_type}    ${revision}
     ...    ${file_name}    ${workset}    ${args}
