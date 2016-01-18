@@ -6,43 +6,43 @@ Resource          ../../resources/keywords.txt
 *** Test Cases ***    OK_NOK     USERNAME                       PASSWORD                       HOST                           DN NAME                           DSN                           PRODUCT ID         ITEM ID                                    VARIANT      ITEM TYPE      REVISION               WORKSET                FILENAME                  CHANGEIDS        RETCODE    STATUS          REPORT MESSAGE
 1.Successful action request with valid parameters_ACTION
                       [Setup]    Add Item Workset
-                      OK         ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-189061173X2500X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_OK}     Operation completed
+                      OK         ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-190795421X6832X0            A            SRC            java_s1_1#1            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_OK}     Operation completed
 
 2.Fail with invalid user
-                      NOK        ${_DIMENSIONS_USER}_invalid    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-189061173X2500X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
+                      NOK        ${_DIMENSIONS_USER}_invalid    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-190795421X6832X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
 
 3.Fail with invalid password
-                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}_invalid    ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-189061173X2500X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
+                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}_invalid    ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-190795421X6832X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
 
 4.Fail with invalid host
-                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}_invalid    ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-189061173X2500X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
+                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}_invalid    ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-190795421X6832X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
 
 5.Fail with invalid database name
-                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}_invalid    ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-189061173X2500X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
+                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}_invalid    ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-190795421X6832X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
 
 6.Fail with invalid dsn
-                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}_invalid    QLARIUS            HUYTQ TEST RTF-189061173X2500X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
+                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}_invalid    QLARIUS            HUYTQ TEST RTF-190795421X6832X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
 
 7.Fail with invalid Product id
-                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_invalid    HUYTQ TEST RTF-189061173X2500X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
+                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_invalid    HUYTQ TEST RTF-190795421X6832X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
 
 8.Fail with invalid Item ID
                       NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-189061173X2500X0 invalid    A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
 
 9.Fail with invalid Variant
-                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-189061173X2500X0            A_invalid    SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
+                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-190795421X6832X0            A_invalid    SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
 
 10.Fail with invalid itemType
-                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-189061173X2500X0            A            SRC_invalid    java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
+                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-190795421X6832X0            A            SRC_invalid    java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
 
 11.Fail with invalid revision
-                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-189061173X2500X0            A            SRC            java_s1_1#2_invalid    QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
+                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-190795421X6832X0            A            SRC            java_s1_1#2_invalid    QLARIUS:ABC            HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
 
 12.Fail with invalid workset
-                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-189061173X2500X0            A            SRC            java_s1_1#2            QLARIUS:ABC_invalid    HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
+                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-190795421X6832X0            A            SRC            java_s1_1#2            QLARIUS:ABC_invalid    HuyTQ_test.rtf            QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
 
 13.Fail with invalid filename
-                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-189061173X2500X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf_invalid    QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
+                      NOK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            HUYTQ TEST RTF-190795421X6832X0            A            SRC            java_s1_1#2            QLARIUS:ABC            HuyTQ_test.rtf_invalid    QLARIUS_CR_42    0          ${ENDED_NOK}    ${EMPTY}
 
 *** Keywords ***
 RIWS Template

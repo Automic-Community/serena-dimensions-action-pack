@@ -133,6 +133,7 @@ MWSD Move Project Stream Directory
     Action Set    ${PRT_MWSD_DIMENSIONS_WORKSET}    ${workset}
     Action Set    ${PRT_MWSD_DIMENSIONS_CHANGE_IDS}    ${doc}
     Action Execute
+
 EI checkout for update
     [Arguments]    ${host}    ${product_id}    ${item_id}    ${variant}    ${item_type}    ${revision}
     ...    ${file_name}    ${workset}    ${args}
@@ -161,10 +162,10 @@ Add Item Workset
     Action Set    ${PRT_DIMENSIONS_DBNAME}    ${_DIMENSIONS_DB_NAME}
     Action Set    ${PRT_DIMENSIONS_DSN}    ${_DIMENSIONS_DSN}
     Action Set    ${PRT_AIWS_DIMENSIONS_PRODUCT_ID}    QLARIUS
-    Action Set    ${PRT_AIWS_DIMENSIONS_ITEM_ID}    HUYTQ TEST RTF-189061173X2500X0
+    Action Set    ${PRT_AIWS_DIMENSIONS_ITEM_ID}    HUYTQ TEST RTF-190795421X6832X0
     Action Set    ${PRT_AIWS_DIMENSIONS_VARIANT}    A
     Action Set    ${PRT_AIWS_DIMENSIONS_ITEM_TYPE}    SRC
-    Action Set    ${PRT_AIWS_DIMENSIONS_REVISION}    java_s1_1#2
+    Action Set    ${PRT_AIWS_DIMENSIONS_REVISION}    java_s1_1#1
     Action Set    ${PRT_AIWS_DIMENSIONS_WORKSET}    QLARIUS:ABC
     Action Set    ${PRT_AIWS_DIMENSIONS_FILENAME}    HuyTQ_test.rtf
     Action Set    ${PRT_AIWS_DIMENSIONS_WSFILENAME}    New_HuyTQ_test.rtf
@@ -179,10 +180,10 @@ Remove Item Workset
     Action Set    ${PRT_DIMENSIONS_DBNAME}    ${_DIMENSIONS_DB_NAME}
     Action Set    ${PRT_DIMENSIONS_DSN}    ${_DIMENSIONS_DSN}
     Action Set    ${PRT_RIWS_DIMENSIONS_PRODUCT_ID}    QLARIUS
-    Action Set    ${PRT_RIWS_DIMENSIONS_ITEM_ID}    HUYTQ TEST RTF-189061173X2500X0
+    Action Set    ${PRT_RIWS_DIMENSIONS_ITEM_ID}    HUYTQ TEST RTF-190795421X6832X0
     Action Set    ${PRT_RIWS_DIMENSIONS_VARIANT}    A
     Action Set    ${PRT_RIWS_DIMENSIONS_ITEM_TYPE}    SRC
-    Action Set    ${PRT_RIWS_DIMENSIONS_REVISION}    java_s1_1#2
+    Action Set    ${PRT_RIWS_DIMENSIONS_REVISION}    java_s1_1#1
     Action Set    ${PRT_RIWS_DIMENSIONS_WORKSET}    QLARIUS:ABC
     Action Set    ${PRT_RIWS_DIMENSIONS_FILENAME}    HuyTQ_test.rtf
     Action Set    ${PRT_RIWS_DIMENSIONS_CHANGEIDS}    QLARIUS_CR_42
