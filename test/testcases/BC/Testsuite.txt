@@ -1,5 +1,5 @@
 *** Settings ***
-Default Tags      win
+Default Tags      win    ALL
 Test Template     BC Template
 Resource          ../../resources/keywords.txt
 

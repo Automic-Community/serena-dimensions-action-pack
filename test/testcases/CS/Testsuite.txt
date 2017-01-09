@@ -1,6 +1,6 @@
 *** Settings ***
 Suite Setup       Setup_suite
-Default Tags      win
+Default Tags      win    ALL
 Test Template     CS Template
 Resource          ../../resources/keywords.txt
 

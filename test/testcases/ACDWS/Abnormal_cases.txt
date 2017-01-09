@@ -1,5 +1,5 @@
 *** Settings ***
-Default Tags      win
+Default Tags      win    ALL
 Test Template     ACDWS Add Request Items to Project
 Resource          ../../resources/keywords.txt
 
