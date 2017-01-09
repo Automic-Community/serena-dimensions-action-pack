@@ -1,5 +1,5 @@
 *** Settings ***
-Default Tags      win
+Default Tags      win    SMOKE_TEST
 Test Template     LWS Template
 Resource          ../../resources/keywords.txt
 

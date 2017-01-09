@@ -1,5 +1,5 @@
 *** Settings ***
-Default Tags      win    SMOKE_TEST
+Default Tags      win
 Test Template     AC Template
 Resource          ../../resources/keywords.txt
 
