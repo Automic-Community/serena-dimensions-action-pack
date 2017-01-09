@@ -1,6 +1,6 @@
 *** Settings ***
 Force Tags        IMPORT    EXPORT    OTHER
-Default Tags      win    unix
+Default Tags      win    unix    SMOKE_TEST
 Resource          resources/context.txt
 
 *** Test Cases ***
