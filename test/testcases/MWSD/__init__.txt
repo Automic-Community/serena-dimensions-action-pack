@@ -1,3 +1,0 @@
-*** Settings ***
-Documentation     Testing for action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD
-Force Tags        MWSD
