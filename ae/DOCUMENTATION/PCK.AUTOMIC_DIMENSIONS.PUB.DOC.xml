@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<DOCU name="PCK.AUTOMIC_DIMENSIONS.PUB.DOC">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<DOCU_Docu state="1" type="text">
+<DOC><![CDATA[The actions execute the most commonly used or required DMCLI commands. 
+
+Note, that not every single argument option is provided as doing so could make the actions cumbersome. Where an explicit argument option is not provided, these can always be passed via plain text in 'Optional arguments'. 
+
+=Supported Platforms=
+
+* Windows Server 2008 R2
+* Windows Server 2008
+* Windows Server 2003
+
+=Setup=
+
+* Set environment variable UC4RB_DMC_DMCLI_PATH to the directory that contains the Serena Dimensions DMCLI.exe which is used to interact with Serena Dimensions CM from the command line. 
+
+=Rollback=
+
+The Serena Dimensions actions do not support rollbacks yet.
+]]></DOC>
+</DOCU_Docu>
+</DOCU>
+</uc-export>
