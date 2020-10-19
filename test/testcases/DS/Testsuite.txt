@@ -1,0 +1,50 @@
+*** Settings ***
+Suite Setup       Setup_suite
+Default Tags      win    ALL
+Test Template     DS Template
+Resource          ../../resources/keywords.txt
+
+*** Variables ***
+${SPACE}          " "
+${STREAM_ID}      "DS_STREAM"
+${STREAM}         "QLARIUS:MAINLINE_JAVA_STR"
+
+*** Test Cases ***    USERNAME                               PASSWORD               HOST                                   DB_NAME                                   DSN                                   STREAM_ID                       RETCODE    STATUS
+1.Successful          [Setup]                                CS Create a Stream     ${STREAM_ID}                           "Stream Setup for Delete Stream"          ${STREAM}
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    ${STREAM_ID}                    0          ${ENDED_OK}
+
+2.Successful with parameters contain spaces
+                      [Setup]                                CS Create a Stream     ${STREAM_ID}                           "Stream Setup for Delete Stream"          ${STREAM}
+                      ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}    ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}${STREAM_ID}${SPACE}    0          ${ENDED_OK}
+
+3.Fail with Stream ID
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}    ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    ${STREAM_ID}_INVALID            1          ${ENDED_NOK}
+
+*** Keywords ***
+DS Template
+    [Arguments]    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}    ${stream_id}
+    ...    ${returnCode}    ${returnStatus}
+    [Documentation]    This template used for testing action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DS with inputs
+    ...    - ${user}: Username to access Serena Dimensions CM.
+    ...    - ${pass}: Password to access Serena Dimensions CM.
+    ...    - ${host}: Serena Dimensions CM hostname
+    ...    - ${dbname}: Specifies the Serena Dimensions CM database identifier.
+    ...    - ${dsn}: Specifies the data source name for connecting to the database.
+    ...    - ${stream_id}: Specifies the name of stream.
+    ...    - ${returnCode}: return code of execution
+    ...    - ${returnStatus}: return status of execution
+    Init Action    ${ACTION_DS}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${user}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${pass}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${dbname}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${dsn}
+    Action Set    ${PRT_DS_DIMENSIONS_STREAM_ID}    ${stream_id}
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start setup testing for DS Action Request Items

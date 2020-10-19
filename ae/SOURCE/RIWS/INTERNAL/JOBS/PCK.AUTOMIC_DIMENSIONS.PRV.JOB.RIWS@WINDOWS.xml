@@ -25,10 +25,10 @@
 <ExtRepDef>1</ExtRepDef>
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
-<DeactWhen/>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
+<DeactWhen>ANY_OK</DeactWhen>
 <DeactDelay>0</DeactDelay>
 <AutoDeactAlways>0</AutoDeactAlways>
 <AttDialog>0</AttDialog>
@@ -115,22 +115,14 @@
 <PSCRI><![CDATA[:INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.PREPARE_JOB]]></PSCRI>
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[! Run book to run the Dimensions CM RIWS command through the DMCLI.
+<MSCRI><![CDATA[@echo off
+:INC PCK.AUTOMIC_DIMENSIONS.PRV.INCLUDE.RIWS_LOGGING_PARAMS
+! Run book to run the Dimensions CM RIWS command through the DMCLI.
 :INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
+:INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
 
-! Ensure a product ID has been specified
-: IF &UC4RB_DMC_RIWS_PROD_ID#=''
-:   P 'Specify a Product ID'
-:   EXIT 1
-: ENDIF
-
-! Ensure a workset has been defined
-: IF &UC4RB_DMC_RIWS_WORKSET#=''
-:   P 'Specify a workset'
-:   EXIT 1
-: ELSE
-:   SET &WORKSET#='/WORKSET=&UC4RB_DMC_RIWS_WORKSET#'
-: ENDIF
+! Set value for workset field
+: SET &WORKSET#='/WORKSET=&UC4RB_DMC_RIWS_WORKSET#'
 
 ! Check that at least item id or filename has been specified
 : SET &FILENAME#=''
@@ -139,18 +131,19 @@
 :     P 'You must specify at least item id or filename'
 :     EXIT 1
 :   ELSE
-:     SET &FILENAME#='/FILENAME=\\"""&UC4RB_DMC_RIWS_FILENAME# \\"""'
+:     SET &FILENAME#='/FILENAME=\\"""&UC4RB_DMC_RIWS_FILENAME#\\"""'
 :   ENDIF
 : ENDIF
-! Create the item-spec
-: SET &ITEMSPEC#='\\"""&UC4RB_DMC_RIWS_PROD_ID#:&UC4RB_DMC_RIWS_ITEM_ID#.&UC4RB_DMC_RIWS_VARIENT#-&UC4RB_DMC_RIWS_ITEM_TYPE#;&UC4RB_DMC_RIWS_REVISION#\\"""'
 
-! Check if hange Doc IDs have been set
+! Create the item-spec
+: SET &ITEMSPEC#='\\"""&UC4RB_DMC_RIWS_PROD_ID#:&UC4RB_DMC_RIWS_ITEM_ID#.&UC4RB_DMC_RIWS_VARIANT#-&UC4RB_DMC_RIWS_ITEM_TYPE#;&UC4RB_DMC_RIWS_REVISION#\\"""'
+
+! Check if change Doc IDs have been set
 : SET &CHANGEDOCIDS#=''
 : IF &UC4RB_DMC_RIWS_CHANGEIDS#<>''
 :   SET &CHANGEDOCIDS#='/CHANGE_DOC_IDS=(&UC4RB_DMC_RIWS_CHANGEIDS#)'
 : ENDIF
-&UC4RB_DMC_CMD# RIWS &ITEMSPEC# &WORKSET# &CHANGEDOCIDS#
+&UC4RB_DMC_CMD# RIWS &ITEMSPEC# &WORKSET# &FILENAME# &CHANGEDOCIDS#
 :INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CHECK_CMDLINE_CMD@WINDOWS]]></MSCRI>
 </SCRIPT>
 <OUTPUTSCAN state="1">

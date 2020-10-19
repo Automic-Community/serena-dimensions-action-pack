@@ -1,0 +1,61 @@
+*** Settings ***
+Suite Setup       Setup_suite
+Default Tags      win    ALL
+Test Template     MWSD Template
+Resource          ../../resources/keywords.txt
+
+*** Variables ***
+${SPACE}          " "
+
+*** Test Cases ***    USERNAME                               PASSWORD                              HOST                                   DB_NAME                                   DSN                                   SOURCE                                 DEST                                    WORKSET                                DOCS                            RETCODE    STATUS
+1.Successful          [Setup]                                MWSD Move Project Stream Directory    Qlarius Underwriter2                   Qlarius Underwriter                       QLARIUS:MWSD_STREAM                   QLARIUS_CR_7
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}                   ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    Qlarius Underwriter                    Qlarius Underwriter2                    QLARIUS:MWSD_STREAM                    QLARIUS_CR_7                    0          ${ENDED_OK}
+
+2.Successful with parameters contain spaces
+                      [Setup]                                MWSD Move Project Stream Directory    Qlarius Underwriter2                   Qlarius Underwriter                       QLARIUS:MWSD_STREAM                   QLARIUS_CR_7
+                      ${SPACE}${_DIMENSIONS_USER}${SPACE}    ${_DIMENSIONS_PASS}                   ${SPACE}${_DIMENSIONS_HOST}${SPACE}    ${SPACE}${_DIMENSIONS_DB_NAME}${SPACE}    ${SPACE}${_DIMENSIONS_DSN}${SPACE}    ${SPACE}Qlarius Underwriter${SPACE}    ${SPACE}Qlarius Underwriter2${SPACE}    ${SPACE}QLARIUS:MWSD_STREAM${SPACE}    ${SPACE}QLARIUS_CR_7${SPACE}    0          ${ENDED_OK}
+
+3.Fail with invalid Source
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}                   ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    Qlarius Underwriter Invalid            Qlarius Underwriter2                    QLARIUS:MWSD_STREAM                    QLARIUS_CR_7                    1          ${ENDED_NOK}
+
+4.Fail with invalid Workset
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}                   ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    Qlarius Underwriter                    Qlarius Underwriter2                    INVALID_QLARIUS:MWSD_STREAM            QLARIUS_CR_7                    1          ${ENDED_NOK}
+
+5.Fail with invalid doc
+                      ${_DIMENSIONS_USER}                    ${_DIMENSIONS_PASS}                   ${_DIMENSIONS_HOST}                    ${_DIMENSIONS_DB_NAME}                    ${_DIMENSIONS_DSN}                    Qlarius Underwriter                    Qlarius Underwriter2                    QLARIUS:MWSD_STREAM                    INVALID_QLARIUS_CR_7            1          ${ENDED_NOK}
+
+*** Keywords ***
+MWSD Template
+    [Arguments]    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}    ${source}
+    ...    ${dest}    ${workset}    ${doc}    ${returnCode}    ${returnStatus}
+    [Documentation]    This template used for testing action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD with inputs
+    ...    - ${user}: Username to access Serena Dimensions CM.
+    ...    - ${pass}: Password to access Serena Dimensions CM.
+    ...    - ${host}: Serena Dimensions CM hostname
+    ...    - ${dbname}: Specifies the Serena Dimensions CM database identifier.
+    ...    - ${dsn}: Specifies the data source name for connecting to the database.
+    ...    - ${source}: Is the source directory to move the project/stream structure from.
+    ...    - ${dest}: Is the destination directory to move the project/stream structure to.
+    ...    - ${workset}: This optionally specifies the project/stream to be used for this command: failing this, the user's current project/stream will be taken.
+    ...    - ${doc}: Comma separated list of change ids directory move will be recorded against.
+    ...    - ${returnCode}: return code of execution
+    ...    - ${returnStatus}: return status of execution
+    Init Action    ${ACTION_MWSD}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${user}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${pass}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${dbname}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${dsn}
+    Action Set    ${PRT_MWSD_DIMENSIONS_SRC_DIR}    ${source}
+    Action Set    ${PRT_MWSD_DIMENSIONS_DEST_DIR}    ${dest}
+    Action Set    ${PRT_MWSD_DIMENSIONS_WORKSET}    ${workset}
+    Action Set    ${PRT_MWSD_DIMENSIONS_CHANGE_IDS}    ${doc}
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start setup testing for MWSD Action Request Items
+    #MWSD Move Project Stream Directory    Qlarius Underwriter2    Qlarius Underwriter    QLARIUS:MWSD_STREAM    QLARIUS_CR_7

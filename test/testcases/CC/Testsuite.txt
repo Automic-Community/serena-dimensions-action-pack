@@ -1,0 +1,78 @@
+*** Settings ***
+Default Tags      win    ALL
+Test Template     CC Template
+Resource          ../../resources/keywords.txt
+
+*** Test Cases ***    OK_NOK    USERNAME                       PASSWORD                       HOST                           DN NAME                           DSN                           PRODUCT ID         REQUEST TYPE    ATTRIBUTES                                           DESC_FILE       ARGS        RETCODE    STATUS          REPORT MESSAGE
+1.Successful action request with valid parameters_TASK
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            TITLE="I can create request nowq"                    C:\\desc.txt    ${EMPTY}    0          ${ENDED_OK}     Operation completed
+
+2.Successful action request with valid parameters_MRG
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            MRG             TITLE="I can create request nowq"                    C:\\desc.txt    ${EMPTY}    0          ${ENDED_OK}     Operation completed
+
+3.Successful action request with valid parameters_CR
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            CR              TITLE="I can create request nowq",SEVERITY="High"    C:\\desc.txt    ${EMPTY}    0          ${ENDED_OK}     Operation completed
+
+4.Successful action request with valid parameters_BR
+                      OK        ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            BR              TITLE="I can create request nowq"                    C:\\desc.txt    ${EMPTY}    0          ${ENDED_OK}     Operation completed
+
+5.Fail with invalid user
+                      NOK       ${_DIMENSIONS_USER}_invalid    ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            TITLE="I can create request nowq"                    C:\\desc.txt    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+6.Fail with invalid password
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}_invalid    ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            TITLE="I can create request nowq"                    C:\\desc.txt    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+7.Fail with invalid host
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}_invalid    ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            TITLE="I can create request nowq"                    C:\\desc.txt    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+8.Fail with invalid database name
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}_invalid    ${_DIMENSIONS_DSN}            QLARIUS            TASK            TITLE="I can create request nowq"                    C:\\desc.txt    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+9.Fail with invalid dsn
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}_invalid    QLARIUS            TASK            TITLE="I can create request nowq"                    C:\\desc.txt    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+10.Fail with invalid product id
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS_invalid    TASK            TITLE="I can create request nowq"                    C:\\desc.txt    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+11.Fail with invalid request type
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK_invalid    TITLE="I can create request nowq"                    C:\\desc.txt    ${EMPTY}    0          ${ENDED_NOK}    ${EMPTY}
+
+12.Fail with invalid optional arguments
+                      NOK       ${_DIMENSIONS_USER}            ${_DIMENSIONS_PASS}            ${_DIMENSIONS_HOST}            ${_DIMENSIONS_DB_NAME}            ${_DIMENSIONS_DSN}            QLARIUS            TASK            TITLE="I can create request nowq"                    C:\\desc.txt    \abc=xyz    0          ${ENDED_NOK}    ${EMPTY}
+
+*** Keywords ***
+CC Template
+    [Arguments]    ${OK_NOK}    ${user}    ${pass}    ${host}    ${dbname}    ${dsn}
+    ...    ${productId}    ${requestType}    ${attrib}    ${descFile}    ${args}    ${returnCode}
+    ...    ${returnStatus}    ${reportMessage}
+    [Documentation]    This template used for testing action PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC with inputs
+    ...    - ${user}: Username to access Serena Dimensions CM.
+    ...    - ${pass}: Password to access Serena Dimensions CM.
+    ...    - ${host}: Serena Dimensions CM hostname
+    ...    - ${dbname}: Specifies the Serena Dimensions CM database identifier.
+    ...    - ${dsn}: message should be contained in execution report
+    ...    - ${productId}: Specifies the Product Id.
+    ...    - ${requestType}: Specifies request type.
+    ...    - ${attrib}: Specifies attributes.
+    ...    - ${descFile}: Specifies description file.
+    ...    - ${args}: Specifies optional arguments.
+    ...    - ${returnCode}: return code of execution
+    ...    - ${returnStatus}: return status of execution
+    ...    - ${reportMessage}: message should be contained in execution report
+    Init Action    ${ACTION_CC}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${user}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${pass}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${dbname}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${dsn}
+    Action Set    ${PRT_FWI_DIMENSIONS_CC_PRODUCT_ID}    ${productId}
+    Action Set    ${PRT_FWI_DIMENSIONS_CC_REQUEST_TYPE}    ${requestType}
+    Action Set    ${PRT_FWI_DIMENSIONS_CC_ATTRIB}    ${attrib}
+    Action Set    ${PRT_FWI_DIMENSIONS_CC_DESC_FILE}    ${descFile}
+    Action Set    ${PRT_FWI_DIMENSIONS_CC_ARGS}    ${args}
+    Action Execute
+    Action Report Should Be Found
+    Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
+    Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+    Action Report Should Contain    ${reportMessage}

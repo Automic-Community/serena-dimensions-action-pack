@@ -25,10 +25,10 @@
 <ExtRepDef>1</ExtRepDef>
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
-<DeactWhen/>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
+<DeactWhen>ANY_OK</DeactWhen>
 <DeactDelay>0</DeactDelay>
 <AutoDeactAlways>0</AutoDeactAlways>
 <AttDialog>0</AttDialog>
@@ -116,8 +116,24 @@
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
 <MSCRI><![CDATA[! Create Request Runbook
+@echo off
+
+:INC PCK.AUTOMIC_DIMENSIONS.PRV.INCLUDE.CC_LOGGING_PARAMS
 :INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
-&UC4RB_DMC_CMD# CC &UC4RB_DMC_CC_PRODUCT_ID# &UC4RB_DMC_CC_REQUEST_TYPE# &UC4RB_DMC_CC_ARGS#
+:INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
+
+! Set command attributes
+:SET &UC4RB_DMC_CC_ATRIB# = '/ATTRIB=(&UC4RB_DMC_CC_ATTRIB#)'
+
+! Convert unix slash become windows backslash
+:SET &UC4RB_CONVERTED_STRING# = &UC4RB_DMC_CC_DESC#
+:INC PCK.ITPA_SHARED.PRV.INCLUDE.CONVERT_SLASHES_WINDOWS_STYLE
+:SET &UC4RB_DMC_CC_DESC# = &UC4RB_CONVERTED_STRING#
+
+! Set command description
+:SET &UC4RB_DMC_CC_DESC# = '/DESC= &UC4RB_DMC_CC_DESC#'
+
+&UC4RB_DMC_CMD# CC &UC4RB_DMC_CC_PRODUCT_ID# &UC4RB_DMC_CC_REQUEST_TYPE# &UC4RB_DMC_CC_ATRIB# &UC4RB_DMC_CC_DESC# &UC4RB_DMC_CC_ARGS#
 :INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CHECK_CMDLINE_CMD@WINDOWS]]></MSCRI>
 </SCRIPT>
 <OUTPUTSCAN state="1">

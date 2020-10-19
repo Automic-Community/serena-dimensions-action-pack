@@ -1,0 +1,190 @@
+*** Settings ***
+Documentation     This is high level keywords that will be used by local test cases
+Resource          messages.txt
+Resource          context.txt
+Library           com.automic.robot.itpa.ItpaLibrary
+
+*** Key Words ***
+Init Action
+    [Arguments]    ${actionName}
+    Action Create    ${actionName}
+    Action Set    ${PRT_AGENT}    ${_AGENT}
+    Action Set    ${PRT_LOGIN}    ${_LOGIN}
+
+Action Report Should Contain
+    [Arguments]    ${text}
+    ${report} =    Action Get Report
+    Should Contain    ${report}    ${text}
+
+Action Report Should Be Found
+    ${report} =    Action Get Report
+    Should Not Be Empty    ${report}
+
+Action Report Should Not Be Found
+    ${report} =    Action Get Report
+    Should Be Empty    ${report}
+
+Action Return Code Should Be
+    [Arguments]    ${code}
+    ${returnCode}=    Action Get Variable    Return code
+    Should Be Equal    ${returnCode}    ${code}
+
+Action Return Code Should Not Equal
+    [Arguments]    ${code}
+    ${returnCode}=    Action Get Variable    Return code
+    Should Not Be Equal    ${returnCode}    ${code}
+
+Action Return Status Should Be
+    [Arguments]    ${status}
+    ${returnStatus}=    Action Get Variable    Status
+    Should Be Equal    ${returnStatus}    ${status}
+
+Action Return Status Should Not Be
+    [Arguments]    ${status}
+    ${returnStatus}=    Action Get Variable    Status
+    Should Not Be Equal    ${returnStatus}    ${status}
+
+Action Return Variable Should Be
+    [Arguments]    ${variableValue}
+    ${out}=    Action Get Variable    ${variableName}
+    Should Be Equal    ${out}    ${variableValue}
+
+Action Return Variable Should Be Equal As Integers
+    [Arguments]    ${variableValue}
+    ${out}=    Action Get Variable    ${variableName}
+    Should Be Equal As Integers    ${out}    ${variableValue}
+
+Create Dir
+    [Arguments]    ${path}
+    Init Action    PCK.AUTOMIC_FILESYSTEM.PUB.ACTION.CREATE_DIR
+    Action Set    &UC4RB_DIR_FILE_CREATE_DIR#    ${path}
+    Action Execute
+
+Delete Dir
+    [Arguments]    ${path}
+    Init Action    PCK.AUTOMIC_FILESYSTEM.PUB.ACTION.DELETE
+    Action Set    &UC4RB_DIR_FILE_RM_NAME#    ${path}
+    Action Set    &UC4RB_DIR_FILE_RM_FAIL#    NO
+    Action Execute
+
+Create File
+    [Arguments]    ${file_path}
+    Init Action    PCK.AUTOMIC_FILESYSTEM.PUB.ACTION.CREATE_FILE
+    Action Set    &UC4RB_DIR_FILE_CREATE_FILE#    ${file_path}
+    Action Set    &UC4RB_DIR_FILE_FULL_PATH#    YES
+    Action Execute
+
+Pack
+    [Arguments]    ${source_file_path}    ${target_file_path}
+    Init Action    PCK.AUTOMIC_FILESYSTEM.PUB.ACTION.PACK
+    Action Set    &UC4RB_DIR_FILE_PACK_INPUT#    ${source_file_path}
+    Action Set    &UC4RB_DIR_FILE_PACK_NAME#    ${target_file_path}
+    Action Set    &UC4RB_ADD_ZIP#    NO
+    Action Execute
+
+Copy
+    [Arguments]    ${source_file_path}    ${target_file_path}
+    Init Action    PCK.AUTOMIC_FILESYSTEM.PUB.ACTION.COPY
+    Action Set    &UC4RB_DIR_FILE_CP_SOURCE#    ${source_file_path}
+    Action Set    &UC4RB_DIR_FILE_CP_TARGET#    ${target_file_path}
+    Action Set    &UC4RB_DIR_FILE_CP_OVERWRITE#    YES
+    Action Set    &UC4RB_COPY_EXCLUDE#    ${EMPTY}
+    Action Execute
+
+ACDI
+    [Arguments]    ${request}    ${status}    ${workset}
+    Init Action    PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${_DIMENSIONS_USER}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${_DIMENSIONS_PASS}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${_DIMENSIONS_HOST}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${_DIMENSIONS_DB_NAME}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${_DIMENSIONS_DSN}
+    Action Set    ${PRT_ACDI_DIMENSIONS_REQUEST_ID}    ${request}
+    Action Set    ${PRT_ACDI_DIMENSIONS_STATUS}    ${status}
+    Action Set    ${PRT_ACDI_DIMENSIONS_WORKSET}    ${workset}
+    Action Set    ${PRT_ACDI_DIMENSIONS_ARGS}    ${EMPTY}
+    Action Execute
+
+CS Create a Stream
+    [Arguments]    ${stream_id}    ${description}    ${stream}
+    Init Action    PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${_DIMENSIONS_USER}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${_DIMENSIONS_PASS}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${_DIMENSIONS_HOST}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${_DIMENSIONS_DB_NAME}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${_DIMENSIONS_DSN}
+    Action Set    ${PRT_CS_DIMENSIONS_STREAM_ID}    ${stream_id}
+    Action Set    ${PRT_CS_DIMENSIONS_DESCRIPTION}    ${description}
+    Action Set    ${PRT_CS_DIMENSIONS_STREAM}    ${stream}
+    Action Set    ${PRT_CS_DIMENSIONS_BASELINE}    ${EMPTY}
+    Action Set    ${PRT_CS_DIMENSIONS_ARGS}    ${EMPTY}
+    Action Execute
+
+MWSD Move Project Stream Directory
+    [Arguments]    ${source}    ${dest}    ${workset}    ${doc}
+    Init Action    PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${_DIMENSIONS_USER}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${_DIMENSIONS_PASS}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${_DIMENSIONS_HOST}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${_DIMENSIONS_DB_NAME}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${_DIMENSIONS_DSN}
+    Action Set    ${PRT_MWSD_DIMENSIONS_SRC_DIR}    ${source}
+    Action Set    ${PRT_MWSD_DIMENSIONS_DEST_DIR}    ${dest}
+    Action Set    ${PRT_MWSD_DIMENSIONS_WORKSET}    ${workset}
+    Action Set    ${PRT_MWSD_DIMENSIONS_CHANGE_IDS}    ${doc}
+    Action Execute
+
+EI checkout for update
+    [Arguments]    ${host}    ${product_id}    ${item_id}    ${variant}    ${item_type}    ${revision}
+    ...    ${file_name}    ${workset}    ${args}
+    [Documentation]    Keyword to commit changes in ${workingCopy} to ${module} with ${revision} and ${message}
+    Init Action    ${ACTION_EI}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    dmsys
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    S3rv3r@Aut
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${host}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    CM_TYPICAL
+    Action Set    ${PRT_DIMENSIONS_DSN}    DIM10
+    Action Set    ${PRT_EI_DIMENSIONS_PRODUCT_ID}    ${product_id}
+    Action Set    ${PRT_EI_DIMENSIONS_ITEM_ID}    ${item_id}
+    Action Set    ${PRT_EI_DIMENSIONS_VARIANT}    ${variant}
+    Action Set    ${PRT_EI_DIMENSIONS_ITEM_TYPE}    ${item_type}
+    Action Set    ${PRT_EI_DIMENSIONS_REVISION}    ${revision}
+    Action Set    ${PRT_EI_DIMENSIONS_FILE_NAME}    ${file_name}
+    Action Set    ${PRT_EI_DIMENSIONS_WORKSET}    ${workset}
+    Action Set    ${PRT_EI_DIMENSIONS_ARGS}    ${args}
+    Action Execute
+
+Add Item Workset
+    Init Action    ${ACTION_AIWS}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${_DIMENSIONS_USER}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${_DIMENSIONS_PASS}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${_DIMENSIONS_HOST}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${_DIMENSIONS_DB_NAME}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${_DIMENSIONS_DSN}
+    Action Set    ${PRT_AIWS_DIMENSIONS_PRODUCT_ID}    QLARIUS
+    Action Set    ${PRT_AIWS_DIMENSIONS_ITEM_ID}    HUYTQ TEST RTF-190795421X6832X0
+    Action Set    ${PRT_AIWS_DIMENSIONS_VARIANT}    A
+    Action Set    ${PRT_AIWS_DIMENSIONS_ITEM_TYPE}    SRC
+    Action Set    ${PRT_AIWS_DIMENSIONS_REVISION}    java_s1_1#1
+    Action Set    ${PRT_AIWS_DIMENSIONS_WORKSET}    QLARIUS:ABC
+    Action Set    ${PRT_AIWS_DIMENSIONS_FILENAME}    HuyTQ_test.rtf
+    Action Set    ${PRT_AIWS_DIMENSIONS_WSFILENAME}    New_HuyTQ_test.rtf
+    Action Set    ${PRT_AIWS_DIMENSIONS_CHANGEIDS}    QLARIUS_CR_42
+    Action Execute
+
+Remove Item Workset
+    Init Action    ${ACTION_RIWS}
+    Action Set    ${PRT_DIMENSIONS_USERNAME}    ${_DIMENSIONS_USER}
+    Action Set    ${PRT_DIMENSIONS_PASSWORD}    ${_DIMENSIONS_PASS}
+    Action Set    ${PRT_DIMENSIONS_HOST}    ${_DIMENSIONS_HOST}
+    Action Set    ${PRT_DIMENSIONS_DBNAME}    ${_DIMENSIONS_DB_NAME}
+    Action Set    ${PRT_DIMENSIONS_DSN}    ${_DIMENSIONS_DSN}
+    Action Set    ${PRT_RIWS_DIMENSIONS_PRODUCT_ID}    QLARIUS
+    Action Set    ${PRT_RIWS_DIMENSIONS_ITEM_ID}    HUYTQ TEST RTF-190795421X6832X0
+    Action Set    ${PRT_RIWS_DIMENSIONS_VARIANT}    A
+    Action Set    ${PRT_RIWS_DIMENSIONS_ITEM_TYPE}    SRC
+    Action Set    ${PRT_RIWS_DIMENSIONS_REVISION}    java_s1_1#1
+    Action Set    ${PRT_RIWS_DIMENSIONS_WORKSET}    QLARIUS:ABC
+    Action Set    ${PRT_RIWS_DIMENSIONS_FILENAME}    HuyTQ_test.rtf
+    Action Set    ${PRT_RIWS_DIMENSIONS_CHANGEIDS}    QLARIUS_CR_42
+    Action Execute

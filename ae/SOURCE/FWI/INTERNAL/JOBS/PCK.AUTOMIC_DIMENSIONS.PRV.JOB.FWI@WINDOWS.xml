@@ -25,10 +25,10 @@
 <ExtRepDef>1</ExtRepDef>
 <ExtRepAll>0</ExtRepAll>
 <ExtRepNone>0</ExtRepNone>
-<AutoDeactNo>1</AutoDeactNo>
+<AutoDeactNo>0</AutoDeactNo>
 <AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
-<AutoDeactErrorFree>0</AutoDeactErrorFree>
-<DeactWhen/>
+<AutoDeactErrorFree>1</AutoDeactErrorFree>
+<DeactWhen>ANY_OK</DeactWhen>
 <DeactDelay>0</DeactDelay>
 <AutoDeactAlways>0</AutoDeactAlways>
 <AttDialog>0</AttDialog>
@@ -115,18 +115,21 @@
 <PSCRI><![CDATA[:INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.PREPARE_JOB]]></PSCRI>
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[! Run book to run the Dimensions CM FWI command through the DMCLI.
+<MSCRI><![CDATA[:D &STRING_ARR#,string,100
+@echo off
+
+:INC PCK.AUTOMIC_DIMENSIONS.PRV.INCLUDE.FWI_LOGGING_PARAMS
+
+:IF &UC4RB_DMC_FWI_USER_DIR# <> ''
+:  INC PCK.AUTOMIC_FILESYSTEM.PUB.INCLUDE.NORMALIZE_PATH "UC4RB_CONVERTED_STRING" = "UC4RB_DMC_FWI_USER_DIR"
+:  SET &UC4RB_CHECKME# = &UC4RB_DMC_FWI_USER_DIR#
+:  INC PCK.AUTOMIC_FILESYSTEM.PRV.INCLUDE.CHECK_DIR_EXISTS
+:ENDIF
+
+! Run the Dimensions CM FWI command through the DMCLI.
 :INCLUDE PCK.AUTOMIC_DIMENSIONS.PRV.JOBI.CONNECTION@WINDOWS
-! Check product id has been specified
-: IF &UC4RB_DMC_FWI_PRODUCT_ID#=''
-:   P "Specify a product ID"
-:   EXIT 1
-: ENDIF
-! Check project id has been specified
-: IF &UC4RB_DMC_FWI_PROJECT_ID#=''
-:   P "Specifiy a project id"
-:   EXIT
-: ENDIF
+:INC PCK.ITPA_SHARED.PRV.INCLUDE.LOGGING.HEADER.EXECUTION
+
 ! Create project spec
 : SET &PROJECTSPEC#='\\"""&UC4RB_DMC_FWI_PRODUCT_ID#:&UC4RB_DMC_FWI_PROJECT_ID#\\"""'
 
@@ -134,17 +137,17 @@
 : IF &UC4RB_DMC_FWI_USER_DIR#=''
 :   SET &USERDIR#=''
 : ELSE
-:   SET &USERDIR#='/USER_DIRECTORY=\\"""&UC4RB_DMC_FWI_USER_DIR# \\"""'
+:   SET &USERDIR#='/USER_DIRECTORY=\\"""&UC4RB_DMC_FWI_USER_DIR#\\"""'
 : ENDIF
 
 ! Check if directory filter has been specified
 : IF &UC4RB_DMC_FWI_DIR_FILTER#=''
 :   SET &FILTER#=''
 : ELSE
-:   SET &FILTER#='/DIRECTORY=\\\"""&UC4RB_DMC_FWI_DIR_FILTER# \\"""'
+:   SET &FILTER#='/DIRECTORY=\\\"""&UC4RB_DMC_FWI_DIR_FILTER#\\"""'
 : ENDIF
 
-&UC4RB_DMC_CMD# FWI &PROJECTSPEC# &USERDIR# &FILTER# &UC4RB_DMC_FWI_ARGS#
+&UC4RB_DMC_CMD# FWI &PROJECTSPEC# &USERDIR# &FILTER# "&UC4RB_DMC_FWI_ARGS#"
 :INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CHECK_CMDLINE_CMD@WINDOWS]]></MSCRI>
 </SCRIPT>
 <OUTPUTSCAN state="1">

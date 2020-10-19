@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
+<VARA OVD_VRName="FREI" data_type="STATIC" name="PCK.AUTOMIC_DIMENSIONS.PUB.PROMPT_EXTERNAL_MAP" replacementmode="2">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType>STATIC</OH_SubType>
+</HEADER>
+<ATTR_VARA state="1">
+<Type>C|Text</Type>
+<lblSource>Static</lblSource>
+<source>STATIC</source>
+<VRName>FREI|Freely selected</VRName>
+<NotFoundErr>0</NotFoundErr>
+<NotFoundDef>1</NotFoundDef>
+<ShareN>0</ShareN>
+<ShareL>0</ShareL>
+<ShareR>0</ShareR>
+<MaxValue_C>1024</MaxValue_C>
+<CheckMax_C>0</CheckMax_C>
+<uppercase>0</uppercase>
+<sortColumn>0</sortColumn>
+<sortDirection>0</sortDirection>
+</ATTR_VARA>
+<VARA state="1">
+<Variables>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/UC4RB_DMC_AC_CHECK#" Value="EXT:/dimensions/action_request/check" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/UC4RB_DMC_AC_REQUEST_ID#" Value="EXT:/dimensions/action_request/request_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/UC4RB_DMC_AC_STATUS#" Value="EXT:/dimensions/action_request/status" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AC/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI/UC4RB_DMC_ACDI_REQ_ID#" Value="EXT:/dimensions/action_request_items/request_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI/UC4RB_DMC_ACDI_STATUS#" Value="EXT:/dimensions/action_request_items/status" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI/UC4RB_DMC_ACDI_WORKSET#" Value="EXT:/dimensions/action_request_items/workset" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDI/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDWS/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDWS/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDWS/UC4RB_DMC_ACDWS_DIR_FILTER#" Value="EXT:/dimensions/add_request_items_to_project/directory_filter" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDWS/UC4RB_DMC_ACDWS_REQUEST_ID#" Value="EXT:/dimensions/add_request_items_to_project/request_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDWS/UC4RB_DMC_ACDWS_WORKSET#" Value="EXT:/dimensions/add_request_items_to_project/workset" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDWS/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDWS/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDWS/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDWS/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ACDWS/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_CHANGEIDS#" Value="EXT:/dimensions/add_item_revision_to_project/change_doc_ids" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_FILENAME#" Value="EXT:/dimensions/add_item_revision_to_project/file_name" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_ITEM_ID#" Value="EXT:/dimensions/add_item_revision_to_project/item_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_ITEM_TYPE#" Value="EXT:/dimensions/add_item_revision_to_project/item_type" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_PROD_ID#" Value="EXT:/dimensions/add_item_revision_to_project/product_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_REVISION#" Value="EXT:/dimensions/add_item_revision_to_project/revision" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_VARIANT#" Value="EXT:/dimensions/add_item_revision_to_project/variant" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_WORKSET#" Value="EXT:/dimensions/add_item_revision_to_project/workset" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_AIWS_WSFILENAME#" Value="EXT:/dimensions/add_item_revision_to_project/ws_filename" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.AIWS/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.BC/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.BC/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.BC/UC4RB_DMC_BC_FILENAME#" Value="EXT:/dimensions/browse_request/file_name" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.BC/UC4RB_DMC_BC_REQUEST_ID#" Value="EXT:/dimensions/browse_request/request_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.BC/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.BC/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.BC/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.BC/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.BC/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_CC_ATTRIB#" Value="EXT:/dimensions/create_request/attributes" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_CC_DESC#" Value="EXT:/dimensions/create_request/description_file" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_CC_PRODUCT_ID#" Value="EXT:/dimensions/create_request/product_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_CC_REQUEST_TYPE#" Value="EXT:/dimensions/create_request/request_type" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CC/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS/UC4RB_DMC_CS_BASELINE#" Value="EXT:/dimensions/create_stream/baseline" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS/UC4RB_DMC_CS_DESCRIPTION#" Value="EXT:/dimensions/create_stream/description" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS/UC4RB_DMC_CS_STREAM#" Value="EXT:/dimensions/create_stream/base_stream" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS/UC4RB_DMC_CS_STREAM_ID#" Value="EXT:/dimensions/create_stream/stream_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.CS/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DELIVER/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DELIVER/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DELIVER/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DELIVER/UC4RB_DMC_DELV_CHANGEIDS#" Value="EXT:/dimensions/deliver/change_doc_ids" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DELIVER/UC4RB_DMC_DELV_SPEC#" Value="EXT:/dimensions/deliver/delivery_spec" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DELIVER/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DELIVER/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DELIVER/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DELIVER/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DS/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DS/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DS/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DS/UC4RB_DMC_DS_STREAM_ID#" Value="EXT:/dimensions/delete_stream/stream_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DS/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DS/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DS/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.DS/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ECDI/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ECDI/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ECDI/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ECDI/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ECDI/UC4RB_DMC_ECDI_FOLDER#" Value="EXT:/dimensions/extract_request_items/extract_folder" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ECDI/UC4RB_DMC_ECDI_REQ_ID#" Value="EXT:/dimensions/extract_request_items/request_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ECDI/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ECDI/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.ECDI/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/UC4RB_DMC_EI_FILENAME#" Value="EXT:/dimensions/extract_item/file_name" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/UC4RB_DMC_EI_ITEM_ID#" Value="EXT:/dimensions/extract_item/item_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/UC4RB_DMC_EI_ITEM_TYPE#" Value="EXT:/dimensions/extract_item/item_type" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/UC4RB_DMC_EI_PROD_ID#" Value="EXT:/dimensions/extract_item/product_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/UC4RB_DMC_EI_REVISION#" Value="EXT:/dimensions/extract_item/revision" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/UC4RB_DMC_EI_VARIANT#" Value="EXT:/dimensions/extract_item/variant" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/UC4RB_DMC_EI_WORKSET#" Value="EXT:/dimensions/extract_item/workset" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.EI/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FBI/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FBI/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FBI/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FBI/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FBI/UC4RB_DMC_FBI_BL_ID#" Value="EXT:/dimensions/fetch_baseline_items/baseline_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FBI/UC4RB_DMC_FBI_DIR_FILTER#" Value="EXT:/dimensions/fetch_baseline_items/directory_filter" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FBI/UC4RB_DMC_FBI_PROD_ID#" Value="EXT:/dimensions/fetch_baseline_items/product_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FBI/UC4RB_DMC_FBI_USER_DIR#" Value="EXT:/dimensions/fetch_baseline_items/user_directory" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FBI/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FBI/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FBI/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FCDI/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FCDI/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FCDI/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FCDI/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FCDI/UC4RB_DMC_FCDI_FOLDER#" Value="EXT:/dimensions/fetch_request_items/fetch_folder" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FCDI/UC4RB_DMC_FCDI_REQUEST_ID#" Value="EXT:/dimensions/fetch_request_items/request_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FCDI/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FCDI/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FCDI/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/UC4RB_DMC_FI_FILENAME#" Value="EXT:/dimensions/fetch_item/file_name" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/UC4RB_DMC_FI_ITEM_ID#" Value="EXT:/dimensions/fetch_item/item_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/UC4RB_DMC_FI_ITEM_TYPE#" Value="EXT:/dimensions/fetch_item/item_type" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/UC4RB_DMC_FI_PROD_ID#" Value="EXT:/dimensions/fetch_item/product_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/UC4RB_DMC_FI_REVISION#" Value="EXT:/dimensions/fetch_item/revision" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/UC4RB_DMC_FI_VARIANT#" Value="EXT:/dimensions/fetch_item/variant" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/UC4RB_DMC_FI_WORKSET#" Value="EXT:/dimensions/fetch_item/workset" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FI/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FWI/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FWI/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FWI/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FWI/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FWI/UC4RB_DMC_FWI_DIR_FILTER#" Value="EXT:/dimensions/fetch_project_items/directory_filter" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FWI/UC4RB_DMC_FWI_PRODUCT_ID#" Value="EXT:/dimensions/fetch_project_items/product_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FWI/UC4RB_DMC_FWI_PROJECT_ID#" Value="EXT:/dimensions/fetch_project_items/project_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FWI/UC4RB_DMC_FWI_USER_DIR#" Value="EXT:/dimensions/fetch_project_items/user_directory" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FWI/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FWI/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.FWI/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_GEN_ARGS#" Value="EXT:/dimensions/generic/arguments" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_GEN_COMMAND#" Value="EXT:/dimensions/generic/command" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.GENERIC/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.LWS/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.LWS/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.LWS/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.LWS/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.LWS/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.LWS/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.LWS/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD/UC4RB_DMC_MSWD_CHANGE_IDS#" Value="EXT:/dimensions/move_directory/change_doc_ids" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD/UC4RB_DMC_MSWD_DEST_DIR#" Value="EXT:/dimensions/move_directory/destination_directory" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD/UC4RB_DMC_MSWD_WORKSET#" Value="EXT:/dimensions/move_directory/workset" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD/UC4RB_DMC_MWSD_SRC_DIR#" Value="EXT:/dimensions/move_directory/source_directory" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.MWSD/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/UC4RB_DMC_RI_FILENAME#" Value="EXT:/dimensions/return_item/file_name" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/UC4RB_DMC_RI_ITEM_ID#" Value="EXT:/dimensions/return_item/item_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/UC4RB_DMC_RI_ITEM_TYPE#" Value="EXT:/dimensions/return_item/item_type" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/UC4RB_DMC_RI_PROD_ID#" Value="EXT:/dimensions/return_item/product_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/UC4RB_DMC_RI_REVISION#" Value="EXT:/dimensions/return_item/revision" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/UC4RB_DMC_RI_VARIANT#" Value="EXT:/dimensions/return_item/variant" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/UC4RB_DMC_RI_WORKSET#" Value="EXT:/dimensions/return_item/workset" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RI/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_CHANGEIDS#" Value="EXT:/dimensions/remove_item_revision_from_project/change_doc_ids" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_FILENAME#" Value="EXT:/dimensions/remove_item_revision_from_project/file_name" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_ITEM_ID#" Value="EXT:/dimensions/remove_item_revision_from_project/item_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_ITEM_TYPE#" Value="EXT:/dimensions/remove_item_revision_from_project/item_type" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_PROD_ID#" Value="EXT:/dimensions/remove_item_revision_from_project/product_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_REVISION#" Value="EXT:/dimensions/remove_item_revision_from_project/revision" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_VARIANT#" Value="EXT:/dimensions/remove_item_revision_from_project/variant" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_RIWS_WORKSET#" Value="EXT:/dimensions/remove_item_revision_from_project/workset" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RIWS/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_CATALOGUE_TYPE#" Value="EXT:/dimensions/report_requests/catalogue_type" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_CATEGORY#" Value="EXT:/dimensions/report_requests/request_category" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_FILENAME#" Value="EXT:/dimensions/report_requests/report_file" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_NAME#" Value="EXT:/dimensions/report_requests/report_type" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_RPT_PRODUCT_ID#" Value="EXT:/dimensions/report_requests/product_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.RPT/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.UWA/AGENT#" Value="&amp;AGENT#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.UWA/LOGIN#" Value="&amp;LOGIN#" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.UWA/UC4RB_DMC_DBNAME#" Value="EXT:/dimensions/dbname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.UWA/UC4RB_DMC_DSN#" Value="EXT:/dimensions/dsn" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.UWA/UC4RB_DMC_HOST#" Value="EXT:/dimensions/hostname" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.UWA/UC4RB_DMC_PASSWORD#" Value="EXT:/dimensions/password" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.UWA/UC4RB_DMC_USERNAME#" Value="EXT:/dimensions/username" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.UWA/UC4RB_DMC_UWA_PRODUCT_ID#" Value="EXT:/dimensions/update_attributes/product_id" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="PCK.AUTOMIC_DIMENSIONS.PUB.ACTION.UWA/UC4RB_DMC_UWA_PROJECT_ID#" Value="EXT:/dimensions/update_attributes/project_id" Value1="" Value2="" Value3="" Value4=""/>
+</Variables>
+</VARA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+</VARA>
+</uc-export>
